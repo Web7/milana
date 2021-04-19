@@ -7,8 +7,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const configureCopy = () => {
 	return [
-		{from: "src/video/", to: "video/"},
-		{from: "src/images/", to: "images/"},
+		// {from: "src/video/", to: "video/"},
+		// {from: "src/images/", to: "images/"},
 		{from: 'src/fonts/', to: 'fonts/'}
 	]
 };
@@ -45,17 +45,17 @@ module.exports = {
 					}
 				}
 			},
-			{
-				test: /\.(mp4)$/,
-				use: {
-					loader: 'file-loader',
-					options: {
-						name: 'video/[name].[ext]',
-						outputPath: 'video/',
-						publicPath: '../'
-					}
-				}
-			},
+			// {
+			// 	test: /\.(mp4)$/,
+			// 	use: {
+			// 		loader: 'file-loader',
+			// 		options: {
+			// 			name: 'video/[name].[ext]',
+			// 			outputPath: 'video/',
+			// 			publicPath: '../'
+			// 		}
+			// 	}
+			// },
 			{
 				test: /\.(woff|woff2|eot|ttf|svg)$/,
 				use: [
@@ -98,7 +98,7 @@ module.exports = {
 		new HtmlWebPackPlugin({
 			template: './src/components/pages/index.pug',
 			filename: 'index.html',
-			file: require('./src/data/white-menu.json'),
+			file: require('./src/data/index.json'),
 			cache: false
 		}),
 		new MiniCssExtractPlugin({
