@@ -1,0 +1,64 @@
+.offcanvas
+	&-start
+		width: calc(100% - 20px)
+		top: 82px
+		border-right: none
+	&-backdrop
+		&:before
+			top: 83px
+			backdrop-filter: blur(7px)
+			background: none
+	.nav
+		&-link
+			font-family: 'montserratsemibold'
+			font-weight: normal
+			font-size: 13px
+			line-height: 29px
+			color: $black
+			text-transform: uppercase
+
+@media (min-width: 768px)
+	.offcanvas
+		&-backdrop
+			&:before
+				top: 92px
+		&-start
+			width: 303px
+			top: 91px
+
+@media (min-width: 992px)
+	.offcanvas
+		&-backdrop
+			&:before
+				top: 92px
+		&-start
+			width: 303px
+			top: 91px
+
+@media (min-width: 1200px)
+	.offcanvas
+		&-backdrop
+			&:before
+				backdrop-filter: none
+				display: none
+		&-start
+			width: 261px
+			top: 91px
+
+@media (min-width: 1400px)
+	.offcanvas
+		&-backdrop
+			&:before
+				top: 75px
+		&-start
+			width: 230px
+			top: 75px
+
+@media (min-width: 1600px)
+	.offcanvas
+		&-backdrop
+			&:before
+				top: 75px
+		&-start
+			width: 310px
+			top: 75px

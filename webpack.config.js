@@ -8,7 +8,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const configureCopy = () => {
 	return [
 		// {from: "src/video/", to: "video/"},
-		// {from: "src/images/", to: "images/"},
+		{from: "src/images/", to: "images/"},
 		{from: 'src/fonts/', to: 'fonts/'}
 	]
 };

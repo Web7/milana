@@ -1,5 +1,50 @@
-footer.bg-light.ms-xxl-310
-	.mx-9.mb-6
-		.container-fluid
-			.row
-
+footer.bg-light.mil-margin-left-side-menu
+	.container-fluid.pt-7.pt-md-10.pb-xxxl-6.pt-xxxl-15
+		.row.px-xxxl-9.px-xxl-5
+			.accordion#accordionNav.px-0.d-lg-flex
+				.accordion-item
+					.accordion-header#footerNavHeadingHelp
+						button.accordion-button(type="button" data-bs-toggle="collapse" data-bs-target="#footerNavCollapseHelp" aria-expanded="true" aria-controls="footerNavCollapseHelp") Помощь
+					.accordion-collapse.collapse.show#footerNavCollapseHelp(aria-labelledby="footerNavHeadingHelp" data-bs-parent="#accordionNav")
+						nav.nav.flex-column
+							a.nav-link(href="#") Оплата
+							a.nav-link(href="#") Доставка
+							a.nav-link(href="#") Возврат
+							a.nav-link(href="#") Гарантия
+							a.nav-link(href="#") Конфиденциальность
+							a.nav-link(href="#") Договор оферты
+							a.nav-link(href="#") Обработка данных
+				.accordion-item
+					.accordion-header#footerNavHeadingBuyers
+						button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#footerNavCollapseBuyers" aria-expanded="false" aria-controls="footerNavCollapseBuyers") Покупателям
+					.accordion-collapse.collapse#footerNavCollapseBuyers(aria-labelledby="footerNavHeadingBuyers" data-bs-parent="#accordionNav")
+						nav.nav.flex-column
+							a.nav-link(href="#") Магазины
+							a.nav-link(href="#") Акции
+							a.nav-link(href="#") Информация о продукте
+							a.nav-link(href="#") Система лояльности
+							a.nav-link(href="#") Отписаться
+				.accordion-item
+					.accordion-header#footerNavHeadingPartners
+						button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#footerNavCollapsePartners" aria-expanded="false" aria-controls="footerNavCollapsePartners") Партнерам
+					.accordion-collapse.collapse#footerNavCollapsePartners(aria-labelledby="footerNavHeadingPartners" data-bs-parent="#accordionNav")
+						nav.nav.flex-column
+							a.nav-link(href="#") Франшиза
+							a.nav-link(href="#") Оптовые продажи
+							a.nav-link(href="#") Совместные покупки
+							a.nav-link(href="#") Продажа кожи
+							a.nav-link(href="#") Аренда площадей
+							a.nav-link(href="#") Закупки
+				.accordion-item
+					.accordion-header#footerNavHeadingCompany
+						button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#footerNavCollapseCompany" aria-expanded="false" aria-controls="footerNavCollapseCompany") Компания
+					.accordion-collapse.collapse#footerNavCollapseCompany(aria-labelledby="footerNavHeadingCompany" data-bs-parent="#accordionNav")
+						nav.nav.flex-column
+							a.nav-link(href="#") Бренд
+							a.nav-link(href="#") Компания
+							a.nav-link(href="#") Новости
+							a.nav-link(href="#") История
+							a.nav-link(href="#") Работа
+							a.nav-link(href="#") Медиа
+							a.nav-link(href="#") Контакты
+			.col-12.py-5.border-top
