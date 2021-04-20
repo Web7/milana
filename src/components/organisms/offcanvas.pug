@@ -1,13 +1,54 @@
 mixin Offcanvas()
 	.offcanvas.offcanvas-start.show#offcanvasScrolling(data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1")
-		.offcanvas-body
+		.offcanvas-body.mil-scroll-bar
 			nav.nav.flex-column
-				a.nav-link(href="#") Женщинам
-				a.nav-link(href="#") Мужчинам
-				a.nav-link(href="#") Сумки
-				a.nav-link(href="#") Аксессуары
-				a.nav-link(href="#") Уход за обувью
-				a.nav-link(href="#") аКЦИИ
-				a.nav-link(href="#") ОБРАЗЫ
-				a.nav-link(href="#") Магазины
-				a.nav-link(href="#") покупателям
+				li.nav-item.nav-sub-item
+					a.nav-link(href="#") Женщинам
+					ul.nav.flex-column
+						li.nav-item
+							a.nav-link(href="#") Все товары
+						li.nav-item
+							a.nav-link(href="#") Новинки
+						li.nav-item
+							a.nav-link(href="#") Распродажа
+						li.nav-item
+							a.nav-link(href="#") Обувь
+							ul.nav.flex-column
+								li.nav-item
+									a.nav-link.nav-badge(href="#" data-badge="606") Босоножки
+								li.nav-item
+									a.nav-link.nav-badge(href="#" data-badge="278") Ботильоны
+								li.nav-item
+									a.nav-link.nav-badge(href="#" data-badge="593") Ботинки
+								li.nav-item
+									a.nav-link.nav-badge(href="#" data-badge="55") Мокасины
+								li.nav-item
+									a.nav-link.nav-badge(href="#" data-badge="709") Полуботинки
+								li.nav-item
+									a.nav-link.nav-badge(href="#" data-badge="78") Полусапоги
+								li.nav-item
+									a.nav-link.nav-badge(href="#" data-badge="60") Сабо
+								li.nav-item
+									a.nav-link.nav-badge(href="#" data-badge="131") Сандалии
+						li.nav-item
+							a.nav-link(href="#") Сумки
+						li.nav-item
+							a.nav-link(href="#") Аксессуары
+						li.nav-item
+							a.nav-link(href="#") Уход за обувью
+				li.nav-item.nav-sub-item
+					a.nav-link(href="#") Мужчинам
+				li.nav-item.nav-sub-item
+					a.nav-link(href="#") Сумки
+				li.nav-item.nav-sub-item
+					a.nav-link(href="#") Аксессуары
+				li.nav-item.nav-sub-item
+					a.nav-link(href="#") Уход за обувью
+				li.nav-item
+					a.nav-link(href="#") аКЦИИ
+				li.nav-item
+					a.nav-link(href="#") ОБРАЗЫ
+				li.nav-item
+					a.nav-link(href="#") Магазины
+				li.nav-item.nav-sub-item
+					a.nav-link(href="#") покупателям

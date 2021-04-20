@@ -13,4 +13,13 @@
 		return this.length !== 0;
 	};
 
+	$(function(){
+		var $milScrollBar = $('.mil-scroll-bar');
+		if ($milScrollBar.exists()) {
+			$milScrollBar.each(function(){
+				new PerfectScrollbar(this);
+			});
+		}
+	})
+
 }, window.jQuery, window.Zepto));

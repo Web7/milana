@@ -7,5 +7,8 @@ import popper from 'popper.js';
 import bootstrap from 'bootstrap';
 import slick from 'slick-carousel';
 import L from 'leaflet';
+import PerfectScrollbar from 'perfect-scrollbar';
+
+window.PerfectScrollbar = PerfectScrollbar;
 
 import './js/common.js';

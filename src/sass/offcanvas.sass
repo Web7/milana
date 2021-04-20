@@ -3,62 +3,118 @@
 		width: calc(100% - 20px)
 		top: 82px
 		border-right: none
+
 	&-backdrop
 		&:before
 			top: 83px
 			backdrop-filter: blur(7px)
 			background: none
-	.nav
-		&-link
-			font-family: 'montserratsemibold'
-			font-weight: normal
-			font-size: 13px
-			line-height: 29px
-			color: $black
-			text-transform: uppercase
+
+	&-body
+		padding: 0
+		overflow: hidden
+		font-weight: normal
+		font-size: 13px
+		line-height: 29px
+		.nav-badge
+			display: flex
+			justify-content: space-between
+			align-items: center
+			&:after
+				content: attr(data-badge)
+		.nav-link
+			font-family: 'montserratregular'
+			padding: 0
+			color: $gray-500
+		.nav-item
+			> .nav
+				margin-bottom: 20px
+				> .nav-item
+					> .nav
+						margin: 10px 0 10px 20px
+		> .nav
+			> .nav
+				&-item
+					> .nav-link
+						font-family: 'montserratsemibold'
+						text-transform: uppercase
+						padding: 0 0 20px 0
+						color: $black
+
+				&-sub-item
+					> .nav-link
+						display: flex
+						justify-content: space-between
+						align-items: center
+
+						&:after
+							content: ""
+							display: inline-block
+							background: url(../images/left-side-menu-close.svg) no-repeat center center
+							background-size: contain
+							width: 11px
+							height: 11px
+
 
 @media (min-width: 768px)
 	.offcanvas
 		&-backdrop
 			&:before
 				top: 92px
+
 		&-start
 			width: 303px
 			top: 91px
 
 @media (min-width: 992px)
 	.offcanvas
+		&-body
+			padding: 55px 45px
+
 		&-backdrop
 			&:before
 				top: 92px
+
 		&-start
 			width: 303px
 			top: 91px
 
 @media (min-width: 1200px)
 	.offcanvas
+		&-body
+			padding: 55px 30px
+
 		&-backdrop
 			&:before
 				backdrop-filter: none
 				display: none
+
 		&-start
 			width: 261px
 			top: 91px
 
 @media (min-width: 1400px)
 	.offcanvas
+		&-body
+			padding: 55px 30px
+
 		&-backdrop
 			&:before
 				top: 75px
+
 		&-start
 			width: 230px
 			top: 75px
 
 @media (min-width: 1600px)
 	.offcanvas
+		&-body
+			padding: 55px 50px
+
 		&-backdrop
 			&:before
 				top: 75px
+
 		&-start
 			width: 310px
 			top: 75px
