@@ -2,8 +2,9 @@ footer
 	font-family: 'montserratregular'
 	font-weight: normal
 	font-size: 13px
-	line-height: 34px
+	line-height: 20px
 	.nav
+		line-height: 34px
 		&-link
 			padding: 5px 20px
 			color: $black
@@ -34,8 +35,28 @@ footer
 				height: 11px
 				background-image: url(../images/nav-close.svg)
 				background-size: contain
+	.mil
+		&-footer-title-menu
+			font-family: 'montserratsemibold'
+			font-weight: normal
+			font-size: 16px
+			line-height: 20px
+			text-transform: uppercase
+			padding: 15px 20px
+			display: flex
+			align-items: center
+		&-footer-phones
+			margin-bottom: 0
+			font-size: 18px
+			line-height: 22px
+			b
+				font-family: 'montserratbold'
+				font-weight: normal
+
 
 .mil
+	&-socials-container
+		width: 100%
 	&-footer-bottom-block
 		font-family: 'montserratregular'
 		font-weight: normal
@@ -52,10 +73,14 @@ footer
 @media (min-width: 768px)
 	footer
 		font-size: 13px
-		line-height: 38px
+		line-height: 20px
 		.nav
+			line-height: 38px
 			&-link
 				padding: 5px 40px
+		.mil
+			&-footer-title-menu
+				padding: 15px 40px
 		.accordion
 			&-button
 				padding: 15px 40px
@@ -70,13 +95,19 @@ footer
 @media (min-width: 992px)
 	footer
 		font-size: 14px
-		line-height: 37px
+		line-height: 20px
 		.collapse
 			&:not(.show)
 				display: block
 		.nav
+			line-height: 37px
 			&-link
-				padding: 5px 0
+				padding: 0
+		.mil
+			&-footer-title-menu
+				padding: 15px 0
+				font-family: 'montserratbold'
+				color: $black
 		.accordion
 			&-button
 				padding: 15px 0
@@ -99,6 +130,8 @@ footer
 @media (min-width: 1200px)
 	footer
 		font-size: 14px
+		line-height: 20px
+	.nav
 		line-height: 37px
 
 	.mil
@@ -111,9 +144,13 @@ footer
 @media (min-width: 1400px)
 	footer
 		font-size: 14px
+		line-height: 20px
+	.nav
 		line-height: 30px
 
 	.mil
+		&-socials-container
+			width: 55%
 		&-margin
 			&-top-header
 				margin-top: 75px
@@ -123,9 +160,13 @@ footer
 @media (min-width: 1600px)
 	footer
 		font-size: 14px
+		line-height: 20px
+	.nav
 		line-height: 30px
 
 	.mil
+		&-socials-container
+			width: 65%
 		&-margin
 			&-top-header
 				margin-top: 75px

@@ -1,20 +1,43 @@
 .i
 	display: inline-block
-	width: 18px
-	height: 18px
+	width: 20px
+	height: 20px
 	background: no-repeat center center
 	background-size: contain
-	&-basket
-		background-image: url(../images/icon-basket.svg)
-	&-favorite
-		background-image: url(../images/icon-favorite.svg)
+	&-social
+		width: 28px
+		height: 28px
 	&-humburget
 		background-image: url(../images/icon-humburger.svg)
 	&-profile
-		background-image: url(../images/icon-profile.svg)
+		background-image: url(../images/icons-sprite.svg#profile-black)
 	&-search
 		background-image: url(../images/icon-search.svg)
-	&-telegram
-		background-image: url(../images/icon-telegram.svg)
-	&-whatsapp
-		background-image: url(../images/icon-whatsapp.svg)
+
+$iconNames: 'whatsapp','telegram','basket','favorite'
+
+@each $iconName in $iconNames
+	.i-#{$iconName}
+		background-image: url("../images/icons-sprite.svg##{$iconName}-black")
+		&.i-black
+			background-image: url("../images/icons-sprite.svg##{$iconName}-black")
+		&.i-gray
+			background-image: url("../images/icons-sprite.svg##{$iconName}-gray")
+		&.i-white
+			background-image: url("../images/icons-sprite.svg##{$iconName}-white")
+		&:hover
+			background-image: url("../images/icons-sprite.svg##{$iconName}-hover")
+
+$iconSocials: 'instagram','fb','vk','ok','twitter','pinterest','youtobe'
+
+@each $iconName in $iconSocials
+	.i-#{$iconName}
+		background-image: url("../images/icons-social-sprite.svg##{$iconName}-gray")
+		&.i-black
+			background-image: url("../images/icons-social-sprite.svg##{$iconName}-black")
+		&.i-gray
+			background-image: url("../images/icons-social-sprite.svg##{$iconName}-gray")
+		&.i-white
+			background-image: url("../images/icons-social-sprite.svg##{$iconName}-white")
+		&:hover
+			background-image: url("../images/icons-social-sprite.svg##{$iconName}-hover")
