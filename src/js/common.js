@@ -13,17 +13,38 @@
 		return this.length !== 0;
 	};
 
+	var scrollBars = {};
+
+	var initLeftSideMenu = function() {
+		var $body = $(document.body);
+		var $milOffCanvasBtn = $('.mil-offcanvas-btn');
+		var $dataTarget = $($milOffCanvasBtn.attr('data-target') || null);
+
+		if ($dataTarget.exists()) {
+			if (window.outerWidth > 1200) {
+				$dataTarget.addClass('show').css('visibility', 'visible');
+			} else {
+				$dataTarget.removeClass('show').css('visibility', 'hidden');
+			}
+			$body.removeClass('off-canvas-backdrop').css('overflow', 'auto');
+		}
+	};
+
 	$(function () {
 		var $milScrollBar = $('.mil-scroll-bar');
 		var $offCanvas = $('.off-canvas');
+
+		initLeftSideMenu();
 
 		if ($offCanvas.exists()) {
 			$offCanvas.css('visibility', 'visible')
 		}
 
 		if ($milScrollBar.exists()) {
+			scrollBars = {};
 			$milScrollBar.each(function () {
-				new PerfectScrollbar(this, {
+				var dataScrollIndex = this.getAttribute('data-scroll-index');
+				scrollBars[dataScrollIndex] = new PerfectScrollbar(this, {
 					wheelPropagation: false
 				});
 			});
@@ -58,19 +79,7 @@
 	});
 
 	$(window).on('resize', function () {
-		var $body = $(document.body);
-		var $milOffCanvasBtn = $('.mil-offcanvas-btn');
-		var $dataTarget = $($milOffCanvasBtn.attr('data-target') || null);
-
-		if ($dataTarget.exists()) {
-			if (window.outerWidth > 1200) {
-				$dataTarget.addClass('show').css('visibility', 'visible');
-			} else {
-				$dataTarget.removeClass('show').css('visibility', 'hidden');
-			}
-			$body.removeClass('off-canvas-backdrop').css('overflow', 'auto');
-		}
-
+		initLeftSideMenu();
 	});
 
 }, window.jQuery, window.Zepto));
