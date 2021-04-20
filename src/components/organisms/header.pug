@@ -2,7 +2,24 @@ header.position-fixed.top-0.start-0.end-0
 	.container-fluid
 		.row
 			.col-auto.bg-primary.px-0
-				.mil-menu-width.d-flex.justify-content-center.mil-offcanvas-btn(data-target="#offcanvasScrolling" aria-controls="offcanvasScrolling")
+				.mil-menu-width.d-flex.justify-content-center.align-items-center
+					a.mil-offcanvas-btn.d-none.d-md-block.d-xl-none(data-target="#offcanvasScrolling" aria-controls="offcanvasScrolling")
+						i.i.i-humburget
 					a.mil-header-logo
-			.col.bg-light
+			.col.mil-top-side-menu
+				.d-flex.align-items-center.h-100
+					.col-auto.ms-auto
+						.d-flex
+							a(href="#")
+								i.i.i-profile
+							a(href="#")
+								i.i.i-favorite
+								span 99+
+							a(href="#")
+								i.i.i-basket
+								span 1
+								span.d-none.d-md-inline  | 5 990 ₽
+					.col-auto.d-md-none
+						a.mil-offcanvas-btn(data-target="#offcanvasScrolling" aria-controls="offcanvasScrolling")
+							i.i.i-humburget
 

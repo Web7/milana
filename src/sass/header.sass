@@ -6,6 +6,40 @@ header
 
 
 .mil
+	&-top-side-menu
+		padding-right: 20px
+		background-color: $primary
+		height: 100%
+		a
+			display: flex
+			align-items: center
+			text-decoration: none
+			margin-right: 19px
+			position: relative
+			span
+				display: inline-block
+				border-radius: 100%
+				background-color: $black
+				font-family: 'montserratregular'
+				font-weight: normal
+				font-size: 9px
+				min-width: 15px
+				min-height: 15px
+				color: $white
+				text-align: center
+				line-height: 15px
+				position: absolute
+				top: 8px
+				left: 8px
+				padding: 0 5px
+			.i
+				filter: invert(1)
+				&-humburget
+					width: 24px
+					height: 24px
+			&.mil-offcanvas-btn
+				margin-right: 0
+
 	&-header-logo
 		background: url(../images/logo.svg) no-repeat center center
 		background-size: contain
@@ -18,8 +52,35 @@ header
 		height: 91px
 		.row
 			height: 91px
+			.mil-offcanvas-btn
+				margin-right: 35px
+				.i-humburget
+					filter: invert(1)
+					width: 32px
+					height: 32px
 
 	.mil
+		&-top-side-menu
+			background-color: $light
+			a
+				display: flex
+				align-items: center
+				margin-right: 35px
+				span
+					font-family: 'montserratmedium'
+					font-weight: normal
+					font-size: 16px
+					line-height: 18px
+					color: $black
+					background-color: transparent
+					position: relative
+					top: auto
+					left: auto
+				.i
+					filter: invert(0)
+				.i + span
+					margin-left: 15px
+
 		&-header-logo
 			width: 132px
 			height: 91px
