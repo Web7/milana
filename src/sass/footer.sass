@@ -3,6 +3,11 @@ footer
 	font-weight: normal
 	font-size: 13px
 	line-height: 20px
+	.i-social
+		width: 41px
+		height: 41px
+		&:last-child
+			margin-right: 0 !important
 	.nav
 		line-height: 34px
 		&-link
@@ -42,7 +47,6 @@ footer
 			font-size: 16px
 			line-height: 20px
 			text-transform: uppercase
-			padding: 15px 20px
 			display: flex
 			align-items: center
 		&-footer-phones
@@ -56,7 +60,7 @@ footer
 
 .mil
 	&-socials-container
-		width: 100%
+		width: 80%
 	&-footer-bottom-block
 		font-family: 'montserratregular'
 		font-weight: normal
@@ -78,14 +82,16 @@ footer
 			line-height: 38px
 			&-link
 				padding: 5px 40px
-		.mil
-			&-footer-title-menu
-				padding: 15px 40px
 		.accordion
 			&-button
 				padding: 15px 40px
+		.i-social
+			width: 33px
+			height: 33px
 
 	.mil
+		&-socials-container
+			width: 100%
 		&-margin
 			&-top-header
 				margin-top: 91px
@@ -105,7 +111,6 @@ footer
 				padding: 0
 		.mil
 			&-footer-title-menu
-				padding: 15px 0
 				font-family: 'montserratbold'
 				color: $black
 		.accordion
@@ -119,6 +124,14 @@ footer
 					color: $black
 			&-item
 				border-bottom: none
+				&:nth-child(1)
+					width: 29.44%
+				&:nth-child(2)
+					width: 31.37%
+				&:nth-child(3)
+					width: 27.09%
+				&:nth-child(4)
+					width: 12.1%
 
 	.mil
 		&-margin
@@ -145,12 +158,26 @@ footer
 	footer
 		font-size: 14px
 		line-height: 20px
-	.nav
-		line-height: 30px
-
+		.i-social
+			width: 28px
+			height: 28px
+		.nav
+			line-height: 30px
+		.col-footer-accordion
+			width: 65.11%
+		.accordion
+			&-item
+				&:nth-child(1)
+					width: 27.54%
+				&:nth-child(2)
+					width: 30.39%
+				&:nth-child(3)
+					width: 26.87%
+				&:nth-child(4)
+					width: 15.2%
 	.mil
 		&-socials-container
-			width: 55%
+			width: 60%
 		&-margin
 			&-top-header
 				margin-top: 75px
@@ -166,7 +193,7 @@ footer
 
 	.mil
 		&-socials-container
-			width: 65%
+			width: 75%
 		&-margin
 			&-top-header
 				margin-top: 75px
