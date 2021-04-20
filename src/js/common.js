@@ -26,8 +26,12 @@
 				new PerfectScrollbar(this);
 			});
 		}
+	});
 
-		new bootstrap.Offcanvas()._getConfig({});
+	$(document).on('click', '.nav-sub-item > .nav-link', function() {
+		var $this = $(this);
+		var $navSubItem = $this.closest('.nav-sub-item');
+		$navSubItem.toggleClass('active');
 	});
 
 	$(document).on('click', '.mil-offcanvas-btn', function() {
@@ -41,6 +45,22 @@
 		}
 		$dataTarget.toggleClass('show').css('visibility', $dataTarget[0].style.visibility === 'hidden' ? 'visible' : 'hidden');
 		$(document.body).toggleClass('off-canvas-backdrop').css('overflow', $dataTarget[0].style.visibility === 'hidden' ? 'auto' : 'hidden');
+	});
+
+	$(window).on('resize', function() {
+		var $body = $(document.body);
+		var $milOffCanvasBtn = $('.mil-offcanvas-btn');
+		var $dataTarget = $($milOffCanvasBtn.attr('data-target') || null);
+
+		if ($dataTarget.exists()) {
+			if (window.outerWidth > 1200) {
+				$dataTarget.addClass('show').css('visibility', 'visible');
+			} else {
+				$dataTarget.removeClass('show').css('visibility', 'hidden');
+			}
+			$body.removeClass('off-canvas-backdrop').css('overflow', 'auto');
+		}
+
 	});
 
 }, window.jQuery, window.Zepto));

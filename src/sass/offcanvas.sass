@@ -26,6 +26,8 @@
 			font-family: 'montserratregular'
 			padding: 0
 			color: $gray-500
+			&:hover
+				color: $primary
 		.nav-item
 			> .nav
 				margin-bottom: 20px
@@ -42,6 +44,9 @@
 						color: $black
 
 				&-sub-item
+					&:not(.active)
+						.nav
+							display: none
 					> .nav-link
 						display: flex
 						justify-content: space-between
@@ -54,6 +59,11 @@
 							background-size: contain
 							width: 11px
 							height: 11px
+					&.active
+						> .nav-link
+							color: $primary
+							&:after
+								background-image: url(../images/left-side-menu-open.svg)
 
 
 @media (min-width: 768px)
