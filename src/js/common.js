@@ -54,7 +54,10 @@
 	$(document).on('click', '.nav-sub-item > .nav-link', function (e) {
 		var $this = $(this);
 		var $navSubItem = $this.closest('.nav-sub-item');
+		var $milScrollBar = $this.closest('.mil-scroll-bar');
+		var dataScrollIndex = $milScrollBar.attr('data-scroll-index');
 		$navSubItem.toggleClass('active');
+		scrollBars[dataScrollIndex].update();
 
 		e.preventDefault();
 		e.stopPropagation();
