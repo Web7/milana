@@ -16,18 +16,18 @@ header
 			text-decoration: none
 			margin-right: 19px
 			position: relative
+			font-family: 'montserratregular'
+			font-weight: normal
+			font-size: 9px
+			color: $white
 			span
 				display: inline-block
 				border-radius: 100%
 				background-color: $black
-				font-family: 'montserratregular'
-				font-weight: normal
-				font-size: 9px
+				line-height: 15px
 				min-width: 15px
 				min-height: 15px
-				color: $white
 				text-align: center
-				line-height: 15px
 				position: absolute
 				top: 8px
 				left: 8px
@@ -37,6 +37,8 @@ header
 				&-humburget
 					width: 24px
 					height: 24px
+				&-profile + span
+					display: none
 			&.mil-offcanvas-btn
 				margin-right: 0
 
@@ -54,32 +56,37 @@ header
 			height: 91px
 			.mil-offcanvas-btn
 				margin-right: 35px
-				.i-humburget
-					filter: invert(1)
-					width: 32px
-					height: 32px
+				.i
+					&-humburget
+						filter: invert(1)
+						width: 32px
+						height: 32px
 
 	.mil
 		&-top-side-menu
+			padding-left: 40px
 			background-color: $light
 			a
 				display: flex
 				align-items: center
 				margin-right: 35px
+				font-family: 'montserratmedium'
+				font-weight: normal
+				font-size: 15px
+				line-height: 18px
+				color: $black
 				span
-					font-family: 'montserratmedium'
-					font-weight: normal
-					font-size: 16px
-					line-height: 18px
-					color: $black
 					background-color: transparent
 					position: relative
 					top: auto
 					left: auto
+					padding: 0
 				.i
 					filter: invert(0)
+					&-profile + span
+						display: inline
 				.i + span
-					margin-left: 15px
+					margin-left: 10px
 
 		&-header-logo
 			width: 132px

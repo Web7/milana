@@ -10,6 +10,5 @@ import L from 'leaflet';
 import PerfectScrollbar from 'perfect-scrollbar';
 
 window.PerfectScrollbar = PerfectScrollbar;
-window.bootstrap = bootstrap;
 
 import './js/common.js';

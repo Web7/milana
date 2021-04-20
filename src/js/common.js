@@ -6,14 +6,14 @@
 	} else {
 		factory(jQuery || Zepto);
 	}
-}(function($){
+}(function ($) {
 	'use strict';
 
 	$.fn.exists = function () {
 		return this.length !== 0;
 	};
 
-	$(function(){
+	$(function () {
 		var $milScrollBar = $('.mil-scroll-bar');
 		var $offCanvas = $('.off-canvas');
 
@@ -22,19 +22,25 @@
 		}
 
 		if ($milScrollBar.exists()) {
-			$milScrollBar.each(function(){
-				new PerfectScrollbar(this);
+			$milScrollBar.each(function () {
+				new PerfectScrollbar(this, {
+					wheelPropagation: false
+				});
 			});
 		}
 	});
 
-	$(document).on('click', '.nav-sub-item > .nav-link', function() {
+	$(document).on('click', '.nav-sub-item > .nav-link', function (e) {
 		var $this = $(this);
 		var $navSubItem = $this.closest('.nav-sub-item');
 		$navSubItem.toggleClass('active');
+
+		e.preventDefault();
+		e.stopPropagation();
+		return false;
 	});
 
-	$(document).on('click', '.mil-offcanvas-btn', function() {
+	$(document).on('click', '.mil-offcanvas-btn', function (e) {
 		var $this = $(this);
 		var $dataTarget = $($this.attr('data-target') || null);
 		if (!$dataTarget.exists()) {
@@ -45,9 +51,13 @@
 		}
 		$dataTarget.toggleClass('show').css('visibility', $dataTarget[0].style.visibility === 'hidden' ? 'visible' : 'hidden');
 		$(document.body).toggleClass('off-canvas-backdrop').css('overflow', $dataTarget[0].style.visibility === 'hidden' ? 'auto' : 'hidden');
+
+		e.preventDefault();
+		e.stopPropagation();
+		return false;
 	});
 
-	$(window).on('resize', function() {
+	$(window).on('resize', function () {
 		var $body = $(document.body);
 		var $milOffCanvasBtn = $('.mil-offcanvas-btn');
 		var $dataTarget = $($milOffCanvasBtn.attr('data-target') || null);
