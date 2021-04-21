@@ -1,4 +1,6 @@
-mixin MainMilCarouselItem()
+mixin MainMilCarouselItem(data)
 	.mil-carousel-item
 		.mil-carousel-slide-img(style="background-image: url(images/group-886.jpg)")
 		.mil-carousel-content
+			.mil-carousel-title= data.title
+			.mil-carousel-description= data.description
