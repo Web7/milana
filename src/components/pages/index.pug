@@ -1,8 +1,20 @@
 extends ../templates/layout
 include ../organisms/offcanvas
 include ../organisms/index/main-carousel
+include ../organisms/index/main-center-carousel
+include ../organisms/index/main-product-carousel-right
+include ../organisms/index/main-product-carousel-left
 
 block main
 	+Offcanvas()
 	main.mil-margin-left-side-menu.mil-margin-top-header
 		+MainCarousel()
+		+MainProductCarouselRight()
+		+MainCenterCarousel([
+			{
+				image: 'images/center-carousel-slide-1.jpg',
+				text1: 'Распродажа сумок стала больше!',
+				text2: 'мы добавили новые модели'
+			}
+		])
+		+MainProductCarouselLeft()

@@ -1,6 +1,7 @@
 .mil
 	&-carousel
 		position: relative
+		z-index: 1
 		&-slide-img
 			width: 100%
 			height: 240px
@@ -55,28 +56,28 @@
 			line-height: 16px
 		.slick-list
 			padding-bottom: 94px
-.slick
-	&-slide
-		margin-bottom: -6px
-	&-dots
-		position: absolute
-		display: flex
-		justify-content: space-between
-		width: 280px
-		bottom: 0
-		li
-			width: auto
-			height: 5px
-			margin: 0
-			flex: 1 0 auto
-			button
-				background-color: $white
-				width: 100%
-				height: 100%
-				padding: 0
-			&.slick-active
-				button
-					background-color: $gray-600
+		.slick
+			&-slide
+				margin-bottom: -6px
+			&-dots
+				position: absolute
+				display: flex
+				justify-content: space-between
+				width: 280px
+				bottom: 0
+				li
+					width: auto
+					height: 5px
+					margin: 0
+					flex: 1 0 auto
+					button
+						background-color: $white
+						width: 100%
+						height: 100%
+						padding: 0
+					&.slick-active
+						button
+							background-color: $gray-600
 
 @media (min-width: 768px)
 	.mil
@@ -111,13 +112,13 @@
 				min-height: 266px
 			.slick-list
 				padding-bottom: 0
-	.slick
-		&-dots
-			width: 475px
-			right: 0
-			left: 0
-			margin: auto
-			bottom: 118px
+			.slick
+				&-dots
+					width: 475px
+					right: 0
+					left: 0
+					margin: auto
+					bottom: 118px
 
 @media (min-width: 992px)
 	.mil
@@ -144,12 +145,12 @@
 				bottom: 109px
 				left: auto
 				min-height: 266px
-	.slick
-		&-dots
-			width: 475px
-			right: 78px
-			left: auto
-			bottom: 104px
+			.slick
+				&-dots
+					width: 475px
+					right: 78px
+					left: auto
+					bottom: 104px
 
 @media (min-width: 1200px)
 	.mil
@@ -175,11 +176,11 @@
 				bottom: 124px
 				min-height: 266px
 
-	.slick
-		&-dots
-			width: 475px
-			right: 78px
-			bottom: 119px
+			.slick
+				&-dots
+					width: 475px
+					right: 78px
+					bottom: 119px
 
 @media (min-width: 1400px)
 	.mil
@@ -204,11 +205,11 @@
 				right: 81px
 				bottom: 195px
 				min-height: 298px
-	.slick
-		&-dots
-			width: 532px
-			right: 81px
-			bottom: 190px
+			.slick
+				&-dots
+					width: 532px
+					right: 81px
+					bottom: 190px
 
 @media (min-width: 1600px)
 	.mil
@@ -233,8 +234,8 @@
 				right: 118px
 				bottom: 195px
 				min-height: 298px
-	.slick
-		&-dots
-			width: 532px
-			right: 118px
-			bottom: 190px
+			.slick
+				&-dots
+					width: 532px
+					right: 118px
+					bottom: 190px

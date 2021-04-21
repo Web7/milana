@@ -34,11 +34,22 @@
 		var $milScrollBar = $('.mil-scroll-bar');
 		var $offCanvas = $('.off-canvas');
 		var $milMainCarousel = $('.mil-main-carousel');
+		var $milMainProductCarouselSlick = $('.mil-main-product-carousel-slick');
 
 		initLeftSideMenu();
 
 		if ($offCanvas.exists()) {
 			$offCanvas.css('visibility', 'visible')
+		}
+
+		if ($milMainProductCarouselSlick.exists()) {
+			$milMainProductCarouselSlick.slick({
+				dots: false,
+				infinite: true,
+				slidesToShow: 1,
+				variableWidth: true,
+				appendArrows: '.mil-main-product-carousel-slick-arrows'
+			});
 		}
 
 		if ($milScrollBar.exists()) {

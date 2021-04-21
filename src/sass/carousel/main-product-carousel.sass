@@ -1,0 +1,210 @@
+.mil
+	&-main-product
+		&-carousel
+			&-item
+				position: relative
+				width: 183px
+				height: 292px
+				text-decoration: none
+				color: initial
+				&-img
+					position: relative
+					background: no-repeat center center
+					background-size: cover
+					width: 100%
+					height: 227px
+					margin-bottom: 25px
+					&:before
+						content: ""
+						display: block
+						top: 0
+						left: 0
+						bottom: 0
+						right: 0
+						position: absolute
+						background-color: $gray-400
+						z-index: 2
+					.badge
+						display: block
+						padding: 5px 10px
+						color: $black
+						border-radius: 0
+						font-family: 'montserratmedium'
+						font-weight: normal
+						font-size: 13px
+						margin-bottom: 5px
+						&-container
+							position: absolute
+							z-index: 3
+							top: 0
+							left: 0
+						&.hit:first-child
+							margin-top: 30px
+				p
+					font-family: 'montserratregular'
+					font-weight: normal
+					font-size: 13px
+					line-height: 18px
+				.mil-main-product-carousel-item-price
+					margin-bottom: 0
+					display: flex
+					align-items: center
+					*
+						margin-right: 15px
+					span
+						font-family: 'montserratmedium'
+						font-weight: normal
+						font-size: 17px
+						line-height: 20px
+					s
+						font-family: 'montserratregular'
+						font-weight: normal
+						font-size: 14px
+						line-height: 18px
+					.badge
+						border-radius: 0
+						font-family: 'montserratregular'
+						font-weight: normal
+						font-size: 12px
+						line-height: 1
+						padding: 5px 10px
+						height: 24px
+			&-slick
+				.slick-slide
+					margin-right: 5px
+			&-container
+				background-color: $white
+				position: absolute
+				bottom: 0
+				right: 0
+				width: 100%
+				padding: 50px 0 70px 20px
+			&-section
+				padding-top: 80px
+				background-color: $gray-100
+				position: relative
+				overflow: hidden
+				margin-top: -163px
+			&-bg
+				position: relative
+				width: 100%
+				height: 574px
+				background: no-repeat center center
+				background-size: cover
+				.title
+					position: absolute
+					top: 112px
+					left: 0
+					right: 0
+					text-align: center
+
+@media (min-width: 768px)
+	.mil
+		&-main-product
+			&-carousel
+				&-item
+					width: 290px
+					height: 460px
+					&-img
+						width: 290px
+						height: 361px
+						margin-bottom: 45px
+				&-container
+					width: 100%
+					padding: 75px 0 75px 40px
+				&-section
+					padding-top: 0
+					margin-top: 0
+				&-bg
+					height: 765px
+					margin-bottom: 0
+					margin-right: 0
+					.title
+						left: 40px
+						right: auto
+						margin: initial
+						top: 99px
+@media (min-width: 992px)
+	.mil
+		&-main-product
+			&-carousel
+				&-container
+					width: calc(100% - 140px)
+					padding: 65px 0 90px 80px
+				&-section
+					padding-top: 60px
+				&-bg
+					background-image: url(../images/carousel-woman.jpg)
+					width: calc(100% - 300px)
+					height: 545px
+					margin-bottom: 280px
+					margin-right: 300px
+					.title
+						left: 222px
+						top: 162px
+@media (min-width: 1200px)
+	.mil
+		&-main-product
+			&-carousel
+				&-container
+					width: calc(100% - 180px)
+					padding: 75px 0 110px 80px
+				&-section
+					padding-top: 115px
+				&-bg
+					width: calc(100% - 180px)
+					height: 630px
+					margin-bottom: 210px
+					margin-right: 180px
+					.title
+						left: 260px
+						top: 138px
+@media (min-width: 1400px)
+	.mil
+		&-main-product
+			&-carousel
+				&-item
+					width: 290px
+					height: 460px
+					&-img
+						width: 290px
+						height: 361px
+						margin-bottom: 45px
+				&-container
+					width: calc(100% - 260px)
+					padding: 90px 0 135px 80px
+				&-section
+					padding-top: 80px
+				&-bg
+					width: calc(100% - 210px)
+					height: 755px
+					margin-bottom: 200px
+					margin-right: 210px
+					.title
+						left: 345px
+						top: 204px
+
+@media (min-width: 1600px)
+	.mil
+		&-main-product
+			&-carousel
+				&-item
+					width: 290px
+					height: 460px
+					&-img
+						width: 290px
+						height: 361px
+						margin-bottom: 45px
+				&-container
+					width: calc(100% - 260px)
+					padding: 90px 0 135px 80px
+				&-section
+					padding-top: 80px
+				&-bg
+					width: calc(100% - 485px)
+					height: 755px
+					margin-bottom: 200px
+					margin-right: 485px
+					.title
+						left: 345px
+						top: 204px

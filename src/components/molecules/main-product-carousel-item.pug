@@ -1,0 +1,18 @@
+mixin MainProductCarouselItem(data)
+	a.mil-main-product-carousel-item(href="#")
+		.mil-main-product-carousel-item-img(style="background-image: url(" + data.image + ")")
+			.badge-container
+				if data.sale
+					.badge.sale.text-primary.bg-white Sale
+				if data.new
+					.badge.new.bg-white New
+				if data.hit
+					.badge.hit.bg-white Хит
+		p= data.name
+		p.mil-main-product-carousel-item-price
+			if !data.sale
+				span= data.price
+			if data.sale
+				s= data.price
+				span.text-primary= data.sale.price
+				span.badge.bg-primary= data.sale.percent
