@@ -99,7 +99,10 @@ module.exports = {
 			template: './src/components/pages/index.pug',
 			filename: 'index.html',
 			file: require('./src/data/index.json'),
-			cache: false
+			cache: false,
+			minify: {
+				collapseWhitespace: true
+			}
 		}),
 		new MiniCssExtractPlugin({
 			filename: 'css/style.css',

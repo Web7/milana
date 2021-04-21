@@ -1,0 +1,187 @@
+.mil
+	&-carousel
+		position: relative
+		&-slide-img
+			width: 100%
+			height: 240px
+			background: no-repeat center center
+			background-size: cover
+		&-arrows
+			position: absolute
+			width: 72px
+			height: 13px
+			bottom: 49px
+			left: 245px
+			z-index: 5
+			.slick-arrow
+				width: 30px
+				height: 13px
+				margin: 0
+				padding: 0
+				background: no-repeat 0 0
+				background-size: contain
+				&:before
+					display: none
+				&.slick
+					&-prev
+						background-image: url(../images/slick-arrows.svg#arrow-left-white)
+						left: 0
+					&-next
+						background-image: url(../images/slick-arrows.svg#arrow-right-black)
+						right: 0
+		&-item
+			position: relative
+		&-content
+			position: absolute
+			background-color: $primary
+			color: $white
+			transition: height linear 300ms
+			width: 280px
+			min-height: 144px
+			left: 0
+			bottom: -89px
+		.slick-list
+			padding-bottom: 94px
+.slick
+	&-slide
+		margin-bottom: -6px
+	&-dots
+		position: absolute
+		display: flex
+		justify-content: space-between
+		width: 280px
+		bottom: 0
+		li
+			width: auto
+			height: 5px
+			margin: 0
+			flex: 1 0 auto
+			button
+				background-color: $white
+				width: 100%
+				height: 100%
+				padding: 0
+			&.slick-active
+				button
+					background-color: $gray-600
+
+@media (min-width: 768px)
+	.mil
+		&-carousel
+			&-slide-img
+				height: 677px
+			&-arrows
+				width: 72px
+				height: 13px
+				bottom: 191px
+				right: -477px
+				left: 0
+				margin: auto
+				.slick-arrow
+					&.slick
+						&-next
+							background-image: url(../images/slick-arrows.svg#arrow-right-white)
+			&-content
+				width: 475px
+				right: 0
+				left: 0
+				margin: auto
+				bottom: 123px
+				min-height: 266px
+			.slick-list
+				padding-bottom: 0
+	.slick
+		&-dots
+			width: 475px
+			right: 0
+			left: 0
+			margin: auto
+			bottom: 118px
+
+@media (min-width: 992px)
+	.mil
+		&-carousel
+			&-slide-img
+				height: 677px
+			&-arrows
+				width: 72px
+				height: 13px
+				bottom: 191px
+				left: auto
+				right: 40px
+			&-content
+				width: 475px
+				right: 78px
+				bottom: 109px
+				left: auto
+				min-height: 266px
+	.slick
+		&-dots
+			width: 475px
+			right: 78px
+			left: auto
+			bottom: 104px
+
+@media (min-width: 1200px)
+	.mil
+		&-carousel
+			&-slide-img
+				height: 709px
+			&-arrows
+				width: 72px
+				height: 13px
+				bottom: 206px
+				right: 40px
+			&-content
+				width: 475px
+				right: 78px
+				bottom: 124px
+				min-height: 266px
+
+	.slick
+		&-dots
+			width: 475px
+			right: 78px
+			bottom: 119px
+
+@media (min-width: 1400px)
+	.mil
+		&-carousel
+			&-slide-img
+				height: 900px
+			&-arrows
+				width: 72px
+				height: 13px
+				bottom: 284px
+				right: 45px
+			&-content
+				width: 532px
+				right: 81px
+				bottom: 195px
+				min-height: 298px
+	.slick
+		&-dots
+			width: 532px
+			right: 81px
+			bottom: 190px
+
+@media (min-width: 1600px)
+	.mil
+		&-carousel
+			&-slide-img
+				height: 900px
+			&-arrows
+				width: 72px
+				height: 13px
+				bottom: 284px
+				right: 81px
+			&-content
+				width: 532px
+				right: 118px
+				bottom: 195px
+				min-height: 298px
+	.slick
+		&-dots
+			width: 532px
+			right: 118px
+			bottom: 190px

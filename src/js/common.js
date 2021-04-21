@@ -33,6 +33,7 @@
 	$(function () {
 		var $milScrollBar = $('.mil-scroll-bar');
 		var $offCanvas = $('.off-canvas');
+		var $milMainCarousel = $('.mil-main-carousel');
 
 		initLeftSideMenu();
 
@@ -48,6 +49,16 @@
 					wheelPropagation: false
 				});
 			});
+		}
+
+		if ($milMainCarousel.exists()) {
+			$milMainCarousel.slick({
+				dots: true,
+				infinite: true,
+				appendArrows: '.mil-carousel-arrows',
+				fade: true,
+				cssEase: 'linear'
+			})
 		}
 	});
 
