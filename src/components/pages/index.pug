@@ -2,11 +2,13 @@ extends ../templates/layout
 include ../organisms/index/main-carousel
 include ../organisms/index/main-center-carousel
 include ../organisms/product-carousel
+include ../organisms/instagram
 
 block main
 	main.mil-margin-left-side-menu.mil-margin-top-header
 		+MainCarousel()
 		+ProductCarousel({
+			titleClass: 'h1',
 			title: 'женщинам',
 			type: 'right',
 			items: [
@@ -69,6 +71,7 @@ block main
 			}
 		])
 		+ProductCarousel({
+			titleClass: 'h1',
 			title: 'мужчинам',
 			type: 'left',
 			items: [
@@ -130,3 +133,4 @@ block main
 				buttonsCount: 1
 			}
 		])
+		+Instagram()
