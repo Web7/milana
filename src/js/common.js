@@ -35,11 +35,22 @@
 		var $offCanvas = $('.off-canvas');
 		var $milMainCarousel = $('.mil-main-carousel');
 		var $milProductCarouselSlick = $('.mil-product-carousel-slick');
+		var $milMainCenterCarouselSlick = $('.mil-main-center-carousel-slick');
 
 		initLeftSideMenu();
 
 		if ($offCanvas.exists()) {
 			$offCanvas.css('visibility', 'visible')
+		}
+
+		if ($milMainCenterCarouselSlick.exists()) {
+			$milMainCenterCarouselSlick.slick({
+				dots: true,
+				infinite: true,
+				arrows: false,
+				fade: true,
+				cssEase: 'linear'
+			})
 		}
 
 		if ($milProductCarouselSlick.exists()) {

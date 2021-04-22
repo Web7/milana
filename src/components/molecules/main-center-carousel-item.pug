@@ -4,5 +4,8 @@ mixin MainCenterCarouselItem(data)
 			p.mb-4= data.text1
 			p.h2.text-uppercase.mb-10= data.text2
 			.d-inline-block
-				a.btn.btn-primary.mx-2(href="#") Женщины
-				a.btn.btn-primary.mx-2(href="#") Мужчины
+				if data.buttonsCount === 1
+					a.btn.btn-primary.mx-2(href="#") В каталог
+				if data.buttonsCount === 2
+					a.btn.btn-primary.mx-2(href="#") Женщины
+					a.btn.btn-primary.mx-2(href="#") Мужчины
