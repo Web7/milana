@@ -99,10 +99,13 @@ module.exports = {
 			template: './src/components/pages/index.pug',
 			filename: 'index.html',
 			file: require('./src/data/index.json'),
-			cache: false,
-			minify: {
-				collapseWhitespace: true
-			}
+			cache: false
+		}),
+		new HtmlWebPackPlugin({
+			template: './src/components/pages/catalog.pug',
+			filename: 'catalog.html',
+			file: require('./src/data/index.json'),
+			cache: false
 		}),
 		new MiniCssExtractPlugin({
 			filename: 'css/style.css',
