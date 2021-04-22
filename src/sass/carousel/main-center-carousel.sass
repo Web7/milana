@@ -11,9 +11,17 @@
 			min-height: 531px
 			color: $white
 			position: relative
+			font-family: 'montserratregular'
+			font-weight: normal
+			font-size: 30px
+			line-height: 34px
 			&:before
 				content: ""
-				display: block
-				position: absolute
-				top: 0
-				left: 0
+				z-index: 1
+				background-color: $gray-300
+				@include absolute-size
+			&-content
+				position: relative
+				z-index: 2
+
+
