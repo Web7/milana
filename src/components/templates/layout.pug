@@ -1,3 +1,5 @@
+include ../organisms/offcanvas
+
 block variables
 - let path = self.htmlWebpackPlugin.options
 
@@ -9,6 +11,7 @@ html(lang="en")
 		block head
 	body.d-flex.flex-column.off-canvas-backdrop
 		include ../organisms/header
+		+Offcanvas()
 		block main
 		include ../organisms/footer
 		block scripts

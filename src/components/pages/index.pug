@@ -1,11 +1,9 @@
 extends ../templates/layout
-include ../organisms/offcanvas
 include ../organisms/index/main-carousel
 include ../organisms/index/main-center-carousel
 include ../organisms/product-carousel
 
 block main
-	+Offcanvas()
 	main.mil-margin-left-side-menu.mil-margin-top-header
 		+MainCarousel()
 		+ProductCarousel({
