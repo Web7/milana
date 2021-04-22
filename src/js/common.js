@@ -44,12 +44,13 @@
 
 		if ($milProductCarouselSlick.exists()) {
 			$milProductCarouselSlick.each(function() {
-				$(this).slick({
+				var $this = $(this);
+				$this.slick({
 					dots: false,
 					infinite: true,
 					slidesToShow: 1,
 					variableWidth: true,
-					appendArrows: '.mil-product-carousel-slick-arrows'
+					appendArrows: '.mil-product-carousel-position-' + $this.attr('data-type') + ' .mil-carousel-arrows'
 				});
 			});
 		}
@@ -68,7 +69,7 @@
 			$milMainCarousel.slick({
 				dots: true,
 				infinite: true,
-				appendArrows: '.mil-carousel-arrows',
+				appendArrows: '.mil-carousel .mil-carousel-arrows',
 				fade: true,
 				cssEase: 'linear'
 			})

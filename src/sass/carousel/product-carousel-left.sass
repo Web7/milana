@@ -4,6 +4,14 @@
 	position: relative
 	overflow: hidden
 	margin-top: -163px
+	.mil-carousel-arrows
+		display: none
+		.slick-arrow
+			&.slick
+				&-prev
+					background-image: url(../images/slick-arrows.svg#arrow-left-black)
+				&-next
+					background-image: url(../images/slick-arrows.svg#arrow-right-black)
 	.mil
 		&-product
 			&-carousel
@@ -34,6 +42,10 @@
 	.mil-product-carousel-position-left
 		padding-top: 0
 		margin-top: 0
+		.mil-carousel-arrows
+			display: block
+			top: 115px
+			right: 40px
 		.mil
 			&-product
 				&-carousel
@@ -53,6 +65,10 @@
 @media (min-width: 992px)
 	.mil-product-carousel-position-left
 		padding-top: 60px
+		.mil-carousel-arrows
+			top: 237px
+			right: auto
+			left: 45px
 		.mil
 			&-product
 				&-carousel
@@ -74,6 +90,9 @@
 @media (min-width: 1200px)
 	.mil-product-carousel-position-left
 		padding-top: 115px
+		.mil-carousel-arrows
+			top: 270px
+			left: 45px
 		.mil
 			&-product
 				&-carousel
@@ -94,6 +113,9 @@
 @media (min-width: 1400px)
 	.mil-product-carousel-position-left
 		padding-top: 80px
+		.mil-carousel-arrows
+			top: 308px
+			left: 45px
 		.mil
 			&-product
 				&-carousel
@@ -114,6 +136,9 @@
 @media (min-width: 1600px)
 	.mil-product-carousel-position-left
 		padding-top: 80px
+		.mil-carousel-arrows
+			top: 308px
+			left: 45px
 		.mil
 			&-product
 				&-carousel
