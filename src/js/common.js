@@ -34,7 +34,7 @@
 		var $milScrollBar = $('.mil-scroll-bar');
 		var $offCanvas = $('.off-canvas');
 		var $milMainCarousel = $('.mil-main-carousel');
-		var $milMainProductCarouselSlick = $('.mil-main-product-carousel-slick');
+		var $milProductCarouselSlick = $('.mil-product-carousel-slick');
 
 		initLeftSideMenu();
 
@@ -42,13 +42,15 @@
 			$offCanvas.css('visibility', 'visible')
 		}
 
-		if ($milMainProductCarouselSlick.exists()) {
-			$milMainProductCarouselSlick.slick({
-				dots: false,
-				infinite: true,
-				slidesToShow: 1,
-				variableWidth: true,
-				appendArrows: '.mil-main-product-carousel-slick-arrows'
+		if ($milProductCarouselSlick.exists()) {
+			$milProductCarouselSlick.each(function() {
+				$(this).slick({
+					dots: false,
+					infinite: true,
+					slidesToShow: 1,
+					variableWidth: true,
+					appendArrows: '.mil-product-carousel-slick-arrows'
+				});
 			});
 		}
 

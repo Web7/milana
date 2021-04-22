@@ -1,0 +1,11 @@
+include ../molecules/product-preview-item
+
+mixin ProductCarousel(data)
+	section.mil-product-carousel-section(class="mil-product-carousel-position-" + data.type)
+		.mil-product-carousel-bg
+			h2.h1.text-white.text-uppercase.title= data.title
+		.mil-product-carousel-slick-arrows
+		.mil-product-carousel-container
+			.mil-product-carousel-slick
+				each item in data.items
+					+ProductPreviewItem(item)

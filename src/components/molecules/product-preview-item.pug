@@ -1,6 +1,6 @@
-mixin MainProductCarouselItem(data)
-	a.mil-main-product-carousel-item(href="#")
-		.mil-main-product-carousel-item-img(style="background-image: url(" + data.image + ")")
+mixin ProductPreviewItem(data)
+	a.mil-product-preview-item(href="#")
+		.mil-product-preview-item-img(style="background-image: url(" + data.image + ")")
 			.badge-container
 				if data.sale
 					.badge.sale.text-primary.bg-white Sale
@@ -9,7 +9,7 @@ mixin MainProductCarouselItem(data)
 				if data.hit
 					.badge.hit.bg-white Хит
 		p= data.name
-		p.mil-main-product-carousel-item-price
+		p.mil-product-preview-item-price
 			if !data.sale
 				span= data.price
 			if data.sale

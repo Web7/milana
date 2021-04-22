@@ -2,14 +2,54 @@ extends ../templates/layout
 include ../organisms/offcanvas
 include ../organisms/index/main-carousel
 include ../organisms/index/main-center-carousel
-include ../organisms/index/main-product-carousel-right
-include ../organisms/index/main-product-carousel-left
+include ../organisms/product-carousel
 
 block main
 	+Offcanvas()
 	main.mil-margin-left-side-menu.mil-margin-top-header
 		+MainCarousel()
-		+MainProductCarouselRight()
+		+ProductCarousel({
+			title: 'женщинам',
+			type: 'right',
+			items: [
+				{
+					image: 'images/woman-slide-01.jpg',
+					name: 'Ботинки / 202454-3-110W',
+					price: '10 990 ₽'
+				},
+				{
+					image: 'images/woman-slide-02.jpg',
+					name: 'Сапоги / 202431-2-110W',
+					price: '12 990 ₽',
+					hit: true
+				},
+				{
+					image: 'images/woman-slide-03.jpg',
+					name: 'Ботинки / 202433-1-110W',
+					price: '9 990 ₽'
+				},
+				{
+					image: 'images/woman-slide-04.jpg',
+					name: 'Ботинки … / 202454-3-110W',
+					price: '13 990 ₽',
+					sale: {
+						price: '5 990 ₽',
+						percent: '-20%'
+					},
+					new: true
+				},
+				{
+					image: 'images/woman-slide-01.jpg',
+					name: 'Ботинки / 202454-3-110W',
+					price: '10 990 ₽'
+				},
+				{
+					image: 'images/woman-slide-02.jpg',
+					name: 'Сапоги / 202431-2-110W',
+					price: '12 990 ₽'
+				}
+			]
+		})
 		+MainCenterCarousel([
 			{
 				image: 'images/center-carousel-slide-1.jpg',
@@ -17,7 +57,48 @@ block main
 				text2: 'мы добавили новые модели'
 			}
 		])
-		+MainProductCarouselLeft()
+		+ProductCarousel({
+			title: 'мужчинам',
+			type: 'left',
+			items: [
+				{
+					image: 'images/woman-slide-01.jpg',
+					name: 'Ботинки / 202454-3-110W',
+					price: '10 990 ₽'
+				},
+				{
+					image: 'images/woman-slide-02.jpg',
+					name: 'Сапоги / 202431-2-110W',
+					price: '12 990 ₽',
+					hit: true
+				},
+				{
+					image: 'images/woman-slide-03.jpg',
+					name: 'Ботинки / 202433-1-110W',
+					price: '9 990 ₽'
+				},
+				{
+					image: 'images/woman-slide-04.jpg',
+					name: 'Ботинки … / 202454-3-110W',
+					price: '13 990 ₽',
+					sale: {
+						price: '5 990 ₽',
+						percent: '-20%'
+					},
+					new: true
+				},
+				{
+					image: 'images/woman-slide-01.jpg',
+					name: 'Ботинки / 202454-3-110W',
+					price: '10 990 ₽'
+				},
+				{
+					image: 'images/woman-slide-02.jpg',
+					name: 'Сапоги / 202431-2-110W',
+					price: '12 990 ₽'
+				}
+			]
+		})
 		+MainCenterCarousel([
 			{
 				image: 'images/center-carousel-slide-1.jpg',
