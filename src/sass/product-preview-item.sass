@@ -7,6 +7,49 @@
 				height: 292px
 				text-decoration: none
 				color: initial
+				&-sizes
+					list-style: none
+					margin: 0
+					padding: 0
+					display: flex
+					font-size: 13px
+					line-height: 26px
+					opacity: 0
+					transition: opacity linear 300ms
+					li
+						width: 28px
+						height: 28px
+						border: 1px solid $black
+						text-align: center
+						margin-right: 3px
+						margin-bottom: 3px
+						&.disable
+							border-color: $gray-500
+							color: $gray-500
+							position: relative
+							&:before
+								content: ""
+								display: block
+								width: 1px
+								height: 37px
+								background-color: $gray-500
+								position: absolute
+								top: -5px
+								left: 13px
+								transform: rotate(-45deg)
+							&:after
+								content: ""
+								display: block
+								width: 1px
+								height: 37px
+								background-color: $gray-500
+								position: absolute
+								top: -5px
+								left: 12px
+								transform: rotate(45deg)
+				&:hover
+					.mil-product-preview-item-sizes
+						opacity: 1
 				&-img
 					position: relative
 					background: no-repeat center center
@@ -46,7 +89,8 @@
 					font-size: 13px
 					line-height: 18px
 				.mil-product-preview-item-price
-					margin-bottom: 0
+					margin-bottom: 20px
+					height: 28px
 					display: flex
 					align-items: center
 					*
@@ -125,7 +169,7 @@
 			&-preview
 				&-item
 					width: 290px
-					height: 460px
+					height: 520px //460px
 					&-img
 						width: 290px
 						height: 361px
