@@ -1,9 +1,11 @@
+const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const PAGES = fs.readdirSync('./src/components/pages/').filter(fileName => fileName.endsWith('.pug'));
 
 const configureCopy = () => {
 	return [
@@ -45,17 +47,17 @@ module.exports = {
 					}
 				}
 			},
-			// {
-			// 	test: /\.(mp4)$/,
-			// 	use: {
-			// 		loader: 'file-loader',
-			// 		options: {
-			// 			name: 'video/[name].[ext]',
-			// 			outputPath: 'video/',
-			// 			publicPath: '../'
-			// 		}
-			// 	}
-			// },
+			{
+				test: /\.(mp4)$/,
+				use: {
+					loader: 'file-loader',
+					options: {
+						name: 'video/[name].[ext]',
+						outputPath: 'video/',
+						publicPath: '../'
+					}
+				}
+			},
 			{
 				test: /\.(woff|woff2|eot|ttf|svg)$/,
 				use: [
@@ -95,22 +97,17 @@ module.exports = {
 		new CopyWebpackPlugin({
 			patterns: configureCopy()
 		}),
-		new HtmlWebPackPlugin({
-			template: './src/components/pages/index.pug',
-			filename: 'index.html',
-			file: require('./src/data/index.json'),
-			cache: false
-		}),
-		new HtmlWebPackPlugin({
-			template: './src/components/pages/catalog.pug',
-			filename: 'catalog.html',
-			file: require('./src/data/index.json'),
-			cache: false
-		}),
 		new MiniCssExtractPlugin({
 			filename: 'css/style.css',
 			chunkFilename: '[id].css'
-		})
+		}),
+		...PAGES.map(page => new HtmlWebPackPlugin({
+				template: `./src/components/pages/${page}`,
+				filename: `${page.replace(/\.pug/, '.html')}`,
+				file: require('./src/data/index.json'),
+				cache: false
+			})
+		)
 	],
 
 	optimization: {
