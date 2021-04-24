@@ -19,25 +19,27 @@ $iconNames: 'whatsapp','telegram','basket','favorite','profile'
 		background-image: url("../images/icons-sprite.svg##{$iconName}-black")
 		&.i-black
 			background-image: url("../images/icons-sprite.svg##{$iconName}-black")
-		&.i-gray
-			background-image: url("../images/icons-sprite.svg##{$iconName}-gray")
+		&.i-secondary
+			background-image: url("../images/icons-sprite.svg##{$iconName}-secondary")
 		&.i-white
 			background-image: url("../images/icons-sprite.svg##{$iconName}-white")
+		&.i-primary,
 		&.active,
 		&:hover
-			background-image: url("../images/icons-sprite.svg##{$iconName}-hover")
+			background-image: url("../images/icons-sprite.svg##{$iconName}-primary")
 
 $iconSocials: 'instagram','fb','vk','ok','twitter','pinterest','youtobe'
 
 @each $iconName in $iconSocials
 	.i-#{$iconName}
-		background-image: url("../images/icons-social-sprite.svg##{$iconName}-gray")
+		background-image: url("../images/icons-social-sprite.svg##{$iconName}-secondary")
 		&.i-black
 			background-image: url("../images/icons-social-sprite.svg##{$iconName}-black")
-		&.i-gray
-			background-image: url("../images/icons-social-sprite.svg##{$iconName}-gray")
+		&.i-secondary
+			background-image: url("../images/icons-social-sprite.svg##{$iconName}-secondary")
 		&.i-white
 			background-image: url("../images/icons-social-sprite.svg##{$iconName}-white")
+		&.i-primary,
 		&.active,
 		&:hover
-			background-image: url("../images/icons-social-sprite.svg##{$iconName}-hover")
+			background-image: url("../images/icons-social-sprite.svg##{$iconName}-primary")

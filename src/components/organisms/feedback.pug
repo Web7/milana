@@ -1,5 +1,6 @@
-include ../atoms/checkbox
+include ../atoms/radio-checkbox
 
 mixin Feedback()
 	section.mil-feedback-section
-		+Checkbox({})
+		+RadioCheckbox({type: 'radio', title: 'Женщинам', id: 'woman', name: 'feedback', checked: true, class: 'form-check-white'})
+		+RadioCheckbox({type: 'radio', title: 'Мужчинам', id: 'man', name: 'feedback', class: 'form-check-white'})

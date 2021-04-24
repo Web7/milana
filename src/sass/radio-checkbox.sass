@@ -1,0 +1,18 @@
+@mixin formCheckInput($color, $name)
+	color: $color
+	.form-check
+		&-input
+			border-color: $color
+			&:checked
+				border-color: $color
+				background-image: url("../images/checkboxes-sprite.svg##{$name}-checkbox")
+
+.form-check
+	&-white
+		@include formCheckInput($white, 'white')
+	&-primary
+		@include formCheckInput($primary, 'primary')
+	&-secondary
+		@include formCheckInput($secondary, 'secondary')
+	&-black
+		@include formCheckInput($black, 'black')
