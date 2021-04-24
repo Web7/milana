@@ -1,35 +1,21 @@
-.h1
-	font-size: 39px
+@mixin headersTag($sizes...)
+	@for $i from 0 to length($sizes)
+		.h#{$i + 1}
+			font-size: #{nth($sizes, $i+1)}
 
-.h2
-	font-size: 20px
+@include headersTag(39px, 20px, 40px, 36px, 18px)
 
 @media (min-width: 768px)
-	.h1
-		font-size: 60px
-	.h2
-		font-size: 35px
+	@include headersTag(60px, 35px, 40px, 36px, 25px)
 
 @media (min-width: 992px)
-	.h1
-		font-size: 51px
-	.h2
-		font-size: 45px
+	@include headersTag(51px, 45px, 40px, 36px, 25px)
 
 @media (min-width: 1200px)
-	.h1
-		font-size: 61px
-	.h2
-		font-size: 45px
+	@include headersTag(61px, 45px, 40px, 36px, 25px)
 
 @media (min-width: 1400px)
-	.h1
-		font-size: 71px
-	.h2
-		font-size: 60px
+	@include headersTag(71px, 60px, 40px, 36px, 30px)
 
 @media (min-width: 1600px)
-	.h1
-		font-size: 71px
-	.h2
-		font-size: 60px
+	@include headersTag(71px, 60px, 40px, 36px, 30px)
