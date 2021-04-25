@@ -8,7 +8,12 @@ block main
 	main.mil-margin-left-side-menu.mil-margin-top-header
 		section.pt-15.ps-17.pe-9
 			+BreadcrumbAndTitle({breadcrumb: ['Главная', 'Каталог', 'Женщинам', 'Женские ботфорты'], title: 'Женские ботфорты', classTitle: 'mb-10'})
-			p test2
+
+			.row.row-cols-5
+				- var items = [{image: 'images/woman-slide-01.jpg',name: 'Ботинки / 202454-3-110W',price: '10 990 ₽'},{image: 'images/woman-slide-02.jpg',name: 'Сапоги / 202431-2-110W',price: '12 990 ₽',hit: true},{image: 'images/woman-slide-03.jpg',name: 'Ботинки / 202433-1-110W',price: '9 990 ₽'},{image: 'images/woman-slide-04.jpg',name: 'Ботинки … / 202454-3-110W',price: '13 990 ₽',sale: {price: '5 990 ₽',percent: '-20%'},new: true},{image: 'images/woman-slide-01.jpg',name: 'Ботинки / 202454-3-110W',price: '10 990 ₽'}]
+				each item in [...items, ...items, ...items, ...items]
+					.col.mb-7
+						+ProductPreviewItem(item)
 		+ProductCarousel({
 			titleClass: 'h3',
 			title: 'ранее вы смотрели',
