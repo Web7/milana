@@ -2,27 +2,27 @@ include ../atoms/footer-social-icon
 - var socNames = ["i-instagram","i-fb","i-vk","i-ok","i-twitter","i-pinterest","i-youtobe"]
 
 footer.bg-light.mil-margin-left-side-menu
-	.container-fluid.pt-7.pt-md-10.pt-xxxl-15
-		.row.px-xxxl-9.px-xxl-5.justify-content-between
-			.col-12.col-xxl-3.col-xxxl-2.order-1.order-lg-0.px-3.px-md-7.px-xxl-1.mb-lg-8.mb-xxl-0
+	.container-fluid.pt-8.pt-md-11.pt-xxxl-16
+		.row.px-xxxl-10.px-xxl-6.justify-content-between
+			.col-12.col-xxl-4.col-xxxl-3.order-1.order-lg-0.px-4.px-md-8.px-xxl-2.mb-lg-9.mb-xxl-0
 				.row.flex-column.flex-md-row.row-cols-md-3.align-items-md-start.flex-xxl-column.row-cols-xxl-1
-					.col-auto.mil-footer-title-menu.mb-7.mb-xxl-7.pt-xxl-1
-						span.me-1 Контакты
-						a.me-1(href="#").i.i-telegram.i-gray
+					.col-auto.mil-footer-title-menu.mb-8.mb-xxl-8.pt-xxl-2
+						span.me-2 Контакты
+						a.me-2(href="#").i.i-telegram.i-gray
 						a(href="#").i.i-whatsapp.i-gray
-					.col-auto.mb-9.mb-xxl-10
+					.col-auto.mb-10.mb-xxl-11
 						p.mil-footer-phones
 							b +7 800 555 38 60
 							br
 							b +7 495 215 27 01
 					.col-auto
 						p.mb-0 Следите за нашими новостями в социальных сетях:
-						.mil-socials-container.mt-6.mt-md-3.mt-xxl-4.mb-xxl-7
+						.mil-socials-container.mt-7.mt-md-4.mt-xxl-5.mb-xxl-8
 							each name in socNames
 								+FooterSocialIcon()(class= name)
 
-			.col-12.col-footer-accordion.order-0.order-lg-1.px-0.px-lg-7.px-xxl-0.mb-12.mb-md-13.mb-lg-0
-				.accordion#accordionNav.px-0.d-lg-flex.justify-content-between.row-cols-lg-4.mb-lg-6
+			.col-12.col-footer-accordion.order-0.order-lg-1.px-0.px-lg-8.px-xxl-0.mb-13.mb-md-14.mb-lg-0
+				.accordion#accordionNav.px-0.d-lg-flex.justify-content-between.row-cols-lg-4.mb-lg-7
 					.accordion-item
 						.accordion-header#footerNavHeadingHelp
 							button.accordion-button(type="button" data-bs-toggle="collapse" data-bs-target="#footerNavCollapseHelp" aria-expanded="true" aria-controls="footerNavCollapseHelp") Помощь
@@ -68,12 +68,12 @@ footer.bg-light.mil-margin-left-side-menu
 								a.nav-link(href="#") Работа
 								a.nav-link(href="#") Медиа
 								a.nav-link(href="#") Контакты
-			.col-12.py-5.border-top.px-3.order-2.px-xxl-0
-				.d-flex.justify-content-between.mil-footer-bottom-block.mx-md-3.mx-xxl-0
+			.col-12.py-6.border-top.px-4.order-2.px-xxl-0
+				.d-flex.justify-content-between.mil-footer-bottom-block.mx-md-4.mx-xxl-0
 					.d-flex.d-none.d-md-block
-						img.me-3(src="images/logo-visa.svg" alt="" title="")
-						img.me-3(src="images/logo-mastercard.svg" alt="" title="")
+						img.me-4(src="images/logo-visa.svg" alt="" title="")
+						img.me-4(src="images/logo-mastercard.svg" alt="" title="")
 						img(src="images/logo-halva.svg" alt="" title="")
 					.d-flex.flex-column.flex-md-row
-						p.me-md-5.me-lg-18 © 2020 ООО “Milana Shoes”
+						p.me-md-6.me-lg-19 © 2020 ООО “Milana Shoes”
 						p Создание и разработка сайта
