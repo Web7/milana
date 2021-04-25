@@ -1,7 +1,10 @@
 extends ../templates/layout
 include ../organisms/feedback
+include ../organisms/breadcrumb-and-title
 
 block main
 	main.mil-margin-left-side-menu.mil-margin-top-header
+		section.pt-15.ps-17.pe-9
+			+BreadcrumbAndTitle({breadcrumb: ['Главная', 'Акции'], title: 'Акции', classTitle: 'mb-10'})
 
 		+Feedback()

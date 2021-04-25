@@ -1,0 +1,5 @@
+include ../molecules/breadcrumb
+
+mixin BreadcrumbAndTitle(data)
+	+Breadcrumb(data.breadcrumb)
+	h1.h3.text-uppercase(class!= data.classTitle)= data.title

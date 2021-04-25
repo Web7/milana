@@ -1,0 +1,5 @@
+mixin Breadcrumb(data)
+	nav(aria-label="breadcrumb")
+		ol.breadcrumb
+			each value, index in data
+				li.breadcrumb-item(class= index === data.length-1 ? 'active' : '')= value

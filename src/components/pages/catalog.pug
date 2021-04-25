@@ -1,10 +1,14 @@
 extends ../templates/layout
 include ../organisms/product-carousel
 include ../organisms/feedback
+include ../molecules/breadcrumb
+include ../organisms/breadcrumb-and-title
 
 block main
 	main.mil-margin-left-side-menu.mil-margin-top-header
-
+		section.pt-15.ps-17.pe-9
+			+BreadcrumbAndTitle({breadcrumb: ['Главная', 'Каталог', 'Женщинам', 'Женские ботфорты'], title: 'Женские ботфорты', classTitle: 'mb-10'})
+			p test2
 		+ProductCarousel({
 			titleClass: 'h3',
 			title: 'ранее вы смотрели',
