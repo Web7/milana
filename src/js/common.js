@@ -50,7 +50,7 @@
 				arrows: false,
 				fade: true,
 				cssEase: 'linear',
-				autoplay: 3000
+				autoplay: 7000
 			})
 		}
 

@@ -11,7 +11,8 @@ const configureCopy = () => {
 	return [
 		// {from: "src/video/", to: "video/"},
 		{from: "src/images/", to: "images/"},
-		{from: 'src/fonts/', to: 'fonts/'}
+		{from: 'src/fonts/', to: 'fonts/'},
+		{from: 'src/js/', to: 'js/'}
 	]
 };
 
@@ -23,7 +24,7 @@ module.exports = {
 	},
 
 	output: {
-		filename: 'js/index.js',
+		filename: 'js/temp-index.min.js',
 		path: path.resolve(__dirname, 'dist')
 	},
 
