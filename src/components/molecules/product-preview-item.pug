@@ -1,5 +1,5 @@
 mixin ProductPreviewItem(data)
-	a.mil-product-preview-item(href="#")
+	.mil-product-preview-item
 		.mil-product-preview-item-img(style="background-image: url(" + data.image + ")")
 			.badge-container
 				if data.sale
@@ -8,19 +8,21 @@ mixin ProductPreviewItem(data)
 					.badge.new.bg-white New
 				if data.hit
 					.badge.hit.bg-white Хит
-		p= data.name
-		p.mil-product-preview-item-price
-			if !data.sale
-				span= data.price
-			if data.sale
-				s= data.price
-				span.text-primary= data.sale.price
-				span.badge.bg-primary= data.sale.percent
-		ul.mil-product-preview-item-sizes
-			li 35
-			li.disable 36
-			li 37
-			li 38
-			li.disable 39
-			li 40
-			li 41
+			input.favorites-check(type="checkbox")
+		a(href="#")
+			p= data.name
+			p.mil-product-preview-item-price
+				if !data.sale
+					span= data.price
+				if data.sale
+					s= data.price
+					span.text-primary= data.sale.price
+					span.badge.bg-primary= data.sale.percent
+			ul.mil-product-preview-item-sizes
+				li 35
+				li.disable 36
+				li 37
+				li 38
+				li.disable 39
+				li 40
+				li 41
