@@ -5,7 +5,10 @@ header
 		height: 82px
 	.dropdown-city a
 		font-size: 13px !important
-
+	.mil-offcanvas-btn
+		&.open
+			.i-menu
+				background-image: url(../images/icon-menu.svg#open)
 
 .mil
 	&-top-side-menu
@@ -16,7 +19,7 @@ header
 			display: flex
 			align-items: center
 			text-decoration: none
-			margin-right: 19px
+			margin-right: 15px
 			position: relative
 			font-family: 'montserratregular'
 			font-weight: normal
@@ -31,12 +34,14 @@ header
 				min-height: 15px
 				text-align: center
 				position: absolute
-				top: 8px
-				left: 8px
+				top: 14px
+				left: 12px
 				padding: 0 5px
 			.i
 				filter: invert(1)
-				&-humburget
+				width: 24px
+				height: 24px
+				&-menu
 					width: 24px
 					height: 24px
 				&-profile + span
@@ -59,7 +64,7 @@ header
 			.mil-offcanvas-btn
 				margin-right: 35px
 				.i
-					&-humburget
+					&-menu
 						filter: invert(1)
 						width: 32px
 						height: 32px
@@ -87,6 +92,8 @@ header
 					padding: 0
 				.i
 					filter: invert(0)
+					width: 20px
+					height: 20px
 					&-profile + span
 						display: inline-block
 				.i + span

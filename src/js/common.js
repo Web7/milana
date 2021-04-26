@@ -110,8 +110,9 @@
 		if (window.outerWidth > 1200) {
 			return;
 		}
+		$this.toggleClass('open');
 		$dataTarget.toggleClass('show');//.css('visibility', $dataTarget[0].style.visibility === 'hidden' ? 'visible' : 'hidden');
-		$(document.body).toggleClass('off-canvas-backdrop').css('overflow', $dataTarget.hasClass('show') === 'hidden' ? 'auto' : 'hidden');
+		$(document.body).toggleClass('off-canvas-backdrop').css('overflow', !$dataTarget.hasClass('show') ? 'auto' : 'hidden');
 
 		e.preventDefault();
 		e.stopPropagation();
