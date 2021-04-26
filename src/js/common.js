@@ -22,9 +22,9 @@
 
 		if ($dataTarget.exists()) {
 			if (window.outerWidth > 1200) {
-				$dataTarget.addClass('show').css('visibility', 'visible');
+				$dataTarget.addClass('show');
 			} else {
-				$dataTarget.removeClass('show').css('visibility', 'hidden');
+				$dataTarget.removeClass('show');
 			}
 			$body.removeClass('off-canvas-backdrop').css('overflow', 'auto');
 		}
@@ -110,8 +110,8 @@
 		if (window.outerWidth > 1200) {
 			return;
 		}
-		$dataTarget.toggleClass('show').css('visibility', $dataTarget[0].style.visibility === 'hidden' ? 'visible' : 'hidden');
-		$(document.body).toggleClass('off-canvas-backdrop').css('overflow', $dataTarget[0].style.visibility === 'hidden' ? 'auto' : 'hidden');
+		$dataTarget.toggleClass('show');//.css('visibility', $dataTarget[0].style.visibility === 'hidden' ? 'visible' : 'hidden');
+		$(document.body).toggleClass('off-canvas-backdrop').css('overflow', $dataTarget.hasClass('show') === 'hidden' ? 'auto' : 'hidden');
 
 		e.preventDefault();
 		e.stopPropagation();
