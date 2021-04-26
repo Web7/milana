@@ -4,12 +4,15 @@ include ../atoms/footer-social-icon
 footer.bg-light.mil-margin-left-side-menu
 	.container-fluid.pt-8.pt-md-11.pt-xxxl-16
 		.row.px-xxxl-10.px-xxl-6.justify-content-between
-			.col-12.col-xxl-4.col-xxxl-3.order-1.order-lg-0.px-4.px-md-8.px-xxl-2.mb-lg-9.mb-xxl-0
+			.col-12.col-xxl-4.col-xxxl-3.order-1.order-lg-0.px-4.px-md-8.px-xxl-2.mb-lg-9.mb-xxl-0.ps-xxl-0
 				.row.flex-column.flex-md-row.row-cols-md-3.align-items-md-start.flex-xxl-column.row-cols-xxl-1
-					.col-auto.mil-footer-title-menu.mb-8.mb-xxl-8.pt-xxl-2
-						span.me-2 Контакты
-						a.me-2(href="#").i.i-telegram.i-secondary
-						a(href="#").i.i-whatsapp.i-secondary
+					.col-auto.d-flex.flex-column
+						.mil-footer-title-menu.mb-8.mb-md-15.mb-lg-8.mb-xxl-8.pt-xxl-2
+							span.me-2 Контакты
+							a.me-2(href="#").i.i-telegram.i-secondary
+							a(href="#").i.i-whatsapp.i-secondary
+						.d-none.d-md-block.d-lg-none
+							img(src="images/yandex.svg" alt="" title="")
 					.col-auto.mb-10.mb-xxl-11
 						p.mil-footer-phones
 							b +7 800 555 38 60
@@ -17,9 +20,11 @@ footer.bg-light.mil-margin-left-side-menu
 							b +7 495 215 27 01
 					.col-auto
 						p.mb-0 Следите за нашими новостями<br>в социальных сетях:
-						.mil-socials-container.mt-7.mt-md-4.mt-xxl-5.mb-xxl-8.mb-7.mb-md-15.mb-lg-4.mb-xl-2
+						.mil-socials-container.mt-7.mt-md-4.mt-xxl-5.mb-xxl-8.mb-5.mb-md-15.mb-lg-4.mb-xl-2
 							each name in socNames
 								+FooterSocialIcon()(class= name)
+						.d-md-none.mb-7
+							img(src="images/yandex.svg" alt="" title="")
 						.d-flex.d-md-none.mb-6.mb-md-0
 							img.me-4(src="images/logo-visa.svg" alt="" title="")
 							img.me-4(src="images/logo-mastercard.svg" alt="" title="")
@@ -72,7 +77,9 @@ footer.bg-light.mil-margin-left-side-menu
 								a.nav-link(href="#") Работа
 								a.nav-link(href="#") Медиа
 								a.nav-link(href="#") Контакты
-			.col-12.py-6.border-top.px-4.order-2.px-xxl-0
+			.col-12.order-2.px-xxl-0.text-end.mb-xxl-9.mb-lg-11.px-8.d-none.d-lg-block
+				img(src="images/yandex.svg" alt="" title="")
+			.col-12.py-6.border-top.px-4.order-3.px-xxl-0
 				.d-flex.justify-content-between.mil-footer-bottom-block.mx-md-4.mx-xxl-0
 					.d-flex.d-none.d-md-block
 						img.me-4(src="images/logo-visa.svg" alt="" title="")
