@@ -1,7 +1,7 @@
 mixin Offcanvas()
 	.off-canvas.off-canvas-start.show.overflow-hidden#offcanvasScrolling(data-scroll="true" data-backdrop="true" tabindex="-1")
 		.off-canvas-body.mil-scroll-bar(data-scroll-index="offCanvasBody")
-			nav.nav.flex-column
+			nav.nav.flex-column.mb-xxl-0.mb-xl-20.mb-lg-28
 				li.nav-item.nav-sub-item.active
 					a.nav-link(href="catalog.html") Женщинам
 					ul.nav.flex-column
@@ -52,3 +52,13 @@ mixin Offcanvas()
 					a.nav-link(href="shops.html") Магазины
 				li.nav-item.nav-sub-item
 					a.nav-link(href="#") покупателям
+			.d-xxl-none.off-canvas-contacts.text-center
+				.dropdown.dropdown-city.mb-2
+					a.dropdown-toggle.justify-content-center(href="#" role="button" id="dropdownCity" data-bs-toggle="dropdown" aria-expanded="false") Калининград
+					.dropdown-menu
+				.d-flex.align-items-center
+					a.off-canvas-phone.me-3(href="tel:+78005553860") +7 800 555 38 60
+					a.me-3(href="#")
+						i.i.i-telegram.i-s-20
+					a.me-3(href="#")
+						i.i.i-whatsapp.i-s-20
