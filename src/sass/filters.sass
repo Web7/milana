@@ -1,0 +1,15 @@
+.dropdown-toggle
+	display: flex
+	&:after
+		display: inline-block
+		vertical-align: $caret-vertical-align
+		content: ""
+		width: 9px
+		height: 9px
+		background: url(../images/caret-filter-sprite.svg#down) no-repeat center center
+		margin: auto 0 auto 20px
+		transform: rotateX(0)
+		transition: transform linear 300ms
+	&.show
+		&:after
+			transform: rotateX(180deg)
