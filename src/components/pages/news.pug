@@ -5,7 +5,7 @@ include ../organisms/breadcrumb-and-title
 include ../molecules/news-preview-item
 
 block main
-	- var news =[{image: '', title: 'Рекострукция магазина белая дача аутлет'},{image: '', title: 'Новая коллекция весна-лето 2021'},{image: '', title: 'Новинка:<br>подарочные карты'},{image: '', title: ''}]
+	- var news =[{image: 'images/news-item-01.jpg', title: 'Рекострукция<br>магазинабелая дача<br>аутлет'},{image: 'images/news-item-02.jpg', title: 'Новая коллекция<br>весна-лето 2021'},{image: 'images/news-item-01.jpg', title: 'Новинка:<br>подарочные карты'},{image: 'images/news-item-02.jpg', title: 'коронавирус, сидим<br>дома! бесплатная<br>доставка'}]
 
 	main.mil-margin-left-side-menu.mil-margin-top-header
 		section.pe-md-7.pe-lg-8.pt-7.pt-md-13.pt-xxl-16.ps-xxxl-18.ps-xxl-14.ps-xl-12.ps-lg-9.ps-md-8.px-4
@@ -15,9 +15,9 @@ block main
 				classTitle: 'mb-10'
 			})
 
-			.row.row-cols-4
+			.row.row-cols-xxxl-4.row-cols-xxl-3.row-cols-md-2
 				each newsItem in [...news, ...news]
-					.col.ps-0.pe-1.pb-1
+					.col.px-0.pe-md-1.pb-1
 						+NewsPreviewItem(newsItem)
 
 			+Pagination()
