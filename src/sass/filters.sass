@@ -1,15 +1,42 @@
-.dropdown-toggle
-	display: flex
-	&:after
-		display: inline-block
-		vertical-align: $caret-vertical-align
-		content: ""
-		width: 9px
-		height: 9px
-		background: url(../images/caret-filter-sprite.svg#down) no-repeat center center
-		margin: auto 0 auto 10px
-		transform: rotateX(0)
-		transition: transform linear 300ms
-	&.show
-		&:after
-			transform: rotateX(180deg)
+.mil-filters
+	.navbar-nav
+		flex: auto
+	.dropdown
+		&-col
+			min-width: 230px
+		&-scrollbar
+			--mil-dropdown-height: 400px
+			max-height: calc(var(--mil-dropdown-height) - 90px)
+			overflow: hidden
+			position: relative
+		&-title
+			font-size: 13px
+		&-toggle
+			display: flex
+			&:after
+				display: inline-block
+				vertical-align: $caret-vertical-align
+				content: ""
+				width: 9px
+				height: 9px
+				background: url(../images/caret-filter-sprite.svg#down) no-repeat center center
+				margin: auto 0 auto 10px
+				transform: rotateX(0)
+				transition: transform linear 300ms
+			&.show
+				&:after
+					transform: rotateX(180deg)
+		&-menu
+			max-height: 400px
+			.column-block
+				margin-bottom: -20px
+				-webkit-columns: 2 180px
+				-moz-columns: 2 180px
+				columns: 2 180px
+				width: 100%
+				height: 100%
+			.form-check
+				margin-bottom: 20px
+				margin-right: 40px
+				&:last-child
+					margin-bottom: 0

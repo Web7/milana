@@ -1,27 +1,85 @@
+include ../../atoms/radio-checkbox
+
 mixin CatalogFilters()
+	- var cities = [{name: 'Москва', id: 'city1'},{name: 'Санкт-Петербург', id: 'city2'},{name: 'Волгоград', id: 'city3'},{name: 'Калининград', id: 'city4'},{name: 'Владивосток', id: 'city5'},{name: 'Нижний Новгород', id: 'city6'},{name: 'Москва', id: 'city7'},{name: 'Санкт-Петербург', id: 'city8'},{name: 'Волгоград', id: 'city9'},{name: 'Калининград', id: 'city10'},{name: 'Владивосток', id: 'city11'},{name: 'Нижний Новгород', id: 'city12'}]
+	- var colors = [{name: 'Бежевый', id: 'color1'},{name: 'Белый', id: 'color2'},{name: 'Бордовый', id: 'color3'},{name: 'Коричневый', id: 'color4'},{name: 'Рыжий', id: 'color5'},{name: 'Хаки', id: 'color6'},{name: 'Серый', id: 'color7'},{name: 'Черный', id: 'color8'},{name: 'Фиолтеовый', id: 'color9'},{name: 'Красный', id: 'color10'}, {name: 'Бежевый', id: 'color1'},{name: 'Белый', id: 'color2'},{name: 'Бордовый', id: 'color3'},{name: 'Коричневый', id: 'color4'},{name: 'Рыжий', id: 'color5'},{name: 'Хаки', id: 'color6'},{name: 'Серый', id: 'color7'},{name: 'Черный', id: 'color8'},{name: 'Фиолтеовый', id: 'color9'},{name: 'Красный', id: 'color10'}];
 	nav.navbar.navbar-expand-lg.mb-8
 		button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarCatalogFilter" aria-controls="navbarNavDarkDropdown" aria-expanded="false")
-		.collapse.navbar-collapse#navbarCatalogFilter
+		.collapse.navbar-collapse.mil-filters#navbarCatalogFilter
 			ul.navbar-nav
 				li.nav-item.dropdown.me-4
-					a.nav-link.dropdown-toggle#navbarSize(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Размер
-					.dropdown-menu
+					a.nav-link.dropdown-toggle#navbarSize(href="#" role="button" aria-haspopup="true" aria-expanded="false") Размер
+					.dropdown-menu.ps-11.py-9.pe-3
 				li.nav-item.dropdown.me-4
-					a.nav-link.dropdown-toggle#navbarColor(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Цвет
-					.dropdown-menu
+					a.nav-link.dropdown-toggle#navbarColor(href="#" role="button" aria-haspopup="true" aria-expanded="false") Цвет
+					.dropdown-menu.ps-11.py-9.pe-3
+						.dropdown-scrollbar(data-scroll-index="colorsScroll")
+							.column-block
+								each color in colors
+									+RadioCheckbox({
+										type: 'checkbox',
+										title: color.name,
+										id: color.id
+									})
 				li.nav-item.dropdown.me-4
-					a.nav-link.dropdown-toggle#navbarSeason(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Сезон
-					.dropdown-menu
+					a.nav-link.dropdown-toggle#navbarSeason(href="#" role="button" aria-haspopup="true" aria-expanded="false") Сезон
+					.dropdown-menu.ps-11.py-9.pe-3
+						.dropdown-scrollbar(data-scroll-index="seasonsScroll")
+							div
+								+RadioCheckbox({
+									type: 'checkbox',
+									title: 'Деми',
+									id: 'demi'
+								})
+								+RadioCheckbox({
+									type: 'checkbox',
+									title: 'Зима',
+									id: 'winter',
+									checked: true
+								})
 				li.nav-item.dropdown.me-4
-					a.nav-link.dropdown-toggle#navbarMterial(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Метериал
-					.dropdown-menu
+					a.nav-link.dropdown-toggle#navbarMterial(href="#" role="button" aria-haspopup="true" aria-expanded="false") Метериал
+					.dropdown-menu.ps-11.py-9.pe-3
 				li.nav-item.dropdown.me-4
-					a.nav-link.dropdown-toggle#navbarPrice(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Цена
-					.dropdown-menu
+					a.nav-link.dropdown-toggle#navbarPrice(href="#" role="button" aria-haspopup="true" aria-expanded="false") Цена
+					.dropdown-menu.ps-11.py-9.pe-3
+						.perfect-scrollbar.overflow-hidden.position-relative
+							.dropdown-col
+								+RadioCheckbox({
+									type: 'radio',
+									title: 'от 3 000 до 5 000 ₽',
+									id: 'price1',
+									name: 'price'
+								})
+								+RadioCheckbox({
+									type: 'checkbox',
+									title: 'от 5 000 ₽',
+									id: 'price2',
+									checked: true,
+									name: 'price'
+								})
 				li.nav-item.dropdown.me-4
-					a.nav-link.dropdown-toggle#navbarShop(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Магазин
-					.dropdown-menu
+					a.nav-link.dropdown-toggle#navbarShop(href="#" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Магазин
+					.dropdown-menu.px-11.py-9
+						.row.row-cols-2.flex-nowrap
+							.col
+								.dropdown-col
+									.dropdown-title.mb-10 Город
+									.dropdown-scrollbar(data-scroll-index="citiesScroll")
+										each city in cities
+											+RadioCheckbox({
+												type: 'checkbox',
+												title: city.name,
+												id: city.id
+											})
+							.col
+								.dropdown-col
+									.dropdown-title.mb-10 Магазин
+									.dropdown-scrollbar(data-scroll-index="shopsScroll")
 				li.nav-item.dropdown.me-4
-					a.nav-link.dropdown-toggle#navbarOtherFilters(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Другие фильтры
-					.dropdown-menu
+					a.nav-link.dropdown-toggle#navbarOtherFilters(href="#" role="button" aria-haspopup="true" aria-expanded="false") Другие фильтры
+					.dropdown-menu.ps-11.py-9.pe-3
+				li.nav-item.dropdown.me-4.ms-auto
+					a.nav-link.dropdown-toggle#navbarOrder(href="#" role="button" aria-haspopup="true" aria-expanded="false") Сортировать
+					.dropdown-menu.ps-11.py-9.pe-3
 
