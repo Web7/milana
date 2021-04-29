@@ -1,4 +1,5 @@
 mixin NewsPreviewItem(data)
 	a.news-preview-item(style="background-image: url(" + data.image + ")" href="#")
+		img.d-none(src= data.image alt="" title="")
 		.news-preview-item-title
 			span!= data.title

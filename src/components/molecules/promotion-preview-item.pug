@@ -1,0 +1,9 @@
+mixin PromotionPreviewItem(data)
+	.d-flex.promotion-preview-item.flex-column.flex-md-row
+		.promotion-preview-item-image.flex-md-grow-1(class= data.classImage style="background-image: url(" + data.image + ")")
+			img.d-none(src!= data.image alt="" title="")
+		.promotion-preview-item-text(class= data.classText)
+			h2.h5.text-uppercase.f-bold.mb-4!= data.title
+			p.mb-7!= data.period
+			p!= data.text
+			a.text-uppercase(href="#") Подробнее

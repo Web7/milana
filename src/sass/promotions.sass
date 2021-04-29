@@ -1,0 +1,50 @@
+.promotion
+	&-preview-item
+		margin-bottom: 5px
+		&-image
+			background: no-repeat center center
+			background-size: cover
+			margin-right: 5px
+			min-height: 190px
+			width: 100%
+		&-text
+			width: 100%
+			padding: 50px 20px
+			font-size: 14px
+			display: flex
+			flex-direction: column
+			margin-right: 5px
+			&.bg-primary
+				color: $white
+				a
+					color: $white
+			a
+				margin-top: auto
+				text-decoration: none
+				color: $black
+				font-family: 'montserratsemibold'
+				font-weight: normal
+
+@media (min-width: 768px)
+	.promotion
+		&-preview-item
+			&-image
+				margin-right: 5px
+			&-text
+				min-width: 420px
+				max-width: 4200px
+				min-height: 550px
+				padding: 100px 55px 100px 55px
+
+@media (min-width: 992px)
+	.promotion
+		&-preview-item
+			&-image
+				margin-right: 5px
+			&-text
+				min-width: 550px
+				max-width: 550px
+				min-height: 550px
+				padding: 110px 100px 110px 70px
+				font-size: 14px
+				margin-right: 5px

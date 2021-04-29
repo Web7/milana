@@ -1,10 +1,20 @@
 extends ../templates/layout
 include ../organisms/feedback
 include ../organisms/breadcrumb-and-title
+include ../molecules/promotion-preview-item
+include ../molecules/pagination
 
 block main
+	- var newPromotions = [{image: 'images/promotion-item-01.jpg', title: 'Скидки на<br>коллекцию 2020.<br>До -50% на все!', classText: 'bg-light', text: 'При наличие современных средств, многие люди по прежнему больше доверяют народным методам не только лечения насморка или горла, но и когда дела касается запах пота от ног.', period: 'с 12.02.2021 по 28.02.2021'}, {image: 'images/promotion-item-01.jpg', title: 'Только 3 дня<br>скидки 50%<br>на все товары!', classText: 'bg-primary order-md-0', classImage: 'order-md-1', text: 'Двухсторонние мужские ремни приобретают всё большую популярность у современных мужчин', period: 'с 12.02.2021 по 28.02.2021'}]
 	main.mil-margin-left-side-menu.mil-margin-top-header
-		section.pt-15.ps-17.pe-9
+		section.pe-md-7.pe-lg-8.pt-7.pt-md-13.pt-xxl-16.ps-xxxl-18.ps-xxl-14.ps-xl-12.ps-lg-9.ps-md-8.px-4.pb-16
 			+BreadcrumbAndTitle({breadcrumb: ['Главная', 'Акции'], title: 'Акции', classTitle: 'mb-10'})
-
+			each promotion in newPromotions
+				+PromotionPreviewItem(promotion)
+		section.pe-md-7.pe-lg-8.pt-7.pt-md-13.pt-xxl-16.ps-xxxl-18.ps-xxl-14.ps-xl-12.ps-lg-9.ps-md-8.px-4
+			h2.h3.mb-18.text-uppercase завершенные акции
+			.opacity-50
+				each promotion in newPromotions
+					+PromotionPreviewItem(promotion)
+			+Pagination()
 		+Feedback()
