@@ -1,8 +1,9 @@
 mixin Pagination()
 	nav.my-xxxl-23.my-xxl-21.my-xl-15.my-lg-18.my-md-19.my-16
 		ul.pagination.justify-content-center
-			li.page-item
+			li.page-item.disabled
 				a.page-link(href="#")
+					i.i.i-page.i-page-prev
 			li.page-item.active
 				a.page-link(href="#") 1
 			li.page-item
@@ -13,3 +14,4 @@ mixin Pagination()
 				a.page-link(href="#") 10
 			li.page-item
 				a.page-link(href="#")
+					i.i.i-page.i-page-next

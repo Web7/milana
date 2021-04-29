@@ -1,0 +1,20 @@
+.page
+	&-link
+		min-width: 28px
+		height: 28px
+		line-height: 28px
+		text-align: center
+		margin: 0 2px
+		&:hover
+			.i-page
+				&-prev
+					background-image: url(../images/icon-page.svg#prev-white)
+				&-next
+					background-image: url(../images/icon-page.svg#next-white)
+	&-item
+		&.disabled
+			.i-page
+				&-prev
+					background-image: url(../images/icon-page.svg#prev-secondary)
+				&-next
+					background-image: url(../images/icon-page.svg#next-secondary)
