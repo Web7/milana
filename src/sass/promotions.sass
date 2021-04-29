@@ -18,12 +18,24 @@
 				color: $white
 				a
 					color: $white
+					&:after
+						background-image: url(../images/slick-arrows.svg#arrow-right-white)
 			a
 				margin-top: auto
 				text-decoration: none
 				color: $black
 				font-family: 'montserratsemibold'
 				font-weight: normal
+				&:after
+					content: ""
+					display: inline-block
+					width: 20px
+					height: 8px
+					margin-left: 9px
+					margin-bottom: 1px
+					background: url(../images/slick-arrows.svg#arrow-right-black) no-repeat center center
+					background-size: contain
+
 
 @media (min-width: 768px)
 	.promotion
