@@ -4,4 +4,4 @@ mixin TabsPersonalArea(data)
 	ul.nav.nav-tabs.mil-scroll-bar(data-scroll-index="navTabs")
 		each link in links
 			li.nav-item
-				a.nav-link(href= link.href class= data && data.activeName === link.name ? 'active' : '')!= link.name
+				a.nav-link(href= link.href class= data && data.activeHref === link.href ? 'active' : '')!= link.name
