@@ -52,8 +52,6 @@ footer
 		font-weight: normal
 		font-size: 14px
 		.dropdown-toggle
-			&:after
-				background-image: url(../images/caret-filter-sprite.svg#black-down)
 			&:before
 				display: inline-block
 				content: ""
@@ -61,6 +59,18 @@ footer
 				height: 17px
 				background: url(../images/map-point.svg) no-repeat center center
 				margin: -2px 10px 0 0
+			&:after
+				display: inline-block
+				content: ""
+				width: 9px
+				height: 9px
+				background: url(../images/caret-filter-sprite.svg#black-down) no-repeat center center
+				margin: auto 0 auto 10px
+				transform: rotateX(0)
+				transition: transform linear 300ms
+			&.show
+				&:after
+					transform: rotateX(180deg)
 		a
 			color: $black
 			text-decoration: none
