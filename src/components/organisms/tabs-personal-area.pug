@@ -1,6 +1,7 @@
 mixin TabsPersonalArea(data)
 	- var links = [{name: 'Профиль', href: "#"},{name: 'Скидки', href: "#"},{name: 'Избранное', href: "favorites.html"},{name: 'История заказов', href: "#"},{name: 'Лист ожидания', href: "waiting-list.html"},{name: 'Мои отзывы', href: "#"},{name: 'Рассылки', href: "#"},{name: 'Возвраты', href: "#"}]
-	ul.nav.nav-tabs
+
+	ul.nav.nav-tabs.mil-scroll-bar(data-scroll-index="navTabs")
 		each link in links
 			li.nav-item
 				a.nav-link(href= link.href class= data && data.activeName === link.name ? 'active' : '')!= link.name
