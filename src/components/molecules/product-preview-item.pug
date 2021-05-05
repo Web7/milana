@@ -1,5 +1,5 @@
 mixin ProductPreviewItem(data)
-	.mil-product-preview-item
+	.mil-product-preview-item&attributes(attributes)
 		.mil-product-preview-item-img(style="background-image: url(" + data.image + ")")
 			img.d-none(src= data.image alt="" title="")
 			if data.close
