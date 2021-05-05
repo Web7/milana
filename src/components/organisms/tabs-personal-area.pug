@@ -1,7 +1,8 @@
 mixin TabsPersonalArea(data)
 	- var links = [{name: 'Профиль', href: "profile.html"},{name: 'Скидки <span class="badge bg-primary">10%</span>', href: "sales.html"},{name: 'Избранное', href: "favorites.html"},{name: 'История заказов', href: "history-of-orders.html"},{name: 'Лист ожидания', href: "waiting-list.html"},{name: 'Мои отзывы', href: "my-reviews.html"},{name: 'Рассылки', href: "newsletters.html"},{name: 'Возвраты', href: "refunds.html"}]
-	.sticky-container(data-margin-top="75px")
-		ul.nav.nav-tabs.mil-scroll-bar(data-scroll-index="navTabs")
-			each link in links
-				li.nav-item
-					a.nav-link(href= link.href class= data && data.activeHref === link.href ? 'active' : '')!= link.name
+	.sticky-nav-tabs
+		.sticky-container(data-margin-top="75px")
+			ul.nav.nav-tabs.mil-scroll-bar(data-scroll-index="navTabs")
+				each link in links
+					li.nav-item
+						a.nav-link(href= link.href class= data && data.activeHref === link.href ? 'active' : '')!= link.name
