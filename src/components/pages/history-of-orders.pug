@@ -15,5 +15,42 @@ block main
 			})
 			div(data-sticky-container)
 				+TabsPersonalArea({activeHref: 'history-of-orders.html'})
-
+				table.table
+					thead.table-dark
+						tr
+							td № заказа
+							td Дата и время заказа
+							td Статус
+							td Способ оплаты
+							td Сумма
+							td
+					tbody
+						tr
+							th 258591
+							td 14.02.2020 12:14
+							td Новый
+							td Оплата наличными при получении
+							td 6 999 руб.
+							td
+						tr
+							th 359592
+							td 11.02.2020 16:25
+							td Закрыт
+							td Оплата банковской картой
+							td 2 499 руб.
+							td
+						tr
+							th 359592
+							td 11.02.2020 16:25
+							td Закрыт
+							td Оплата банковской картой
+							td 2 499 руб.
+							td
+						tr
+							th 359592
+							td 11.02.2020 16:25
+							td Закрыт
+							td Оплата банковской картой
+							td 2 499 руб.
+							td
 		+Feedback()
