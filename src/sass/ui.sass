@@ -114,6 +114,16 @@ footer
 .small .form-check-input
 	margin-top: 0.15rem
 
+.accordion
+	&-item
+		border-bottom: 1px solid $black
+	&-button
+		font-family: 'montserratbold'
+		font-weight: normal
+		font-size: 20px
+	&-body
+		padding-bottom: 100px
+
 @mixin opacity($opacity...)
 	@for $i from 0 to length($opacity)
 		.opacity-#{nth($opacity, $i+1)}
