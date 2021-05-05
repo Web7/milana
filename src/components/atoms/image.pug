@@ -1,5 +1,2 @@
 mixin Img(data)
-	if data.loading
-		img(loading= data.loading alt= data.alt title= data.title src= data.src)
-	else
-		img(alt="" title="" src= data.src)
+	img.img-fluid(loading="lazy" alt= data.alt || "" title= data.title || "" src= data.src)&attributes(attributes)
