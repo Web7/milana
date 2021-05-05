@@ -1,5 +1,5 @@
 mixin TabsPersonalArea(data)
-	- var links = [{name: 'Профиль', href: "#"},{name: 'Скидки', href: "#"},{name: 'Избранное', href: "favorites.html"},{name: 'История заказов', href: "#"},{name: 'Лист ожидания', href: "waiting-list.html"},{name: 'Мои отзывы', href: "#"},{name: 'Рассылки', href: "#"},{name: 'Возвраты', href: "#"}]
+	- var links = [{name: 'Профиль', href: "profile.html"},{name: 'Скидки', href: "sales.html"},{name: 'Избранное', href: "favorites.html"},{name: 'История заказов', href: "history-of-orders.html"},{name: 'Лист ожидания', href: "waiting-list.html"},{name: 'Мои отзывы', href: "my-reviews.html"},{name: 'Рассылки', href: "newsletters.html"},{name: 'Возвраты', href: "refunds.html"}]
 
 	ul.nav.nav-tabs.mil-scroll-bar(data-scroll-index="navTabs")
 		each link in links

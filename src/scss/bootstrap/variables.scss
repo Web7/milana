@@ -17,7 +17,7 @@ $gray-600: #afafb9 !default;
 $gray-700: #cbccd4 !default;
 $gray-800: rgba(0, 0, 0, 0.15) !default;
 
-$gray-900: #212529 !default;
+$gray-900: #cecece !default;
 
 // scss-docs-end gray-color-variables
 
@@ -555,9 +555,9 @@ $btn-font-size:               15px !default;
 $btn-line-height:             18px !default;
 $btn-white-space:             0 !default; // Set to `nowrap` to prevent text wrapping
 
-$btn-padding-y-sm:            $input-btn-padding-y-sm !default;
-$btn-padding-x-sm:            $input-btn-padding-x-sm !default;
-$btn-font-size-sm:            $input-btn-font-size-sm !default;
+$btn-padding-y-sm:            15px !default;
+$btn-padding-x-sm:            15px !default;
+$btn-font-size-sm:            14px !default;
 
 $btn-padding-y-lg:            $input-btn-padding-y-lg !default;
 $btn-padding-x-lg:            $input-btn-padding-x-lg !default;
@@ -577,8 +577,8 @@ $btn-link-hover-color:        $link-hover-color !default;
 $btn-link-disabled-color:     $gray-600 !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           0 !default;
-$btn-border-radius-sm:        $border-radius-sm !default;
+$btn-border-radius:           none !default;
+$btn-border-radius-sm:        none !default;
 $btn-border-radius-lg:        $border-radius-lg !default;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
@@ -637,7 +637,7 @@ $input-border-color:                    $gray-400 !default;
 $input-border-width:                    0 !default;
 $input-box-shadow:                      none !default;
 
-$input-border-radius:                   $border-radius !default;
+$input-border-radius:                   none !default;
 $input-border-radius-sm:                0 !default;
 $input-border-radius-lg:                $border-radius-lg !default;
 
