@@ -13,6 +13,7 @@ block main
 				title: 'Личный кабинет',
 				classTitle: 'mb-10'
 			})
-			+TabsPersonalArea({activeHref: 'newsletters.html'})
+			div(data-sticky-container)
+				+TabsPersonalArea({activeHref: 'newsletters.html'})
 
 		+Feedback()

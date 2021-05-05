@@ -13,71 +13,72 @@ block main
 				title: 'Личный кабинет',
 				classTitle: 'mb-10'
 			})
-			+TabsPersonalArea({activeHref: 'profile.html'})
+			div(data-sticky-container)
+				+TabsPersonalArea({activeHref: 'profile.html'})
 
-			.row.g-2.personal-area-form.mb-26
-				.col-lg-6
-					.row
-						label.col-lg-4.col-form-label.mb-6 Мои данные
-						.col-lg-8.mb-6
-							input.form-control.bg-light(type="text" placeholder="Фамилия")
-						.col-lg-8.offset-lg-4.mb-6
-							input.form-control.bg-light(type="text" placeholder="Имя")
-						.col-lg-8.offset-lg-4.mb-6
-							input.form-control.bg-light(type="text" placeholder="Отчество")
-						.col-lg-8.offset-lg-4.mb-6
-							.row
-								.col-auto
+				.row.g-2.personal-area-form.mb-26
+					.col-lg-6
+						.row
+							label.col-lg-4.col-form-label.mb-6 Мои данные
+							.col-lg-8.mb-6
+								input.form-control.bg-light(type="text" placeholder="Фамилия")
+							.col-lg-8.offset-lg-4.mb-6
+								input.form-control.bg-light(type="text" placeholder="Имя")
+							.col-lg-8.offset-lg-4.mb-6
+								input.form-control.bg-light(type="text" placeholder="Отчество")
+							.col-lg-8.offset-lg-4.mb-6
+								.row
+									.col-auto
+										+RadioCheckbox({
+											type: 'radio',
+											title: 'Мужской',
+											id: 'man',
+											name: 'sex',
+											checked: true
+										})
+									.col-auto
+										+RadioCheckbox({
+											type: 'radio',
+											title: 'Женский',
+											id: 'woman',
+											name: 'sex'
+										})
+							label.col-lg-4.col-form-label.mb-6 Телефон
+							.col-lg-8.mb-6
+								input.form-control.bg-light(type="text" placeholder="+7 000 000 00 00")
+							label.col-lg-4.col-form-label.mb-6 e-mail
+							.col-lg-8.mb-6
+								input.form-control.bg-light.mb-2(type="text" placeholder="")
+								.small
 									+RadioCheckbox({
-										type: 'radio',
-										title: 'Мужской',
-										id: 'man',
-										name: 'sex',
-										checked: true
+										type: 'checkbox',
+										title: 'Быть в курсе новинок и акций Milana Shoes',
+										id: 'newsletters'
 									})
-								.col-auto
-									+RadioCheckbox({
-										type: 'radio',
-										title: 'Женский',
-										id: 'woman',
-										name: 'sex'
-									})
-						label.col-lg-4.col-form-label.mb-6 Телефон
-						.col-lg-8.mb-6
-							input.form-control.bg-light(type="text" placeholder="+7 000 000 00 00")
-						label.col-lg-4.col-form-label.mb-6 e-mail
-						.col-lg-8.mb-6
-							input.form-control.bg-light.mb-2(type="text" placeholder="")
-							.small
-								+RadioCheckbox({
-									type: 'checkbox',
-									title: 'Быть в курсе новинок и акций Milana Shoes',
-									id: 'newsletters'
-								})
-						label.col-lg-4.col-form-label.mb-6 дата рождения
-						.col-lg-8.mb-6
-							input.form-control.bg-light.mb-2(type="text" placeholder="дд-мм-гг")
-							.small.text-dark
-								small Укажи дату рождения и получай<br>приятные бонусы к празднику.
-				.col-lg-6
-					.row
-						label.col-lg-2.col-form-label.mb-6.offset-lg-2 Адрес
-						.col-lg-8.mb-6
-							input.form-control.bg-light(type="text" placeholder="Город")
-						.col-lg-8.offset-lg-4.mb-6
-							input.form-control.bg-light(type="text" placeholder="Улица")
-						.col-lg-8.offset-lg-4.mb-6
-							input.form-control.bg-light(type="text" placeholder="Дом")
-						.col-lg-8.offset-lg-4.mb-6
-							input.form-control.bg-light(type="text" placeholder="Корпус")
-						.col-lg-8.offset-lg-4.mb-6
-							input.form-control.bg-light(type="text" placeholder="Квартира")
-						.col-lg-8.offset-lg-4.mb-6
-							input.form-control.bg-light(type="text" placeholder="Индекс")
-						.col-lg-8.offset-lg-4.mb-6
-							button.btn.btn-outline-black.btn-sm.w-100(type="button") Сменить пароль
-						.col-lg-8.offset-lg-4.mb-6
-							button.btn.btn-black.btn-sm.w-100(type="button") Сохранить
+							label.col-lg-4.col-form-label.mb-6 дата рождения
+							.col-lg-8.mb-6
+								input.form-control.bg-light.mb-2(type="text" placeholder="дд-мм-гг")
+								.small.text-dark
+									small Укажи дату рождения и получай<br>приятные бонусы к празднику.
+					.col-lg-6
+						.row
+							label.col-lg-2.col-form-label.mb-6.offset-lg-2 Адрес
+							.col-lg-8.mb-6
+								input.form-control.bg-light(type="text" placeholder="Город")
+							.col-lg-8.offset-lg-4.mb-6
+								input.form-control.bg-light(type="text" placeholder="Улица")
+							.col-lg-8.offset-lg-4.mb-6
+								input.form-control.bg-light(type="text" placeholder="Дом")
+							.col-lg-8.offset-lg-4.mb-6
+								input.form-control.bg-light(type="text" placeholder="Корпус")
+							.col-lg-8.offset-lg-4.mb-6
+								input.form-control.bg-light(type="text" placeholder="Квартира")
+							.col-lg-8.offset-lg-4.mb-6
+								input.form-control.bg-light(type="text" placeholder="Индекс")
+							.col-lg-8.offset-lg-4.mb-6
+								button.btn.btn-outline-black.btn-sm.w-100(type="button") Сменить пароль
+							.col-lg-8.offset-lg-4.mb-6
+								button.btn.btn-black.btn-sm.w-100(type="button") Сохранить
 
 
 		+Feedback()

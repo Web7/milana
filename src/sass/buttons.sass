@@ -7,6 +7,13 @@
 		&-primary
 			border-color: $black
 			color: $black
+		&-black
+			&:hover,
+			&:focus,
+			&:active
+				border-color: $primary
+				color: $white
+				background-color: $primary
 	&-primary
 		&:hover,
 		&:focus,
@@ -14,6 +21,13 @@
 			border-color: $white
 			color: $primary
 			background-color: $white
+	&-black
+		&:hover,
+		&:focus,
+		&:active
+			border-color: $primary
+			color: $white
+			background-color: $primary
 
 @media (min-width: 768px)
 	.btn:not(.btn-sm)
