@@ -15,8 +15,8 @@ $gray-400: rgba(141, 139, 143, 0.11) !default;
 $gray-500: #b1b1b9 !default;
 $gray-600: #afafb9 !default;
 $gray-700: #cbccd4 !default;
+$gray-800: rgba(0, 0, 0, 0.15) !default;
 
-$gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 
 // scss-docs-end gray-color-variables
@@ -859,13 +859,13 @@ $nav-link-hover-color:              null !default;
 $nav-link-transition:               color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out !default;
 $nav-link-disabled-color:           $gray-600 !default;
 
-$nav-tabs-border-color:             $gray-300 !default;
-$nav-tabs-border-width:             $border-width !default;
-$nav-tabs-border-radius:            $border-radius !default;
-$nav-tabs-link-hover-border-color:  $gray-200 $gray-200 $nav-tabs-border-color !default;
-$nav-tabs-link-active-color:        $gray-700 !default;
+$nav-tabs-border-color:             $gray-800 !default;
+$nav-tabs-border-width:             1px !default;
+$nav-tabs-border-radius:            none !default;
+$nav-tabs-link-hover-border-color:  transparent transparent $primary !default;
+$nav-tabs-link-active-color:        $primary !default;
 $nav-tabs-link-active-bg:           $body-bg !default;
-$nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
+$nav-tabs-link-active-border-color: transparent transparent $primary !default;
 
 $nav-pills-border-radius:           $border-radius !default;
 $nav-pills-link-active-color:       $component-active-color !default;

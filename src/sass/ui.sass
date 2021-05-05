@@ -83,14 +83,23 @@ footer
 	font-family: 'montserratsemibold'
 	font-weight: normal
 	font-size: 13px
-	border-bottom: 2px solid $gray-200
-	margin-bottom: 30px
+	border-bottom: 1px solid $gray-800
+	margin-bottom: 80px
+	line-height: 1
 	.nav-link
+		padding: 18px 6px
+		margin-left: 5px
+		margin-right: 5px
+		margin-bottom: -2px
 		color: $black
-		border-bottom: 2px solid transparent
-		&:hover
-			color: $primary
-			border-color: transparent transparent $primary
+		border-bottom: 3px solid transparent
+	.nav-item
+		&:first-child
+			.nav-link
+				margin-left: 0
+		&:last-child
+			.nav-link
+				margin-right: 0
 
 @mixin opacity($opacity...)
 	@for $i from 0 to length($opacity)
