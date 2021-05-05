@@ -1,0 +1,6 @@
+mixin TabsPersonalArea(data)
+	- var links = [{name: 'Профиль', href: "#"},{name: 'Скидки', href: "#"},{name: 'Избранное', href: "#"},{name: 'История заказов', href: "#"},{name: 'Лист ожидания', href: "#"},{name: 'Мои отзывы', href: "#"},{name: 'Рассылки', href: "#"},{name: 'Возвраты', href: "#"}]
+	ul.nav.nav-tabs
+		each link in links
+			li.nav-item
+				a.nav-link(href= link.href class= data && data.activeName === link.name ? 'active' : '')!= link.name
