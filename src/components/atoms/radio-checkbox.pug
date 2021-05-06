@@ -1,4 +1,7 @@
 mixin RadioCheckbox(data)
 	.form-check(class!= data.class)
-		input.form-check-input(type= data.type value="" id!= data.id disabled!= data.disabled name= data.name checked= data.checked)
+		if data.type === 'checkmark'
+			input.form-check-mark(type="checkbox" value="" id!= data.id disabled!= data.disabled name= data.name checked= data.checked)
+		else
+			input.form-check-input(type= data.type value="" id!= data.id disabled!= data.disabled name= data.name checked= data.checked)
 		label.form-check-label(for!= data.id)= data.title

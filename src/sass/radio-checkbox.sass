@@ -1,6 +1,12 @@
 @mixin formCheckInput($color, $name)
 	color: $color
 	.form-check
+		&-mark
+			border-color: $color
+			border-radius: 0 !important
+			&:checked
+				border-color: $color
+				background-image: url("../images/checkboxes-sprite.svg##{$name}-checkmark")
 		&-input
 			border-color: $color
 			border-radius: 0 !important
@@ -9,6 +15,28 @@
 				background-image: url("../images/checkboxes-sprite.svg##{$name}-checkbox")
 
 .form-check
+	display: flex
+	align-items: center
+	@include formCheckInput($black, 'black')
+	&-mark
+		margin-top: initial
+		margin-right: 15px
+		border: 1px solid $black
+		width: 1em
+		height: 1em
+		vertical-align: top
+		background-color: none
+		background-repeat: no-repeat
+		background-position: center
+		background-size: contain
+		float: left
+		margin-left: -1.5em
+	&-input
+		margin-top: initial
+		margin-right: 15px
+	&-label
+		line-height: 1
+		margin-top: 2px
 	&-white
 		@include formCheckInput($white, 'white')
 	&-primary
