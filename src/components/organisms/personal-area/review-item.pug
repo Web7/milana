@@ -1,0 +1,19 @@
+include ../../molecules/rating-stars
+
+mixin ReviewItem(data)
+	.col-12.col-lg-6
+		.personal-area-review-item
+			.mb-2
+				b= data.name
+				.d-inline-block
+					.btn-group
+						i.review-menu.dropdown-toggle(data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false")
+						ul.dropdown-menu.dropdown-menu-end.dropdown-menu-lg-start
+							li
+								a.dropdown-item(href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasReviewEdit" aria-controls="offcanvasReviewEdit") Изменить
+							li
+								a.dropdown-item(href="#") Удалить
+			p.mb-4= data.date
+			+RatingStars(data.rating)
+			.text-justify
+				p= data.description

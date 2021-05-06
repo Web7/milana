@@ -1,0 +1,23 @@
+$stars: 1, 2, 3, 4, 5
+
+.i-star
+	background-image: url(../images/icon-star.svg#secondary)
+	background-size: contain
+	width: 11px
+	height: 11px
+
+.rating-stars-container
+	.i
+		margin-right: 5px
+	@each $star in $stars
+		&[data-rating="#{$star}"]
+			.i
+				&:nth-child(-n+#{$star})
+					background-image: url(../images/icon-star.svg#primary)
+
+@each $star in $stars
+	.rating-stars[value="#{$star}"] + .rating-stars-container
+		.i
+			cursor: pointer
+			&:nth-child(-n+#{$star})
+				background-image: url(../images/icon-star.svg#primary)

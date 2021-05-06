@@ -1,51 +1,88 @@
-.personal-area-form
-	font-size: 14px
-	.col-form-label
-		font-family: 'montserratbold'
-		font-weight: normal
+@import 'tabs-personal-area'
+
+.personal-area
+	&-form
 		font-size: 14px
-		text-transform: uppercase
-		line-height: 40px
-		padding-top: 0
-		padding-bottom: 0
-	.form-control
-		color: $black
-		font-size: 14px
-		font-family: 'montserratregular'
-		font-weight: normal
-		padding: 14px 20px 12px
-		line-height: 1
-		&::placeholder
-			color: $gray-600
+		.col-form-label
+			font-family: 'montserratbold'
+			font-weight: normal
+			font-size: 14px
+			text-transform: uppercase
+			line-height: 40px
+			padding-top: 0
+			padding-bottom: 0
+		.form-control
+			color: $black
 			font-size: 14px
 			font-family: 'montserratregular'
 			font-weight: normal
-	input + .small
-		small
-			font-size: 12px
-			line-height: 16px
-	.btn
-		font-size: 14px
+			padding: 14px 20px 12px
+			line-height: 1
+			&::placeholder
+				color: $gray-600
+				font-size: 14px
+				font-family: 'montserratregular'
+				font-weight: normal
+		input + .small
+			small
+				font-size: 12px
+				line-height: 16px
+		.btn
+			font-size: 14px
 
-	.order
-		&-link
+		.order
+			&-link
+				display: inline-block
+				width: 16px
+				height: 16px
+				background: url(../images/slick-arrows.svg#arrow-right-black) no-repeat center center
+				background-size: contain
+			&-true
+				display: inline-block
+				width: 8px
+				height: 8px
+				background: url(../images/icons-order-info.svg#true) no-repeat center center
+				background-size: contain
+			&-false
+				display: inline-block
+				width: 8px
+				height: 8px
+				background: url(../images/icons-order-info.svg#false) no-repeat center center
+				background-size: contain
+		.review-menu
 			display: inline-block
-			width: 16px
-			height: 16px
-			background: url(../images/slick-arrows.svg#arrow-right-black) no-repeat center center
-			background-size: contain
-		&-true
-			display: inline-block
-			width: 8px
-			height: 8px
-			background: url(../images/icons-order-info.svg#true) no-repeat center center
-			background-size: contain
-		&-false
-			display: inline-block
-			width: 8px
-			height: 8px
-			background: url(../images/icons-order-info.svg#false) no-repeat center center
-			background-size: contain
+			width: 21px
+			height: 21px
+			cursor: pointer
+			position: relative
+			top: -1px
+			margin-left: 5px
+			&:before
+				content: ". . ."
+				font-family: 'montserratblack'
+				font-size: 12px
+				transform: rotate(-90deg)
+				display: inline-block
+				letter-spacing: -1px
+	&-my-reviews
+		> *
+			&:nth-child(odd)
+				padding-right: 70px
+			&:nth-child(even)
+				padding-left: 70px
+
+	&-review-item
+		.dropdown-menu
+			background-color: $gray-100
+			box-shadow: none
+			min-width: auto
+			.dropdown-item
+				color: $black
+				font-size: 13px
+				padding-left: 18px
+				padding-right: 18px
+
+
 
 .sales
 	&-info-container

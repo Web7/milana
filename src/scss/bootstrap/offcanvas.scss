@@ -1,3 +1,4 @@
+.offcanvas,
 .off-canvas {
 	position: fixed;
 	bottom: 0;
@@ -14,6 +15,7 @@
 	@include transition(transform $offcanvas-transition-duration ease-in-out);
 }
 
+.offcanvas-header,
 .off-canvas-header {
 	display: flex;
 	justify-content: space-between;
@@ -25,11 +27,17 @@
 	}
 }
 
+.offcanvas-title,
 .off-canvas-title {
 	margin-bottom: 0;
 	line-height: $offcanvas-title-line-height;
+	font-family: 'montserratbold';
+	font-weight: normal;
+	font-size: 20px;
+	text-transform: uppercase;
 }
 
+.offcanvas-body,
 .off-canvas-body {
 	flex-grow: 1;
 	padding: $offcanvas-padding-y $offcanvas-padding-x;
@@ -44,6 +52,7 @@
 	transform: translateX(-100%);
 }
 
+.offcanvas-end,
 .off-canvas-end {
 	top: 0;
 	right: 0;
@@ -61,10 +70,12 @@
 	transform: translateY(100%);
 }
 
+.offcanvas.show,
 .off-canvas.show {
 	transform: none;
 }
 
+.offcanvas-backdrop::before,
 .off-canvas-backdrop::before {
 	position: fixed;
 	top: 0;

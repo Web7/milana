@@ -3,9 +3,12 @@ include ../organisms/feedback
 include ../molecules/pagination
 include ../organisms/breadcrumb-and-title
 include ../molecules/product-preview-item
-include ../organisms/tabs-personal-area
+include ../organisms/personal-area/tabs-personal-area
+include ../organisms/personal-area/review-item
+include ../organisms/review-edit
 
 block main
+	- var reviews = [{name: 'Ботфорты / 211404-1-810', date: '10.12.2020', rating: 0, description: 'Весьма удачное приобретения! Удобно, стильно! В руках кажется тяжеловаты, но на ноге такого не чувствуешь. Весьма удачное приобретения! Удобно, стильно! В руках кажется тяжеловаты, но на ноге такого не чувствуешь.'},{name: 'Сапоги  / 211404-1-810F', date: '10.12.2020', rating: 3, description: 'Отличные! Ооооооочень удобные. Высокие, в меру широкие. Но размер как будто великоват. Заказала на размер меньше, померею, и выберу.'},{name: 'Туфли / 211404-1-810F', date: '10.12.2020', rating: 5, description: 'Весьма удачное приобретения! Удобно, стильно! В руках кажется тяжеловаты, но на ноге такого не чувствуешь.'},{name: 'Ботинки / 211404-1-810F', date: '10.12.2020', rating: 4, description: 'Весьма удачное приобретения! Удобно, стильно! В руках кажется тяжеловаты, но на ноге такого не чувствуешь. Весьма удачное приобретения! Удобно, стильно! В руках кажется тяжеловаты, но на ноге такого не чувствуешь.'},{name: 'Сапоги  / 211404-1-810F', date: '10.12.2020', rating: 5, description: 'Отличные! Ооооооочень удобные. Высокие, в меру широкие. Но размер как будто великоват. Заказала на размер меньше, померею, и выберу.'}]
 	main.mil-margin-left-side-menu.mil-margin-top-header
 		section.pe-md-7.pe-lg-8.pt-7.pt-md-13.pt-xxl-16.ps-xxxl-18.ps-xxl-14.ps-xl-12.ps-lg-9.ps-md-8.px-4
 			+BreadcrumbAndTitle({
@@ -16,5 +19,11 @@ block main
 			div(data-sticky-container)
 				+TabsPersonalArea({activeHref: 'my-reviews.html'})
 				.personal-area-form
-
+					.mb-16
+						a.btn.btn-black.btn-sm(href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasReviewEdit" aria-controls="offcanvasReviewEdit") Оставить отзыв
+					.row.personal-area-my-reviews
+						each review in [...reviews, ...reviews]
+							+ReviewItem(review)
+			+Pagination()
+		+ReviewEdit()
 		+Feedback()
