@@ -116,28 +116,17 @@
 
 		$offCanvasEnd = document.querySelector('.offcanvas-end');
 		if ($offCanvasEnd) {
-			$offCanvasEnd.addEventListener('shown.bs.offcanvas', function () {
-				console.log('show.bs.offcanvas');
+			$offCanvasEnd.addEventListener('show.bs.offcanvas', function () {
 				$offcanvasScrollBar = new PerfectScrollbar('.offcanvas-scroll-bar', {
 					wheelPropagation: false
 				});
 				$('body').css('overflow', 'hidden');
 			});
+			$offCanvasEnd.addEventListener('hide.bs.offcanvas', function(){
+				$offcanvasScrollBar.destroy();
+				$('body').css('overflow', 'auto');
+			})
 		}
-
-
-		// if ($offCanvasEnd.exists()) {
-		// 	$offCanvasEnd.on('show.bs.offcanvas', function(){
-		// 		console.log('show.bs.offcanvas');
-		// 		$offcanvasScrollBar = new PerfectScrollbar('.offcanvas-scroll-bar', {
-		// 			wheelPropagation: false
-		// 		});
-		// 		$('body').css(overflow, 'hidden');
-		// 	}).on('hide.bs.offcanvas', function(){
-		// 		$offcanvasScrollBar.destroy();
-		// 		$('body').css(overflow, 'auto');
-		// 	});
-		// }
 
 		// dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'));
 		// dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
@@ -145,19 +134,6 @@
 		// });
 		// console.log(dropdownList);
 	});
-
-	// $(document).on('show.bs.offcanvas', '.offcanvas-end', function(){
-	// 	console.log('shown.bs.offcanvas');
-	// 	$offcanvasScrollBar = new PerfectScrollbar('.offcanvas-scroll-bar', {
-	// 		wheelPropagation: false
-	// 	});
-	// 	$('body').css(overflow, 'hidden');
-	// });
-	//
-	// $(document).on('hide.bs.offcanvas', '.offcanvas-end', function(){
-	// 	$offcanvasScrollBar.destroy();
-	// 	$('body').css(overflow, 'auto');
-	// });
 
 	$(document).on('click', '.nav-sub-item > .nav-link', function (e) {
 		var $this = $(this);
