@@ -9,11 +9,12 @@ import slick from 'slick-carousel';
 import L from 'leaflet';
 import PerfectScrollbar from 'perfect-scrollbar';
 import Sticky from 'sticky-js'
-import Mask from 'jquery-mask-plugin';
+import mask from 'jquery.maskedinput/src/jquery.maskedinput';
 
 window.PerfectScrollbar = PerfectScrollbar;
 window.bootstrap = bootstrap;
 window.Dropdown = Dropdown;
 window.Sticky = Sticky;
+window.mask = mask;
 
 import './js/common.js';
