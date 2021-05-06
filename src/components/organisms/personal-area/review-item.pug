@@ -14,6 +14,7 @@ mixin ReviewItem(data)
 							li
 								a.dropdown-item(href="#") Удалить
 			p.mb-4= data.date
-			+RatingStars(data.rating)
+			.mb-3
+				+RatingStars(data.rating)
 			.text-justify
 				p= data.description

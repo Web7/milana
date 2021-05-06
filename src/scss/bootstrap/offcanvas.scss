@@ -41,7 +41,7 @@
 .off-canvas-body {
 	flex-grow: 1;
 	padding: $offcanvas-padding-y $offcanvas-padding-x;
-	overflow-y: auto;
+	overflow: hidden;
 }
 
 .off-canvas-start {
