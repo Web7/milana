@@ -16,6 +16,25 @@ block main
 			div(data-sticky-container)
 				+TabsPersonalArea({activeHref: 'sales.html'})
 				.personal-area-form
+					.row.mb-20
+						.col-12.col-lg-5.pe-1
+							.sales-info-container.bg-light
+								.row
+									.col-12.col-md-6.text-center
+										.sales-logo.mt-22
+									.col-12.col-md-6
+										.mt-22.text-center.text-md-start
+											.mb-2 Размер скидки
+											.mb-8.sales-number 10%
+											.mb-2 До следующей скидки
+											.mb-8.sales-number 11 100 ₽
+						.col-lg-7.ps-0.d-none.d-lg-block
+							.sales-info-container.bg-light.position-relative.w-100
+								.sales-percent-bg
+								.sales-percent
+									span 10
+									small %
+
 					.accordion.mb-38#accordion1
 						.accordion-item
 							h2.accordion-header#heading1

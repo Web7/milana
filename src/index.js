@@ -9,6 +9,7 @@ import slick from 'slick-carousel';
 import L from 'leaflet';
 import PerfectScrollbar from 'perfect-scrollbar';
 import Sticky from 'sticky-js'
+import Mask from 'jquery-mask-plugin';
 
 window.PerfectScrollbar = PerfectScrollbar;
 window.bootstrap = bootstrap;

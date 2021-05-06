@@ -20,3 +20,52 @@
 			font-size: 14px
 			font-family: 'montserratregular'
 			font-weight: normal
+	input + .small
+		small
+			font-size: 12px
+			line-height: 16px
+	.btn
+		font-size: 14px
+.sales
+	&-info-container
+		min-height: 310px
+		width: 100%
+	&-logo
+		background: url(../images/logo.svg#logo-black) no-repeat center center
+		background-size: contain
+		width: 122px
+		height: 38px
+		display: inline-block
+	&-number
+		font-family: 'montserratmedium'
+		font-weight: normal
+		font-size: 22px
+		line-height: 1
+	&-percent
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 5px
+		font-family: 'montserratsemibold'
+		font-weight: normal
+		line-height: 0
+		text-align: center
+		span
+			font-size: 257px
+		small
+			font-size: 189px
+		&-bg
+			background: url(../images/sales-percent-bg.png) no-repeat 0 0
+			background-size: contain
+			width: 177px
+			height: 386px
+			position: absolute
+			right: 0
+			top: 0
+			z-index: 1
+
+@media (min-width: 992px)
+	.personal-area-form
+		input + .small
+			small
+				width: 205px

@@ -50,7 +50,7 @@ block main
 												})
 									label.col-lg-4.col-form-label.mb-6 Телефон
 									.col-lg-8.mb-6
-										input.form-control.bg-light(type="text" placeholder="+7 XXX XXX XX XX")
+										input.form-control.bg-light(type="text" placeholder="+7 XXX XXX XX XX" data-mask="+7 000 000 00 00")
 									label.col-lg-4.col-form-label.mb-6 e-mail
 									.col-lg-8.mb-6
 										input.form-control.bg-light.mb-2(type="text" placeholder="")
@@ -63,10 +63,10 @@ block main
 											})
 									label.col-lg-4.col-form-label.mb-6 дата рождения
 									.col-lg-8.mb-6
-										input.form-control.bg-light.mb-2(type="text" placeholder="дд-мм-гг")
+										input.form-control.bg-light.mb-2(type="text" placeholder="дд-мм-гггг" data-mask="00-00-0000")
 										.small.text-secondary.d-flex.align-items-center
 											i.i.i-gift.i-secondary.me-1.mb-1
-											small Укажи дату рождения и получай<br>приятные бонусы к празднику.
+											small Укажи дату рождения и получай приятные бонусы к празднику.
 							.col-lg-6
 								.row
 									label.col-lg-2.col-form-label.mb-6.offset-lg-2 Адрес
@@ -82,9 +82,9 @@ block main
 										input.form-control.bg-light(type="text" placeholder="Квартира")
 									.col-lg-8.offset-lg-4.mb-6
 										input.form-control.bg-light(type="text" placeholder="Индекс")
-									.col-lg-8.offset-lg-4.mb-6
+									.col-lg-8.offset-lg-4.mb-4
 										button.btn.btn-outline-black.btn-sm.w-100(type="button") Сменить пароль
-									.col-lg-8.offset-lg-4.mb-6
+									.col-lg-8.offset-lg-4.mb-4
 										button.btn.btn-black.btn-sm.w-100(type="submit") Сохранить
 
 

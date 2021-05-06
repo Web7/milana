@@ -34,8 +34,12 @@ $iconNames: 'whatsapp','telegram','basket','favorite','profile','gift'
 			background-image: url("../images/icons-sprite.svg##{$iconName}-white")
 		&.i-primary,
 		&.active,
-		&:hover
+		&[href]:hover
 			background-image: url("../images/icons-sprite.svg##{$iconName}-primary")
+	a[href]
+		.i-#{$iconName}
+			&:hover
+				background-image: url("../images/icons-sprite.svg##{$iconName}-primary")
 
 $iconSocials: 'instagram','fb','vk','ok','twitter','pinterest','youtobe'
 
@@ -50,5 +54,9 @@ $iconSocials: 'instagram','fb','vk','ok','twitter','pinterest','youtobe'
 			background-image: url("../images/icons-social-sprite.svg##{$iconName}-white")
 		&.i-primary,
 		&.active,
-		&:hover
+		&[href]:hover
 			background-image: url("../images/icons-social-sprite.svg##{$iconName}-primary")
+	a[href]
+		.i-#{$iconName}
+			&:hover
+				background-image: url("../images/icons-social-sprite.svg##{$iconName}-primary")
