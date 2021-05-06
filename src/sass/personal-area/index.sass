@@ -65,6 +65,10 @@
 				display: inline-block
 				letter-spacing: -1px
 	&-my-reviews
+		.col-12
+			&:nth-last-child(-n+2)
+				.personal-area-review-item
+					margin-bottom: 0
 		> *
 			&:nth-child(odd)
 				padding-right: 70px
@@ -72,6 +76,7 @@
 				padding-left: 70px
 
 	&-review-item
+		margin-bottom: 85px
 		.dropdown-menu
 			background-color: $gray-100
 			box-shadow: none
