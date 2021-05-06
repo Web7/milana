@@ -11,7 +11,7 @@ mixin ProductPreviewItem(data)
 					.badge.new.bg-white New
 				if data.hit
 					.badge.hit.bg-white Хит
-			input.favorites-check(type="checkbox")
+			input.favorites-check(type="checkbox" checked= data.checked)
 		a(href="#")
 			p= data.name
 			p.mil-product-preview-item-price

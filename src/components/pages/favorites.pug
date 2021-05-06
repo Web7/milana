@@ -15,12 +15,13 @@ block main
 			})
 			div(data-sticky-container)
 				+TabsPersonalArea({activeHref: 'favorites.html'})
-				.row.row-cols-xxxl-5.row-cols-xxl-4.row-cols-lg-3.row-cols-md-2.row-cols-1.mx-0
-					- var items = [{image: 'images/woman-slide-01.jpg',name: 'Ботинки / 202454-3-110W',price: '10 990 ₽', isSizes: true},{image: 'images/woman-slide-02.jpg',name: 'Сапоги / 202431-2-110W',price: '12 990 ₽',hit: true, isSizes: true},{image: 'images/woman-slide-03.jpg',name: 'Ботинки / 202433-1-110W',price: '9 990 ₽', isSizes: true},{image: 'images/woman-slide-04.jpg',name: 'Ботинки … / 202454-3-110W',price: '13 990 ₽',sale: {price: '5 990 ₽',percent: '-20%'},new: true, isSizes: true},{image: 'images/woman-slide-01.jpg',name: 'Ботинки / 202454-3-110W',price: '10 990 ₽', isSizes: true}]
-					- var id = 0
-					each item in [...items, ...items, ...items, ...items]
-						.col.mb-8.ps-md-0.pe-md-1.px-5
-							+ProductPreviewItem(item, id++)(class="show-sizes")
+				.personal-area-form
+					.row.row-cols-xxxl-5.row-cols-xxl-4.row-cols-lg-3.row-cols-md-2.row-cols-1.mx-0
+						- var items = [{image: 'images/woman-slide-01.jpg',name: 'Ботинки / 202454-3-110W',price: '10 990 ₽', isSizes: true, checked: true},{image: 'images/woman-slide-02.jpg',name: 'Сапоги / 202431-2-110W',price: '12 990 ₽',hit: true, isSizes: true, checked: true},{image: 'images/woman-slide-03.jpg',name: 'Ботинки / 202433-1-110W',price: '9 990 ₽', isSizes: true, checked: true},{image: 'images/woman-slide-04.jpg',name: 'Ботинки … / 202454-3-110W',price: '13 990 ₽',sale: {price: '5 990 ₽',percent: '-20%'},new: true, isSizes: true, checked: true},{image: 'images/woman-slide-01.jpg',name: 'Ботинки / 202454-3-110W',price: '10 990 ₽', isSizes: true, checked: true}]
+						- var id = 0
+						each item in [...items, ...items, ...items, ...items]
+							.col.mb-8.ps-md-0.pe-md-1.px-5
+								+ProductPreviewItem(item, id++)(class="show-sizes")
 			+Pagination()
 
 		+Feedback()
