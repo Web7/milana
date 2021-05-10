@@ -9,7 +9,16 @@ include ../organisms/catalog/filters
 block main
 	main.mil-margin-left-side-menu.mil-margin-top-header
 		section.pe-md-7.pe-lg-8.pt-7.pt-md-13.pt-xxl-16.ps-xxxl-18.ps-xxl-14.ps-xl-12.ps-lg-9.ps-md-8.px-4
-			+BreadcrumbAndTitle({breadcrumb: ['Главная', 'Каталог', 'Женщинам', 'Женские ботфорты'], title: 'Женские ботфорты', classTitle: 'mb-10'})
+			+Breadcrumb(['Главная', 'Каталог', 'Женщинам', 'Женские ботфорты'])
+			.d-flex.mb-10.align-items-start.flex-column.flex-md-row.catalog-title-container
+				h1.h3.text-uppercase.mb-md-0.catalog-title.mb-6 Женские ботфорты
+					sup 95
+				button.navbar-toggler.btn.btn-primary.btn-sm.ms-md-auto.d-lg-none.btn-icon(type="button" data-bs-toggle="collapse" data-bs-target="#navbarCatalogFilter" aria-controls="navbarNavDarkDropdown" aria-expanded="false")
+					i.i.i-filters
+					| Уточнить
+				.nav-item.dropdown.ms-auto.d-xxl-none.d-lg-block.d-none
+					a.nav-link.dropdown-toggle.f-13px#navbarOrder(href="#" role="button" aria-haspopup="true" aria-expanded="false") Сортировать
+					.dropdown-menu.ps-11.py-9.pe-3
 			+CatalogFilters()
 			.row.row-cols-xxxl-5.row-cols-xxl-4.row-cols-lg-3.row-cols-md-2.row-cols-1.mx-0
 				- var items = [{image: 'images/woman-slide-01.jpg',name: 'Ботинки / 202454-3-110W',price: '10 990 ₽'},{image: 'images/woman-slide-02.jpg',name: 'Сапоги / 202431-2-110W',price: '12 990 ₽',hit: true},{image: 'images/woman-slide-03.jpg',name: 'Ботинки / 202433-1-110W',price: '9 990 ₽'},{image: 'images/woman-slide-04.jpg',name: 'Ботинки … / 202454-3-110W',price: '13 990 ₽',sale: {price: '5 990 ₽',percent: '-20%'},new: true},{image: 'images/woman-slide-01.jpg',name: 'Ботинки / 202454-3-110W',price: '10 990 ₽'}]

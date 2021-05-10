@@ -13,9 +13,9 @@
 @mixin fontSizes($sizes...)
 	@each $size in $sizes
 		.f-#{$size}
-			font-size: $size
+			font-size: $size !important
 
-@include fontSizes(12px,13px,14px,15px)
+@include fontSizes(12px,13px,14px,15px,20px)
 
 .h3
 	font-family: 'montserratbold'

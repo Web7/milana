@@ -1,6 +1,28 @@
 .mil-filters
+	position: fixed
+	background-color: $white
+	width: 100vw
+	height: 100vh
+	z-index: 1050
+	top: 0
+	left: 0
+	right: 0
+	overflow: auto
 	.navbar-nav
 		flex: auto
+		.nav-item
+			padding-left: 20px
+			padding-right: 20px
+			border-bottom: 1px solid #707070
+			.nav-link
+				font-size: 13px
+				color: $black
+				padding-top: 25px
+				padding-bottom: 25px
+				line-height: 1
+				&[href]:hover
+					color: $primary
+
 	.dropdown
 		&-col
 			min-width: 230px
@@ -40,3 +62,18 @@
 				margin-right: 40px
 				&:last-child
 					margin-bottom: 0
+
+@media (min-width: 992px)
+	.mil-filters
+		width: auto
+		height: auto
+		position: static
+		overflow: initial
+		.navbar-nav
+			.nav-item
+				padding-left: 0
+				padding-right: 0
+				border-bottom: none
+				.nav-link
+					padding-top: 0
+					padding-bottom: 0

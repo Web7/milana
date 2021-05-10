@@ -3,6 +3,10 @@
 	font-size: 13px
 	line-height: 15px
 	padding: 14px
+	&-icon
+		display: flex
+		align-items: center
+		justify-content: center
 	&-outline
 		&-primary
 			border-color: $black
@@ -15,12 +19,18 @@
 				color: $white
 				background-color: $primary
 	&-primary
+		.i
+			&-filters
+				background-image: url(../images/icon-filters.svg#filter-white)
 		&:hover,
 		&:focus,
 		&:active
 			border-color: $white
 			color: $primary
 			background-color: $white
+			.i
+				&-filters
+					background-image: url(../images/icon-filters.svg#filter-primary)
 	&-black
 		&:hover,
 		&:focus,
@@ -28,6 +38,10 @@
 			border-color: $primary
 			color: $white
 			background-color: $primary
+	.i
+		margin-right: 10px
+		width: 16px
+		height: 16px
 
 @media (min-width: 768px)
 	.btn:not(.btn-sm)
