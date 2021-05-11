@@ -1,0 +1,11 @@
+mixin ContactsCol(data)
+	.col.contacts-col
+		.contacts-item
+			p.f-bold.text-uppercase.text-primary.mb-6!= data.title
+			.mb-3
+				each phone in data.phones
+					.d-block.f-bold!= phone
+			if (data.workTime)
+				.d-block Режим работы:
+				.d-block пн - пт 09.00 - 18.00
+			.d-block.mt-auto!= data.mail

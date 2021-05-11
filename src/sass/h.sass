@@ -10,12 +10,15 @@
 	&-regular
 		font-family: 'montserratregular'
 
+.line-height-1
+	line-height: 1
+
 @mixin fontSizes($sizes...)
 	@each $size in $sizes
 		.f-#{$size}
 			font-size: $size !important
 
-@include fontSizes(12px,13px,14px,15px,20px)
+@include fontSizes(11px,12px,13px,14px,15px,20px,25px)
 
 .h3
 	font-family: 'montserratbold'
