@@ -3,6 +3,8 @@
 .personal-area
 	&-form
 		font-size: 14px
+		.accordion-button
+			font-size: 15px
 		.col-form-label
 			font-family: 'montserratbold'
 			font-weight: normal
@@ -32,11 +34,24 @@
 
 		.order
 			&-link
+				position: relative
 				display: inline-block
-				width: 16px
+				width: 21px
 				height: 16px
-				background: url(../images/slick-arrows.svg#arrow-right-black) no-repeat center center
-				background-size: contain
+				&:before
+					content: ""
+					display: inline-block
+					position: absolute
+					width: 16px
+					height: 16px
+					background: url(../images/slick-arrows.svg#arrow-right-black) no-repeat center center
+					background-size: contain
+					transition: margin-left linear 300ms
+					left: 0
+					top: 0
+				&:hover
+					&:before
+						margin-left: 5px
 			&-true
 				display: inline-block
 				width: 8px
@@ -66,14 +81,9 @@
 				letter-spacing: -1px
 	&-my-reviews
 		.col-12
-			&:nth-last-child(-n+2)
+			&:nth-last-child(-n+1)
 				.personal-area-review-item
 					margin-bottom: 0
-		> *
-			&:nth-child(odd)
-				padding-right: 70px
-			&:nth-child(even)
-				padding-left: 70px
 
 	&-review-item
 		margin-bottom: 85px
@@ -112,11 +122,10 @@
 		font-family: 'montserratsemibold'
 		font-weight: normal
 		line-height: 0
-		text-align: center
 		span
-			font-size: 257px
+			font-size: 179px
 		small
-			font-size: 189px
+			font-size: 131px
 		&-bg
 			background: url(../images/sales-percent-bg.png) no-repeat 0 0
 			background-size: contain
@@ -127,8 +136,41 @@
 			top: 0
 			z-index: 1
 
-@media (min-width: 992px)
+@media (min-width: 768px)
 	.personal-area-form
-		input + .small
+		.accordion-button
+			font-size: 16px
+
+@media (min-width: 992px)
+	.sales
+		&-percent
+			text-align: center
+			span
+				font-size: 257px
 			small
-				width: 205px
+				font-size: 189px
+	.personal-area
+		&-form
+			input + .small
+				small
+					width: 205px
+		&-my-reviews
+			.col-12
+				&:nth-last-child(-n+2)
+					.personal-area-review-item
+						margin-bottom: 0
+			> *
+				&:nth-child(odd)
+					padding-right: 70px
+				&:nth-child(even)
+					padding-left: 70px
+
+@media (min-width: 1200px)
+	.personal-area-form
+		.accordion-button
+			font-size: 18px
+
+@media (min-width: 1600px)
+	.personal-area-form
+		.accordion-button
+			font-size: 20px

@@ -20,7 +20,7 @@ block main
 				+TabsPersonalArea({activeHref: 'my-reviews.html'})
 				.personal-area-form
 					.mb-16
-						a.btn.btn-black.btn-sm(href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasReviewEdit" aria-controls="offcanvasReviewEdit") Оставить отзыв
+						a.btn.btn-black.btn-sm.w-100.w-md-auto(href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasReviewEdit" aria-controls="offcanvasReviewEdit") Оставить отзыв
 					.row.personal-area-my-reviews
 						each review in [...reviews, ...reviews]
 							+ReviewItem(review)
