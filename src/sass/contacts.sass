@@ -24,7 +24,6 @@
 		&-image
 			top: -212px
 			right: -40px
-			width: 70%
 
 @media (min-width: 1200px)
 	.contacts
@@ -38,10 +37,19 @@
 		&-image
 			top: -227px
 			right: -40px
-			width: 70%
 
 @media (min-width: 1600px)
 	.contacts
 		&-image
-			width: 100%
 			text-align: right
+		&-col
+			&:nth-child(4n+1)
+				padding-right: 76px
+			&:nth-child(4n+2)
+				padding-left: 34px
+				padding-right: 55px
+			&:nth-child(4n+3)
+				padding-left: 55px
+				padding-right: 34px
+			&:nth-child(4n+4)
+				padding-left: 76px
