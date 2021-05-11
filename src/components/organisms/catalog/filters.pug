@@ -12,10 +12,10 @@ mixin CatalogFilters()
 						span.navbar-toggler.p-0(type="button" data-bs-toggle="collapse" data-bs-target="#navbarCatalogFilter" aria-controls="navbarNavDarkDropdown" aria-expanded="false")
 							i.i.i-close.i-sm
 				li.nav-item.dropdown.me-lg-4.order-2
-					a.nav-link.dropdown-toggle#navbarSize(href="#" role="button" aria-haspopup="true" aria-expanded="false") Размер
+					a.nav-link.dropdown-toggle#navbarSize(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Размер
 					.dropdown-menu.ps-11.py-9.pe-3
 				li.nav-item.dropdown.me-lg-4.order-2
-					a.nav-link.dropdown-toggle#navbarColor(href="#" role="button" aria-haspopup="true" aria-expanded="false") Цвет
+					a.nav-link.dropdown-toggle#navbarColor(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Цвет
 					.dropdown-menu.ps-11.py-9.pe-3
 						.dropdown-scrollbar(data-scroll-index="colorsScroll")
 							.column-block
@@ -26,7 +26,7 @@ mixin CatalogFilters()
 										id: color.id
 									})
 				li.nav-item.dropdown.me-lg-4.order-2
-					a.nav-link.dropdown-toggle#navbarSeason(href="#" role="button" aria-haspopup="true" aria-expanded="false") Сезон
+					a.nav-link.dropdown-toggle#navbarSeason(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Сезон
 					.dropdown-menu.ps-11.py-9.pe-3
 						.dropdown-scrollbar(data-scroll-index="seasonsScroll")
 							div
@@ -42,10 +42,10 @@ mixin CatalogFilters()
 									checked: true
 								})
 				li.nav-item.dropdown.me-lg-4.order-2
-					a.nav-link.dropdown-toggle#navbarMterial(href="#" role="button" aria-haspopup="true" aria-expanded="false") Метериал
+					a.nav-link.dropdown-toggle#navbarMterial(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Метериал
 					.dropdown-menu.ps-11.py-9.pe-3
 				li.nav-item.dropdown.me-lg-4.order-2
-					a.nav-link.dropdown-toggle#navbarPrice(href="#" role="button" aria-haspopup="true" aria-expanded="false") Цена
+					a.nav-link.dropdown-toggle#navbarPrice(href="#" role="button" data-bs-offset="100,20" data-bs-display="static" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Цена
 					.dropdown-menu.ps-11.py-9.pe-3
 						.perfect-scrollbar.overflow-hidden.position-relative
 							.dropdown-col
@@ -63,7 +63,7 @@ mixin CatalogFilters()
 									name: 'price'
 								})
 				li.nav-item.dropdown.me-lg-4.order-2
-					a.nav-link.dropdown-toggle#navbarShop(href="#" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") Магазин
+					a.nav-link.dropdown-toggle#navbarShop(href="#" role="button" aria-expanded="false") Магазин
 					.dropdown-menu.px-11.py-9
 						.row.row-cols-2.flex-nowrap
 							.col
@@ -81,14 +81,14 @@ mixin CatalogFilters()
 									.dropdown-title.mb-10 Магазин
 									.dropdown-scrollbar(data-scroll-index="shopsScroll")
 				li.nav-item.dropdown.me-lg-4.order-2
-					a.nav-link.dropdown-toggle#navbarOtherFilters(href="#" role="button" aria-haspopup="true" aria-expanded="false") Другие фильтры
+					a.nav-link.dropdown-toggle#navbarOtherFilters(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Другие фильтры
 					.dropdown-menu.ps-11.py-9.pe-3
 				li.nav-item.dropdown.ms-xxxl-16.ms-xxl-10.ms-lg-auto.d-none.d-lg-block.order-2
-					a.nav-link.d-flex.align-items-center(href="#" role="button" aria-haspopup="true" aria-expanded="false")
+					a.nav-link.d-flex.align-items-center(href="#" role="button" aria-expanded="false")
 						i.i.i-reset.i-sm.me-2
 						| Сбросить фильтр
 				li.nav-item.dropdown.ms-lg-auto.d-lg-none.d-xxl-block.order-1.order-lg-3
-					a.nav-link.dropdown-toggle#navbarOrder(href="#" role="button" aria-haspopup="true" aria-expanded="false") Сортировать
+					a.nav-link.dropdown-toggle#navbarOrder(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Сортировать
 					.dropdown-menu.ps-11.py-9.pe-3
 			.row.d-lg-none.position-fixed.bottom-0.start-0.end-0
 				.col-7.pe-0
