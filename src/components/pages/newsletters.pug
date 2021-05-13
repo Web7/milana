@@ -16,64 +16,77 @@ block main
 			})
 			div(data-sticky-container)
 				+TabsPersonalArea({activeHref: 'mailings.html'})
-				.personal-area-form
-					h2.f-20px.f-bold.text-uppercase.mb-4 Настройки почтовой рассылки
-					p.mb-9 Подписываясь на рассылку магазина, Вы принимаете условия договора публичной оферты
-					.col-4.mb-9
-						input.form-control.bg-light(type="text" placeholder="E-mail *" aria-describedby="text1" required)
-						.invalid-feedback#text1 Заполните поле
-					p.mb-6 Выберите рассылки:
-					.d-flex.mb-11
-						+RadioCheckbox({
-							type: 'checkbox',
-							title: 'Новости и акции. Женщины',
-							id: 'checkbox1',
-							checked: true,
-							class: 'me-10'
-						})
-						+RadioCheckbox({
-							type: 'checkbox',
-							title: 'Новости и акции. Мужчины',
-							id: 'checkbox2',
-							class: 'me-10'
-						})
-						+RadioCheckbox({
-							type: 'checkbox',
-							title: 'Арендодатели',
-							id: 'checkbox3',
-							class: 'me-10'
-						})
-						+RadioCheckbox({
-							type: 'checkbox',
-							title: 'Оптовики',
-							id: 'checkbox4',
-							class: 'me-10'
-						})
-						+RadioCheckbox({
-							type: 'checkbox',
-							title: 'Франчайзи',
-							id: 'checkbox5'
-						})
-
-					h2.f-20px.f-bold.text-uppercase.mb-4 Настройки sms рассылки
-					.col-7
-						p.mb-9 Обратите внимание, при подписке на оповещения о статусе заказов и доставки, оповещения будут приходить на номер телефона, указанный при оформлении заказа.
-					.col-4.mb-9
-						input.form-control.bg-light.profile-phone(type="text" placeholder="Ваш номер телефона *" data-mask="+7 (999) 999-99-99")
-						.invalid-feedback#text2 Заполните поле
-					p.mb-6 Выберите рассылки:
-					.d-flex.mb-11
-						+RadioCheckbox({
-							type: 'checkbox',
-							title: 'Новости и акции',
-							id: 'checkbox6',
-							checked: true,
-							class: 'me-10'
-						})
-						+RadioCheckbox({
-							type: 'checkbox',
-							title: 'Статус заказов и доставки',
-							id: 'checkbox7'
-						})
+				.personal-area-form.mb-22
+					form#form1
+						h2.f-20px.f-bold.text-uppercase.mb-4 Настройки почтовой рассылки
+						p.mb-9 Подписываясь на рассылку магазина, Вы принимаете условия договора публичной оферты
+						.col-12.col-md-5.col-xl-4.mb-9
+							input.form-control.bg-light(type="text" placeholder="E-mail *" aria-describedby="text1" required)
+							.invalid-feedback#text1 Заполните поле
+						p.mb-6 Выберите рассылки:
+						.container-fluid
+							.row.mb-7
+								+RadioCheckbox({
+									type: 'checkbox',
+									title: 'Новости и акции. Женщины',
+									id: 'checkbox1',
+									checked: true,
+									class: 'mb-4 me-10 col-md-auto'
+								})
+								+RadioCheckbox({
+									type: 'checkbox',
+									title: 'Новости и акции. Мужчины',
+									id: 'checkbox2',
+									class: 'mb-4 me-10 col-md-auto'
+								})
+								+RadioCheckbox({
+									type: 'checkbox',
+									title: 'Арендодатели',
+									id: 'checkbox3',
+									class: 'mb-4 me-10 col-md-auto'
+								})
+								+RadioCheckbox({
+									type: 'checkbox',
+									title: 'Оптовики',
+									id: 'checkbox4',
+									class: 'mb-4 me-10 col-md-auto'
+								})
+								+RadioCheckbox({
+									type: 'checkbox',
+									title: 'Франчайзи',
+									id: 'checkbox5',
+									class: 'mb-4 col-md-auto'
+								})
+						.mb-4
+							button.btn.btn-black.btn-sm.px-15.me-md-6.mb-4.w-100.w-md-auto Подписаться на рассылку
+							button.btn.btn-outline-black.btn-sm.px-9.mb-4.w-100.w-md-auto Отменить подписку
+						.mb-22.col-12.col-md-7
+							.f-12px.text-secondary.text-justify После добавления или изменения адреса подписки, Вам будет выслано письмо со ссылкой, для проверки e-mail'а. Подписка будет не активной до перехода по ссылке.
+					form#form2
+						h2.f-20px.f-bold.text-uppercase.mb-4 Настройки sms рассылки
+						.col-12.col-md-7
+							p.mb-9 Обратите внимание, при подписке на оповещения о статусе заказов и доставки, оповещения будут приходить на номер телефона, указанный при оформлении заказа.
+						.col-12.col-md-5.col-xl-4.mb-9
+							input.form-control.bg-light.profile-phone(type="text" placeholder="Ваш номер телефона *" data-mask="+7 (999) 999-99-99")
+							.invalid-feedback#text2 Заполните поле
+						p.mb-6 Выберите рассылки:
+						.container-fluid
+							.row.mb-7
+								+RadioCheckbox({
+									type: 'checkbox',
+									title: 'Новости и акции',
+									id: 'checkbox6',
+									checked: true,
+									class: 'mb-4 me-10 col-md-auto'
+								})
+								+RadioCheckbox({
+									type: 'checkbox',
+									title: 'Статус заказов и доставки',
+									id: 'checkbox7',
+									class: 'mb-4 col-md-auto'
+								})
+						.mb-4
+							button.btn.btn-black.btn-sm.px-15.me-md-6.mb-4.w-100.w-md-auto Подписаться на рассылку
+							button.btn.btn-outline-black.btn-sm.px-9.mb-4.w-100.w-md-auto Отменить подписку
 
 		+Feedback()
