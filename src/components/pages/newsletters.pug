@@ -4,6 +4,7 @@ include ../molecules/pagination
 include ../organisms/breadcrumb-and-title
 include ../molecules/product-preview-item
 include ../organisms/personal-area/tabs-personal-area
+include ../atoms/radio-checkbox
 
 block main
 	main.mil-margin-left-side-menu.mil-margin-top-header
@@ -22,6 +23,37 @@ block main
 						input.form-control.bg-light(type="text" placeholder="E-mail *" aria-describedby="text1" required)
 						.invalid-feedback#text1 Заполните поле
 					p.mb-6 Выберите рассылки:
+					.d-flex.mb-11
+						+RadioCheckbox({
+							type: 'checkbox',
+							title: 'Новости и акции. Женщины',
+							id: 'checkbox1',
+							checked: true,
+							class: 'me-10'
+						})
+						+RadioCheckbox({
+							type: 'checkbox',
+							title: 'Новости и акции. Мужчины',
+							id: 'checkbox2',
+							class: 'me-10'
+						})
+						+RadioCheckbox({
+							type: 'checkbox',
+							title: 'Арендодатели',
+							id: 'checkbox3',
+							class: 'me-10'
+						})
+						+RadioCheckbox({
+							type: 'checkbox',
+							title: 'Оптовики',
+							id: 'checkbox4',
+							class: 'me-10'
+						})
+						+RadioCheckbox({
+							type: 'checkbox',
+							title: 'Франчайзи',
+							id: 'checkbox5'
+						})
 
 					h2.f-20px.f-bold.text-uppercase.mb-4 Настройки sms рассылки
 					.col-7
@@ -30,5 +62,18 @@ block main
 						input.form-control.bg-light.profile-phone(type="text" placeholder="Ваш номер телефона *" data-mask="+7 (999) 999-99-99")
 						.invalid-feedback#text2 Заполните поле
 					p.mb-6 Выберите рассылки:
+					.d-flex.mb-11
+						+RadioCheckbox({
+							type: 'checkbox',
+							title: 'Новости и акции',
+							id: 'checkbox6',
+							checked: true,
+							class: 'me-10'
+						})
+						+RadioCheckbox({
+							type: 'checkbox',
+							title: 'Статус заказов и доставки',
+							id: 'checkbox7'
+						})
 
 		+Feedback()
