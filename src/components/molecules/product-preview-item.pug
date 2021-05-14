@@ -1,9 +1,9 @@
 mixin ProductPreviewItem(data)
-	a.text-decoration-none(href="#").mil-product-preview-item&attributes(attributes)
+	a.text-decoration-none.mil-product-preview-item.d-inline-block&attributes(attributes)
 		.mil-product-preview-item-img(style="background-image: url(" + data.image + ")")
 			img.d-none(src= data.image alt="" title="")
 			if data.close
-				a(href="#").i.i-close
+				.i.i-close
 			.badge-container
 				if data.sale
 					.badge.sale.text-primary.bg-white Sale
