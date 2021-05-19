@@ -23,11 +23,11 @@ mixin CatalogFilters()
 					li.nav-item.dropdown.me-xl-4.order-2
 						a.filter-nav-link.nav-link.dropdown-toggle#navbarSize(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Размер
 						.dropdown-menu.ps-xl-11.py-xl-9.pe-xl-3
-							.dropdown-title.mb-8.dropdown-column-2.ms-xl-0.ms-4
+							.dropdown-title.mb-xl-8.mb-5.dropdown-column-2.ms-xl-0.ms-4
 								span Размер
 								span.text-xl-center Длина стопы (см)
 							.dropdown-scrollbar(data-scroll-index="colorsScroll")
-								.column-block.dropdown-column-2
+								.dropdown-column-2
 									each size in sizes
 										+RadioCheckbox({
 											type: 'checkbox',
@@ -93,10 +93,10 @@ mixin CatalogFilters()
 					li.nav-item.dropdown.me-xl-4.order-2
 						a.filter-nav-link.nav-link.dropdown-toggle#navbarShop(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Магазин
 						.dropdown-menu.dropdown-menu-xxl-start.dropdown-menu-xl-center.px-xl-11.py-xl-9
-							.row.row-cols-2.flex-nowrap
+							.row.row-cols-1.row-cols-xl-2.flex-xl-nowrap
 								.col
 									.dropdown-col
-										.dropdown-title.mb-8 Город
+										.dropdown-title.mb-xl-8.mb-5 Город
 										.dropdown-scrollbar(data-scroll-index="citiesScroll")
 											each city in cities
 												+RadioCheckbox({
@@ -106,7 +106,7 @@ mixin CatalogFilters()
 												})
 								.col
 									.dropdown-col
-										.dropdown-title.mb-8 Магазин
+										.dropdown-title.mb-xl-8.mb-5.mt-xl-0.mt-7 Магазин
 										.dropdown-scrollbar(data-scroll-index="shopsScroll")
 											each shop in shops
 												+RadioCheckbox({
@@ -117,10 +117,10 @@ mixin CatalogFilters()
 					li.nav-item.dropdown.me-xl-4.order-2
 						a.filter-nav-link.nav-link.dropdown-toggle#navbarOtherFilters(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Другие фильтры
 						.dropdown-menu.ps-xl-11.py-xl-9.pe-xl-3
-							.row.row-cols-xl-5.row-cols-1.flex-xl-nowrap
-								.col
-									.dropdown-col
-										.dropdown-title.mb-8 Материал подкладки
+							.row.flex-xl-nowrap
+								.col-auto
+									.dropdown-col.w-auto
+										.dropdown-title.mb-xl-8.mb-5 Материал подкладки
 										.dropdown-scrollbar(data-scroll-index="citiesScroll")
 											each liningMaterial in liningMaterials
 												+RadioCheckbox({
@@ -128,9 +128,9 @@ mixin CatalogFilters()
 													title: liningMaterial.name,
 													id: liningMaterial.id
 												})
-								.col
-									.dropdown-col
-										.dropdown-title.mb-8 Вид застежки
+								.col-auto
+									.dropdown-col.w-auto
+										.dropdown-title.mb-xl-8.mb-5.mt-xl-0.mt-7 Вид застежки
 										.dropdown-scrollbar(data-scroll-index="citiesScroll")
 											each claspType in claspTypes
 												+RadioCheckbox({
@@ -138,9 +138,9 @@ mixin CatalogFilters()
 													title: claspType.name,
 													id: claspType.id
 												})
-								.col
-									.dropdown-col
-										.dropdown-title.mb-8 Тип подошвы
+								.col-auto
+									.dropdown-col.w-auto
+										.dropdown-title.mb-xl-8.mb-5.mt-xl-0.mt-7 Тип подошвы
 										.dropdown-scrollbar(data-scroll-index="citiesScroll")
 											each soleType in soleTypes
 												+RadioCheckbox({
@@ -148,20 +148,20 @@ mixin CatalogFilters()
 													title: soleType.name,
 													id: soleType.id
 												})
-								.col
-									.dropdown-col
-										.dropdown-title.mb-8 Высота каблука (см)
+								.col-auto
+									.dropdown-col.w-auto
+										.dropdown-title.mb-xl-8.mb-5.mt-xl-0.mt-7 Высота каблука (см)
 										.dropdown-scrollbar(data-scroll-index="citiesScroll")
-											.slider-range
-												.row.row-cols-2.mb-4
-													.form-group.col
+											.slider-range.px-xl-0.px-4.me-xl-8.me-0
+												.row.row-cols-xl-2.mb-4
+													.form-group.col-xl.col-md-3
 														input.form-control.form-control-sm.input-from.bg-light
-													.form-group.col
+													.form-group.col-xl.col-md-3
 														input.form-control.form-control-sm.input-to.bg-light
 												input.range(type="text" data-min="0" data-max="20" data-from="2" data-to="7")
-								.col
-									.dropdown-col
-										.dropdown-title.mb-8 Дополнительно
+								.col-auto
+									.dropdown-col.w-auto
+										.dropdown-title.mb-xl-8.mb-5.mt-xl-0.mt-7 Дополнительно
 										.dropdown-scrollbar(data-scroll-index="citiesScroll")
 											+RadioCheckbox({
 												type: 'radio',
