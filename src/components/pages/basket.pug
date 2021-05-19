@@ -1,0 +1,44 @@
+extends ../templates/layout
+include ../organisms/feedback
+include ../organisms/breadcrumb-and-title
+
+block main
+	main.mil-margin-left-side-menu.mil-margin-top-header
+		section.pt-15.ps-17.pe-9
+			+BreadcrumbAndTitle({
+				breadcrumb: ['Главная', 'Корзина'],
+				title: 'Корзина',
+				classTitle: 'mb-10'
+			})
+
+			h2.h7.text-uppercase.f-bold.mb-12 Оформление заказа
+			.row
+				.col-xxl-auto
+					.row
+						label.col-lg-4.col-form-label.mb-6 Мои данные
+						.col-lg-8.mb-6
+							input.form-control.bg-light(type="text" placeholder="Фамилия" aria-describedby="text1" required)
+							.invalid-feedback#text1 Заполните поле
+						.col-lg-8.offset-lg-4.mb-6
+							input.form-control.bg-light(type="text" placeholder="Имя" aria-describedby="text2" required)
+							.invalid-feedback#text2 Заполните поле
+						.col-lg-8.offset-lg-4.mb-6
+							input.form-control.bg-light(type="text" placeholder="Отчество" aria-describedby="text3" required)
+							.invalid-feedback#text3 Заполните поле
+						label.col-lg-4.col-form-label.mb-6 Телефон
+						.col-lg-8.mb-6
+							input.form-control.bg-light.profile-phone(type="text" placeholder="+7 (___) ___-__-__" data-mask="+7 (999) 999-99-99")
+						label.col-lg-4.col-form-label.mb-6 e-mail
+						.col-lg-8.mb-6
+							input.form-control.bg-light.mb-2(type="text" placeholder="")
+							.small
+								+RadioCheckbox({
+									type: 'checkmark',
+									title: 'Быть в курсе новинок и акций Milana Shoes',
+									id: 'newsletters',
+									checked: true
+								})
+				.col-xxl-auto
+
+
+		+Feedback()

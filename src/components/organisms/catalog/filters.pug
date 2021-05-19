@@ -2,98 +2,198 @@ include ../../atoms/radio-checkbox
 
 mixin CatalogFilters()
 	- var cities = [{name: 'Москва', id: 'city1'},{name: 'Санкт-Петербург', id: 'city2'},{name: 'Волгоград', id: 'city3'},{name: 'Калининград', id: 'city4'},{name: 'Владивосток', id: 'city5'},{name: 'Нижний Новгород', id: 'city6'},{name: 'Москва', id: 'city7'},{name: 'Санкт-Петербург', id: 'city8'},{name: 'Волгоград', id: 'city9'},{name: 'Калининград', id: 'city10'},{name: 'Владивосток', id: 'city11'},{name: 'Нижний Новгород', id: 'city12'}]
+	- var shops = [{name: 'ТЦ Выходной', id: 'shop1'},{name: 'ТЦ Ригамолл', id: 'shop2'},{name: 'ТЦ Family outlet', id: 'shop3'},{name: 'ТЦ Калейдоскоп', id: 'shop4'},{name: 'ТЦ Калита', id: 'shop5'},{name: 'ТЦ Фэшн хауз аутлет', id: 'shop6'}]
 	- var colors = [{name: 'Бежевый', id: 'color1'},{name: 'Белый', id: 'color2'},{name: 'Бордовый', id: 'color3'},{name: 'Коричневый', id: 'color4'},{name: 'Рыжий', id: 'color5'},{name: 'Хаки', id: 'color6'},{name: 'Серый', id: 'color7'},{name: 'Черный', id: 'color8'},{name: 'Фиолтеовый', id: 'color9'},{name: 'Красный', id: 'color10'}, {name: 'Бежевый', id: 'color1'},{name: 'Белый', id: 'color2'},{name: 'Бордовый', id: 'color3'},{name: 'Коричневый', id: 'color4'},{name: 'Рыжий', id: 'color5'},{name: 'Хаки', id: 'color6'},{name: 'Серый', id: 'color7'},{name: 'Черный', id: 'color8'},{name: 'Фиолтеовый', id: 'color9'},{name: 'Красный', id: 'color10'}];
-	nav.navbar.navbar-expand-lg.mb-8
+	- var sizes = [{size: '35', footLength: '23', id: 'size1'},{size: '36', footLength: '23.5', id: 'size2'},{size: '37', footLength: '24', id: 'size3'},{size: '38', footLength: '25', id: 'size4'},{size: '39', footLength: '26', id: 'size5'},{size: '40', footLength: '26.5', id: 'size6'},{size: '41', footLength: '27', id: 'size7'}];
+	- var materials = [{name: 'Натур. кожа', id: 'material1'},{name: 'Натур. кожа (велюр)', id: 'material2'},{name: 'Натур. кожа (велюр; стрейч)', id: 'material3'},{name: 'Коричневый', id: 'material4'},{name: 'Натур. кожа (нубук)', id: 'material5'},{name: 'Натур. кожа (велюр); текстиль', id: 'material6'},{name: 'Натур. кожа (велюр); стрейч', id: 'material7'},{name: 'Натур. кожа (стрейч)', id: 'material8'},{name: 'Натур. кожа (спилок)', id: 'material9'}]
+	- var liningMaterials = [{name: 'без подкладки', id: 'liningMaterial1'},{name: 'ворсин', id: 'liningMaterial2'},{name: 'натуральная кожа', id: 'liningMaterial3'},{name: 'натуральная кожа (текстиль)', id: 'liningMaterial4'},{name: 'натуральная кожа (стрейч)', id: 'liningMaterial5'},{name: 'натуральная шерсть', id: 'liningMaterial6'}]
+	- var claspTypes = [{name: 'без застежки', id: 'claspType1'},{name: 'липучка', id: 'claspType2'},{name: 'молния', id: 'claspType3'},{name: 'шнуровка', id: 'claspType4'},{name: 'шнуровка; липучка', id: 'claspType5'},{name: 'молния; шнуровка', id: 'claspType6'}]
+	- var soleTypes = [{name: 'без каблука', id: 'soleType1'},{name: 'платформа', id: 'soleType2'},{name: 'с каблуком', id: 'soleType3'},{name: 'танкетка', id: 'soleType4'}]
+	- var sortList = [{name: 'Сначала дешевые', id: 'sort1'},{name: 'Сначала дорогие', id: 'sort2'},{name: 'Сначала со скидкой', id: 'sort3'},{name: 'Сначала новинки', id: 'sort4'},{name: 'Сначала популярные', id: 'sort5'},{name: 'По убыванию артикула', id: 'sort6'}]
+	nav.navbar.navbar-expand-xl.mb-8
 		.collapse.navbar-collapse.mil-filters#navbarCatalogFilter
-			ul.navbar-nav
-				li.nav-item.d-lg-none.order-0
-					.d-flex.justify-content-between.align-items-center
-						span.nav-link.f-20px.f-bold.text-uppercase уточнить
-						span.navbar-toggler.p-0(type="button" data-bs-toggle="collapse" data-bs-target="#navbarCatalogFilter" aria-controls="navbarNavDarkDropdown" aria-expanded="false")
-							i.i.i-close.i-sm
-				li.nav-item.dropdown.me-lg-4.order-2
-					a.nav-link.dropdown-toggle#navbarSize(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Размер
-					.dropdown-menu.ps-11.py-9.pe-3
-				li.nav-item.dropdown.me-lg-4.order-2
-					a.nav-link.dropdown-toggle#navbarColor(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Цвет
-					.dropdown-menu.ps-11.py-9.pe-3
-						.dropdown-scrollbar(data-scroll-index="colorsScroll")
-							.column-block
-								each color in colors
+			.not-hide-nav-item.nav-item.d-xl-none.order-0.ps-md-14.py-md-6.pe-md-10
+				.d-flex.justify-content-between
+					span.toggle-title-nav-link.f-20px.f-bold.text-uppercase.d-none.mt-9
+					span.title-nav-link.f-20px.f-bold.text-uppercase.mt-9 уточнить
+					span.navbar-toggler.p-0(type="button" data-bs-toggle="collapse" data-bs-target="#navbarCatalogFilter" aria-controls="navbarNavDarkDropdown" aria-expanded="false")
+						i.i.i-close.i-sm
+			.filters-container-scroll.p-xl-0.me-xl-0.ps-md-10.pb-md-6.pe-md-7.me-md-11
+				ul.navbar-nav.f-13px.mb-xl-0.mb-md-15
+					li.nav-item.dropdown.me-xl-4.order-2
+						a.filter-nav-link.nav-link.dropdown-toggle#navbarSize(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Размер
+						.dropdown-menu.ps-xl-11.py-xl-9.pe-xl-3
+							.dropdown-title.mb-8.dropdown-column-2.ms-xl-0.ms-4
+								span Размер
+								span.text-xl-center Длина стопы (см)
+							.dropdown-scrollbar(data-scroll-index="colorsScroll")
+								.column-block.dropdown-column-2
+									each size in sizes
+										+RadioCheckbox({
+											type: 'checkbox',
+											title: '<span>' + size.size + '</span><span class="text-xl-center">' + size.footLength + '</span>',
+											id: size.id
+										})
+					li.nav-item.dropdown.me-xl-4.order-2
+						a.filter-nav-link.nav-link.dropdown-toggle#navbarColor(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Цвет
+						.dropdown-menu.ps-xl-11.py-xl-9.pe-xl-3
+							.dropdown-scrollbar(data-scroll-index="colorsScroll")
+								.column-block
+									each color in colors
+										+RadioCheckbox({
+											type: 'checkbox',
+											title: color.name,
+											id: color.id
+										})
+					li.nav-item.dropdown.me-xl-4.order-2
+						a.filter-nav-link.nav-link.dropdown-toggle#navbarSeason(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Сезон
+						.dropdown-menu.ps-xl-11.py-xl-9.pe-xl-3
+							.dropdown-scrollbar(data-scroll-index="seasonsScroll")
+								div
 									+RadioCheckbox({
 										type: 'checkbox',
-										title: color.name,
-										id: color.id
+										title: 'Деми',
+										id: 'demi'
 									})
-				li.nav-item.dropdown.me-lg-4.order-2
-					a.nav-link.dropdown-toggle#navbarSeason(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Сезон
-					.dropdown-menu.ps-11.py-9.pe-3
-						.dropdown-scrollbar(data-scroll-index="seasonsScroll")
-							div
-								+RadioCheckbox({
-									type: 'checkbox',
-									title: 'Деми',
-									id: 'demi'
-								})
-								+RadioCheckbox({
-									type: 'checkbox',
-									title: 'Зима',
-									id: 'winter',
-									checked: true
-								})
-				li.nav-item.dropdown.me-lg-4.order-2
-					a.nav-link.dropdown-toggle#navbarMterial(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Метериал
-					.dropdown-menu.ps-11.py-9.pe-3
-				li.nav-item.dropdown.me-lg-4.order-2
-					a.nav-link.dropdown-toggle#navbarPrice(href="#" role="button" data-bs-offset="100,20" data-bs-display="static" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Цена
-					.dropdown-menu.ps-11.py-9.pe-3
-						.perfect-scrollbar.overflow-hidden.position-relative
-							.dropdown-col
-								+RadioCheckbox({
-									type: 'radio',
-									title: 'от 3 000 до 5 000 ₽',
-									id: 'price1',
-									name: 'price'
-								})
-								+RadioCheckbox({
-									type: 'checkbox',
-									title: 'от 5 000 ₽',
-									id: 'price2',
-									checked: true,
-									name: 'price'
-								})
-				li.nav-item.dropdown.me-lg-4.order-2
-					a.nav-link.dropdown-toggle#navbarShop(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Магазин
-					.dropdown-menu.px-11.py-9
-						.row.row-cols-2.flex-nowrap
-							.col
+									+RadioCheckbox({
+										type: 'checkbox',
+										title: 'Зима',
+										id: 'winter',
+										checked: true
+									})
+					li.nav-item.dropdown.me-xl-4.order-2
+						a.filter-nav-link.nav-link.dropdown-toggle#navbarMterial(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Метериал
+						.dropdown-menu.ps-xl-11.py-xl-9.pe-xl-3
+							.dropdown-scrollbar(data-scroll-index="colorsScroll")
+								.column-block
+									each material in materials
+										+RadioCheckbox({
+											type: 'checkbox',
+											title: material.name,
+											id: material.id
+										})
+					li.nav-item.dropdown.me-xl-4.order-2
+						a.filter-nav-link.nav-link.dropdown-toggle#navbarPrice(href="#" role="button" data-bs-offset="100,20" data-bs-display="static" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Цена
+						.dropdown-menu.ps-xl-11.py-xl-9.pe-xl-3
+							.perfect-scrollbar.overflow-hidden.position-relative
 								.dropdown-col
-									.dropdown-title.mb-10 Город
-									.dropdown-scrollbar(data-scroll-index="citiesScroll")
-										each city in cities
+									+RadioCheckbox({
+										type: 'radio',
+										title: 'от 3 000 до 5 000 ₽',
+										id: 'price1',
+										name: 'price'
+									})
+									+RadioCheckbox({
+										type: 'checkbox',
+										title: 'от 5 000 ₽',
+										id: 'price2',
+										checked: true,
+										name: 'price'
+									})
+					li.nav-item.dropdown.me-xl-4.order-2
+						a.filter-nav-link.nav-link.dropdown-toggle#navbarShop(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Магазин
+						.dropdown-menu.dropdown-menu-xxl-start.dropdown-menu-xl-center.px-xl-11.py-xl-9
+							.row.row-cols-2.flex-nowrap
+								.col
+									.dropdown-col
+										.dropdown-title.mb-8 Город
+										.dropdown-scrollbar(data-scroll-index="citiesScroll")
+											each city in cities
+												+RadioCheckbox({
+													type: 'checkbox',
+													title: city.name,
+													id: city.id
+												})
+								.col
+									.dropdown-col
+										.dropdown-title.mb-8 Магазин
+										.dropdown-scrollbar(data-scroll-index="shopsScroll")
+											each shop in shops
+												+RadioCheckbox({
+													type: 'checkbox',
+													title: shop.name,
+													id: shop.id
+												})
+					li.nav-item.dropdown.me-xl-4.order-2
+						a.filter-nav-link.nav-link.dropdown-toggle#navbarOtherFilters(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Другие фильтры
+						.dropdown-menu.ps-xl-11.py-xl-9.pe-xl-3
+							.row.row-cols-xl-5.row-cols-1.flex-xl-nowrap
+								.col
+									.dropdown-col
+										.dropdown-title.mb-8 Материал подкладки
+										.dropdown-scrollbar(data-scroll-index="citiesScroll")
+											each liningMaterial in liningMaterials
+												+RadioCheckbox({
+													type: 'checkbox',
+													title: liningMaterial.name,
+													id: liningMaterial.id
+												})
+								.col
+									.dropdown-col
+										.dropdown-title.mb-8 Вид застежки
+										.dropdown-scrollbar(data-scroll-index="citiesScroll")
+											each claspType in claspTypes
+												+RadioCheckbox({
+													type: 'checkbox',
+													title: claspType.name,
+													id: claspType.id
+												})
+								.col
+									.dropdown-col
+										.dropdown-title.mb-8 Тип подошвы
+										.dropdown-scrollbar(data-scroll-index="citiesScroll")
+											each soleType in soleTypes
+												+RadioCheckbox({
+													type: 'checkbox',
+													title: soleType.name,
+													id: soleType.id
+												})
+								.col
+									.dropdown-col
+										.dropdown-title.mb-8 Высота каблука (см)
+										.dropdown-scrollbar(data-scroll-index="citiesScroll")
+											.slider-range
+												.row.row-cols-2.mb-4
+													.form-group.col
+														input.form-control.form-control-sm.input-from.bg-light
+													.form-group.col
+														input.form-control.form-control-sm.input-to.bg-light
+												input.range(type="text" data-min="0" data-max="20" data-from="2" data-to="7")
+								.col
+									.dropdown-col
+										.dropdown-title.mb-8 Дополнительно
+										.dropdown-scrollbar(data-scroll-index="citiesScroll")
+											+RadioCheckbox({
+												type: 'radio',
+												title: 'sale',
+												id: 'sale1',
+												name: 'sale'
+											})
 											+RadioCheckbox({
 												type: 'checkbox',
-												title: city.name,
-												id: city.id
+												title: 'new',
+												id: 'new2',
+												name: 'new'
 											})
-							.col
-								.dropdown-col
-									.dropdown-title.mb-10 Магазин
-									.dropdown-scrollbar(data-scroll-index="shopsScroll")
-				li.nav-item.dropdown.me-lg-4.order-2
-					a.nav-link.dropdown-toggle#navbarOtherFilters(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Другие фильтры
-					.dropdown-menu.ps-11.py-9.pe-3
-				li.nav-item.dropdown.ms-xxxl-16.ms-xxl-10.ms-lg-auto.d-none.d-lg-block.order-2
-					a.nav-link.d-flex.align-items-center(href="#" role="button" aria-expanded="false")
-						i.i.i-reset.i-sm.me-2
-						| Сбросить фильтр
-				li.nav-item.dropdown.ms-lg-auto.d-lg-none.d-xxl-block.order-1.order-lg-3
-					a.nav-link.dropdown-toggle#navbarOrder(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Сортировать
-					.dropdown-menu.ps-11.py-9.pe-3
-			.row.d-lg-none.position-fixed.bottom-0.start-0.end-0
-				.col-7.pe-0
-					a.btn.btn-black.w-100.px-0(href="#") Показать 88 товаров
-				.col-5.ps-0
-					a.btn.btn-primary.w-100.px-0(href="#") Сбросить
+
+					li.not-hide-nav-item.nav-item.dropdown.ms-xxxl-16.ms-xxl-10.ms-xl-auto.d-none.d-xl-block.order-2
+						a.nav-link.d-flex.align-items-center(href="#" role="button" aria-expanded="false")
+							i.i.i-reset.i-sm.me-2
+							| Сбросить фильтр
+					li.nav-item.dropdown.ms-xl-auto.d-xl-none.d-xxl-block.order-1.order-xl-3
+						a.filter-nav-link.nav-link.dropdown-toggle#navbarOrder(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Сортировать
+						.dropdown-menu.dropdown-menu-end.ps-xl-11.py-xl-9.pe-xl-11
+							each sort in sortList
+								+RadioCheckbox({
+									type: 'radio',
+									title: sort.name,
+									id: sort.id,
+									name: 'sort'
+								})
+				.row.d-xl-none
+					.col-7.pe-0
+						a.btn.btn-black.w-100.px-0(href="#") Показать 88 товаров
+					.col-5.ps-0
+						a.btn.btn-primary.w-100.px-0(href="#") Сбросить
 
 

@@ -10,6 +10,7 @@ import L from 'leaflet';
 import PerfectScrollbar from 'perfect-scrollbar';
 import Sticky from 'sticky-js'
 import mask from 'jquery.maskedinput/src/jquery.maskedinput';
+import ionRangeSlider from 'ion-rangeslider';
 
 window.PerfectScrollbar = PerfectScrollbar;
 window.bootstrap = bootstrap;

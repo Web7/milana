@@ -3,17 +3,21 @@
 	background-color: $white
 	width: 100vw
 	height: 100vh
-	z-index: 1050
+	z-index: 1030
 	top: 0
 	left: 0
 	right: 0
-	overflow: auto
+	overflow: hidden
+	.toggle-title-nav-link
+		line-height: 1
+		cursor: pointer
+	.title-nav-link
+		line-height: 1
 	.navbar-nav
 		flex: auto
 		.nav-item
 			padding-left: 20px
 			padding-right: 20px
-			border-bottom: 1px solid #707070
 			.nav-link
 				font-size: 14px
 				color: $black
@@ -24,10 +28,21 @@
 					color: $primary
 
 	.dropdown
+		&-column-2
+			width: 250px
+			margin-right: 40px
+			span
+				display: inline-block
+				width: 50%
+			.form-check-label
+				width: 100%
+				span
+					&:last-child
+						margin-left: -10px
 		&-col
 			min-width: 230px
 		&-scrollbar
-			--mil-dropdown-height: 400px
+			--mil-dropdown-height: 310px
 			max-height: calc(var(--mil-dropdown-height) - 90px)
 			overflow: hidden
 			position: relative
@@ -49,7 +64,9 @@
 				&:after
 					transform: rotateX(180deg)
 		&-menu
+			font-size: inherit
 			max-height: 400px
+
 			.column-block
 				margin-bottom: -20px
 				-webkit-columns: 2 180px
@@ -57,18 +74,117 @@
 				columns: 2 180px
 				width: 100%
 				height: 100%
+			.slider-range,
 			.form-check
-				margin-bottom: 20px
+				margin-bottom: 10px
 				margin-right: 40px
 				&:last-child
 					margin-bottom: 0
 
-@media (min-width: 992px)
+.dropdown
+	&-menu
+		z-index: 1029
+
+.irs--round
+	height: 27px
+	.irs
+		&-bar
+			top: 4px
+			height: 4px
+			background-color: $primary
+		&-handle
+			top: 0
+			width: 12px
+			height: 12px
+			background-color: $primary !important
+			border-color: $primary !important
+			&:hover
+				background-color: $primary
+		&-line
+			height: 4px
+			top: 4px
+			background-color: $gray-100
+
+@media (max-width: 1200px)
+	.mil-filters
+		padding-bottom: 56px
+		.filters-container-scroll
+			position: relative
+			height: calc(100vh - 125px)
+		.form-check
+			padding: 0 20px
+			font-size: 14px
+			justify-content: space-between
+			margin-right: 0 !important
+			margin-bottom: 0 !important
+			&:last-child
+				border-bottom: 0
+			input
+				order: 1
+				margin-left: 0
+				margin-right: 0
+			label
+				padding: 15px 0
+				order: 0
+				width: 100%
+		.toggle-title-nav-link
+			&:before
+				content: ""
+				display: inline-block
+				width: 10px
+				height: 16px
+				left: 0
+				background: url(../images/filters-arrow.svg) no-repeat 0 0
+				transform: rotate(180deg)
+				margin-right: 20px
+		.dropdown
+			&-column-2
+				width: 100%
+				span
+					display: inline-block
+					margin-right: 80px
+					width: auto
+					&:first-child
+						width: 51px
+					&:last-child
+						margin-left: 0 !important
+			&-scrollbar
+				max-height: initial
+			&-menu
+				padding: 0
+				margin-left: -20px
+				margin-right: -20px
+				max-height: initial
+				box-shadow: none
+				.column-block
+					columns: 1
+					margin-bottom: 0
+			&-col
+				min-width: inherit
+			&-toggle
+				position: relative
+				font-family: 'montserratmedium'
+				&:after
+					position: absolute
+					width: 10px
+					height: 16px
+					right: 0
+					background-image: url(../images/filters-arrow.svg)
+
+@media (min-width: 768px)
+	.mil-filters
+		width: 655px
+		left: initial
+
+@media (min-width: 1200px)
 	.mil-filters
 		width: auto
 		height: auto
 		position: static
 		overflow: initial
+		z-index: 1028
+		.filters-container-scroll
+			width: 100%
 		.navbar-nav
 			.nav-item
 				padding-left: 0
