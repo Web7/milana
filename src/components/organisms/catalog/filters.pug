@@ -23,7 +23,7 @@ mixin CatalogFilters()
 					li.nav-item.dropdown.me-xl-4.order-2
 						a.filter-nav-link.nav-link.dropdown-toggle#navbarSize(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Размер
 						.dropdown-menu.ps-xl-11.py-xl-9.pe-xl-3
-							.dropdown-title.mb-xl-8.mb-5.dropdown-column-2.ms-xl-0.ms-4
+							.dropdown-title.mb-xl-8.mb-5.dropdown-column-2
 								span Размер
 								span.text-xl-center Длина стопы (см)
 							.dropdown-scrollbar(data-scroll-index="colorsScroll")
@@ -92,7 +92,7 @@ mixin CatalogFilters()
 									})
 					li.nav-item.dropdown.me-xl-4.order-2
 						a.filter-nav-link.nav-link.dropdown-toggle#navbarShop(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Магазин
-						.dropdown-menu.dropdown-menu-xxl-start.dropdown-menu-xl-center.px-xl-11.py-xl-9
+						.dropdown-menu.dropdown-menu-xxl-start.dropdown-menu-shop.px-xl-11.py-xl-9
 							.row.row-cols-1.row-cols-xl-2.flex-xl-nowrap
 								.col
 									.dropdown-col
@@ -116,9 +116,9 @@ mixin CatalogFilters()
 												})
 					li.nav-item.dropdown.me-xl-4.order-2
 						a.filter-nav-link.nav-link.dropdown-toggle#navbarOtherFilters(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Другие фильтры
-						.dropdown-menu.ps-xl-11.py-xl-9.pe-xl-3
-							.row.flex-xl-nowrap
-								.col-auto
+						.dropdown-menu.ps-xl-11.py-xl-9.pe-xl-3.dropdown-menu-other-filters
+							.row.flex-xl-nowrap.row-cols-1
+								.col-xl-auto.col
 									.dropdown-col.w-auto
 										.dropdown-title.mb-xl-8.mb-5 Материал подкладки
 										.dropdown-scrollbar(data-scroll-index="citiesScroll")
@@ -128,7 +128,7 @@ mixin CatalogFilters()
 													title: liningMaterial.name,
 													id: liningMaterial.id
 												})
-								.col-auto
+								.col-xl-auto.col
 									.dropdown-col.w-auto
 										.dropdown-title.mb-xl-8.mb-5.mt-xl-0.mt-7 Вид застежки
 										.dropdown-scrollbar(data-scroll-index="citiesScroll")
@@ -138,7 +138,7 @@ mixin CatalogFilters()
 													title: claspType.name,
 													id: claspType.id
 												})
-								.col-auto
+								.col-xl-auto.col
 									.dropdown-col.w-auto
 										.dropdown-title.mb-xl-8.mb-5.mt-xl-0.mt-7 Тип подошвы
 										.dropdown-scrollbar(data-scroll-index="citiesScroll")
@@ -148,7 +148,7 @@ mixin CatalogFilters()
 													title: soleType.name,
 													id: soleType.id
 												})
-								.col-auto
+								.col-xl-auto.col
 									.dropdown-col.w-auto
 										.dropdown-title.mb-xl-8.mb-5.mt-xl-0.mt-7 Высота каблука (см)
 										.dropdown-scrollbar(data-scroll-index="citiesScroll")
@@ -159,7 +159,7 @@ mixin CatalogFilters()
 													.form-group.col-xl.col-md-3
 														input.form-control.form-control-sm.input-to.bg-light
 												input.range(type="text" data-min="0" data-max="20" data-from="2" data-to="7")
-								.col-auto
+								.col-xl-auto.col
 									.dropdown-col.w-auto
 										.dropdown-title.mb-xl-8.mb-5.mt-xl-0.mt-7 Дополнительно
 										.dropdown-scrollbar(data-scroll-index="citiesScroll")

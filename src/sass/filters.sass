@@ -168,9 +168,12 @@
 				margin-right: -20px
 				max-height: initial
 				box-shadow: none
+				width: calc(100% + 40px)
 				.column-block
 					columns: 1
 					margin-bottom: 0
+				.slider-range
+					width: 100%
 			&-col
 				min-width: inherit
 			&-toggle
@@ -189,6 +192,10 @@
 		left: initial
 
 @media (min-width: 1200px)
+	.dropdown-menu-shop
+		left: -120% !important
+	.dropdown-menu-other-filters
+		left: -580% !important
 	.mil-filters
 		width: auto
 		height: auto
@@ -206,3 +213,13 @@
 					font-size: 13px
 					padding-top: 0
 					padding-bottom: 0
+
+@media (min-width: 1400px)
+	.dropdown-menu-shop
+		left: 0 !important
+	.dropdown-menu-other-filters
+		left: -440% !important
+
+@media (min-width: 1600px)
+	.dropdown-menu-other-filters
+		left: -250% !important
