@@ -182,7 +182,7 @@ mixin CatalogFilters()
 							| Сбросить фильтр
 					li.nav-item.dropdown.ms-xl-auto.d-xl-none.d-xxl-block.order-1.order-xl-3
 						a.filter-nav-link.nav-link.dropdown-toggle#navbarOrder(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Сортировать
-						.dropdown-menu.dropdown-menu-end.ps-xl-11.py-xl-9.pe-xl-11
+						.dropdown-menu.dropdown-menu-end.ps-xl-11.py-xl-9.pe-xl-11.hide-checked
 							each sort in sortList
 								+RadioCheckbox({
 									type: 'radio',

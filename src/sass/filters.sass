@@ -3,7 +3,7 @@
 	background-color: $white
 	width: 100vw
 	height: 100vh
-	z-index: 1030
+	z-index: 1040
 	top: 0
 	left: 0
 	right: 0
@@ -53,21 +53,7 @@
 		&-title
 			font-size: 13px
 			margin-right: 40px
-		&-toggle
-			display: flex
-			&:after
-				display: inline-block
-				vertical-align: $caret-vertical-align
-				content: ""
-				width: 9px
-				height: 9px
-				background: url(../images/caret-filter-sprite.svg#down) no-repeat center center
-				margin: auto 0 auto 10px
-				transform: rotateX(0)
-				transition: transform linear 300ms
-			&.show
-				&:after
-					transform: rotateX(180deg)
+
 		&-menu
 			font-size: inherit
 			max-height: 400px
@@ -90,6 +76,21 @@
 					margin-bottom: 0
 
 .dropdown
+	&-toggle
+		display: flex
+		&:after
+			display: inline-block
+			vertical-align: $caret-vertical-align
+			content: ""
+			width: 9px
+			height: 9px
+			background: url(../images/caret-filter-sprite.svg#down) no-repeat center center
+			margin: auto 0 auto 10px
+			transform: rotateX(0)
+			transition: transform linear 300ms
+		&.show
+			&:after
+				transform: rotateX(180deg)
 	&-menu
 		z-index: 1029
 
@@ -212,8 +213,13 @@
 		position: static
 		overflow: initial
 		z-index: 1028
+		.hide-checked
+			.form-check-input
+				display: none
 		.form-check
 			padding: 0
+			&-input
+				margin-left: 0
 		.filters-container-scroll
 			width: 100%
 		.dropdown
