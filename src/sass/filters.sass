@@ -71,7 +71,7 @@
 		&-menu
 			font-size: inherit
 			max-height: 400px
-			width: max-content
+			width: 100%
 
 			.column-block
 				margin-bottom: -20px
@@ -113,6 +113,12 @@
 			top: 4px
 			background-color: $gray-100
 
+@media (min-width: 768px)
+	.mil-filters
+		.dropdown
+			&-menu
+				width: calc(100% + 40px)
+
 @media (max-width: 1200px)
 	.mil-filters
 		padding-bottom: 56px
@@ -120,7 +126,7 @@
 			position: relative
 			height: calc(100vh - 125px)
 		.form-check
-			padding: 0 20px
+			padding: 0
 			font-size: 14px
 			justify-content: space-between
 			margin-right: 0 !important
@@ -147,7 +153,6 @@
 				margin-right: 20px
 		.dropdown
 			&-title
-				margin-left: 20px
 				color: #8a8a8a
 				font-size: 14px
 			&-column-2
@@ -164,11 +169,8 @@
 				max-height: initial
 			&-menu
 				padding: 0
-				margin-left: -20px
-				margin-right: -20px
 				max-height: initial
 				box-shadow: none
-				width: calc(100% + 40px)
 				.column-block
 					columns: 1
 					margin-bottom: 0
@@ -190,6 +192,14 @@
 	.mil-filters
 		width: 655px
 		left: initial
+		.form-check
+			padding: 0 20px
+		.dropdown
+			&-menu
+				margin-left: -20px
+				margin-right: -20px
+			&-title
+				margin-left: 20px
 
 @media (min-width: 1200px)
 	.dropdown-menu-shop
@@ -202,8 +212,17 @@
 		position: static
 		overflow: initial
 		z-index: 1028
+		.form-check
+			padding: 0
 		.filters-container-scroll
 			width: 100%
+		.dropdown
+			&-title
+				margin-left: 0
+			&-menu
+				margin-left: 0
+				margin-right: 0
+				width: max-content
 		.navbar-nav
 			.nav-item
 				padding-left: 0
