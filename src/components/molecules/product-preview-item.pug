@@ -18,7 +18,7 @@ mixin ProductPreviewItem(data)
 				if !data.sale
 					span= data.price
 				if data.sale
-					s= data.price
+					s.d-md-inline.d-block= data.price
 					span.text-primary= data.sale.price
 					span.badge.bg-primary= data.sale.percent
 			if data.isSizes
