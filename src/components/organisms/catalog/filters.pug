@@ -10,7 +10,7 @@ mixin CatalogFilters()
 	- var claspTypes = [{name: 'без застежки', id: 'claspType1'},{name: 'липучка', id: 'claspType2'},{name: 'молния', id: 'claspType3'},{name: 'шнуровка', id: 'claspType4'},{name: 'шнуровка; липучка', id: 'claspType5'},{name: 'молния; шнуровка', id: 'claspType6'}]
 	- var soleTypes = [{name: 'без каблука', id: 'soleType1'},{name: 'платформа', id: 'soleType2'},{name: 'с каблуком', id: 'soleType3'},{name: 'танкетка', id: 'soleType4'}]
 	- var sortList = [{name: 'Сначала дешевые', id: 'sort1'},{name: 'Сначала дорогие', id: 'sort2'},{name: 'Сначала со скидкой', id: 'sort3'},{name: 'Сначала новинки', id: 'sort4'},{name: 'Сначала популярные', id: 'sort5'},{name: 'По убыванию артикула', id: 'sort6'}]
-	nav.navbar.navbar-expand-xl.mb-8
+	nav.navbar.navbar-expand-xl.mb-md-8
 		.collapse.navbar-collapse.mil-filters#navbarCatalogFilter
 			.not-hide-nav-item.nav-item.d-xl-none.order-0.ps-md-14.py-md-6.pe-md-10.px-4.pt-6.pb-5
 				.d-flex.justify-content-between
@@ -23,7 +23,7 @@ mixin CatalogFilters()
 					li.nav-item.dropdown.me-xl-4.order-2
 						a.filter-nav-link.nav-link.dropdown-toggle#navbarSize(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Размер
 						.dropdown-menu.ps-xl-11.py-xl-9.pe-xl-3
-							.dropdown-title.mb-xl-8.mb-5.dropdown-column-2
+							.dropdown-title.mb-xl-6.mb-5.dropdown-column-2
 								span Размер
 								span.text-xl-center Длина стопы (см)
 							.dropdown-scrollbar(data-scroll-index="colorsScroll")
@@ -96,11 +96,12 @@ mixin CatalogFilters()
 							.row.row-cols-1.row-cols-xl-2.flex-xl-nowrap
 								.col
 									.dropdown-col
-										.dropdown-title.mb-xl-8.mb-5 Город
+										.dropdown-title.mb-xl-6.mb-5 Город
 										.dropdown-scrollbar(data-scroll-index="citiesScroll")
 											each city in cities
 												+RadioCheckbox({
-													type: 'checkbox',
+													type: 'radio',
+													name: 'city',
 													title: city.name,
 													id: city.id
 												})
@@ -120,7 +121,7 @@ mixin CatalogFilters()
 							.row.flex-xl-nowrap.row-cols-1
 								.col-xl-auto.col
 									.dropdown-col.w-auto
-										.dropdown-title.mb-xl-8.mb-5 Материал подкладки
+										.dropdown-title.mb-xl-6.mb-5 Материал подкладки
 										.dropdown-scrollbar(data-scroll-index="citiesScroll")
 											each liningMaterial in liningMaterials
 												+RadioCheckbox({
@@ -130,7 +131,7 @@ mixin CatalogFilters()
 												})
 								.col-xl-auto.col
 									.dropdown-col.w-auto
-										.dropdown-title.mb-xl-8.mb-5.mt-xl-0.mt-7 Вид застежки
+										.dropdown-title.mb-xl-6.mb-5.mt-xl-0.mt-7 Вид застежки
 										.dropdown-scrollbar(data-scroll-index="citiesScroll")
 											each claspType in claspTypes
 												+RadioCheckbox({
@@ -140,7 +141,7 @@ mixin CatalogFilters()
 												})
 								.col-xl-auto.col
 									.dropdown-col.w-auto
-										.dropdown-title.mb-xl-8.mb-5.mt-xl-0.mt-7 Тип подошвы
+										.dropdown-title.mb-xl-6.mb-5.mt-xl-0.mt-7 Тип подошвы
 										.dropdown-scrollbar(data-scroll-index="citiesScroll")
 											each soleType in soleTypes
 												+RadioCheckbox({
@@ -150,7 +151,7 @@ mixin CatalogFilters()
 												})
 								.col-xl-auto.col
 									.dropdown-col.w-auto
-										.dropdown-title.mb-xl-8.mb-5.mt-xl-0.mt-7 Высота каблука (см)
+										.dropdown-title.mb-xl-6.mb-5.mt-xl-0.mt-7 Высота каблука (см)
 										.dropdown-scrollbar(data-scroll-index="citiesScroll")
 											.slider-range.px-xl-0.px-4.me-xl-8.me-0
 												.row.row-cols-xl-2.mb-4
@@ -161,7 +162,7 @@ mixin CatalogFilters()
 												input.range(type="text" data-min="0" data-max="20" data-from="2" data-to="7")
 								.col-xl-auto.col
 									.dropdown-col.w-auto
-										.dropdown-title.mb-xl-8.mb-5.mt-xl-0.mt-7 Дополнительно
+										.dropdown-title.mb-xl-6.mb-5.mt-xl-0.mt-7 Дополнительно
 										.dropdown-scrollbar(data-scroll-index="citiesScroll")
 											+RadioCheckbox({
 												type: 'radio',
