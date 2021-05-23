@@ -13,12 +13,12 @@
 .line-height-1
 	line-height: 1
 
-@mixin fontSizes($sizes...)
-	@each $size in $sizes
-		.f-#{$size}
-			font-size: $size !important
-
-@include fontSizes(11px,12px,13px,14px,15px,20px,25px)
+//@mixin fontSizes($sizes...)
+//	@each $size in $sizes
+//		.f-#{$size}
+//			font-size: $size !important
+//
+//@include fontSizes(11px,12px,13px,14px,15px,20px,25px)
 
 .h3
 	font-family: 'montserratbold'
@@ -50,3 +50,39 @@
 
 @media (min-width: 1600px)
 	@include headersTag(71px, 60px, 40px, 36px, 30px, 18px, 25px)
+
+@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints))
+	$n: index($breakpoint-names, $name)
+	@if not $n
+		@error "breakpoint `#{$name}` not found in `#{$breakpoints}`"
+	@return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null)
+
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints)
+	@return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}")
+
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints)
+	$min: map-get($breakpoints, $name)
+	@return if($min != 0, $min, null)
+
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints)
+	$min: breakpoint-min($name, $breakpoints)
+	@if $min
+		@media (min-width: $min)
+			@content
+	@else
+		@content
+
+$fontSizes: (11px,12px,13px,14px,15px,18px,20px,25px)
+
+.f
+
+	@each $breakpoint in map-keys($grid-breakpoints)
+		$next: breakpoint-next($breakpoint, $grid-breakpoints)
+		$infix: breakpoint-infix($next, $grid-breakpoints)
+
+		&#{$infix}
+			@include media-breakpoint-up($next)
+				@each $size in $fontSizes
+					&-#{$size}
+						font-size: $size !important
+

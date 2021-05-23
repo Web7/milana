@@ -13,21 +13,21 @@ block main
 				classTitle: 'mb-10'
 			})
 
-			.position-relative.mb-25
-				.d-flex.contacts-phones.mb-10
-					.d-inline-block.pe-24.bg-white.pt-16.pb-12
-						p.f-20px.f-bold.text-uppercase.mb-8 многоканальный<br>номер
-						p.f-25px.f-medium.mb-14 +7 (495) 215-24-41
-						p.f-14px.mb-0 info@milana-shoes.ru
-					.d-inline-block.pe-24.bg-white.pt-16.pb-12
-						p.f-20px.f-bold.text-uppercase.mb-9 Горячая линия по<br>качеству обслуживания
+			.position-relative.mb-md-25.mb-15
+				.d-flex.contacts-phones.mb-10.flex-column.flex-md-row
+					.d-flex.flex-column.pe-md-24.bg-white.pt-md-16.pb-md-12.pb-12
+						p.f-18px.f-md-20px.f-bold.text-uppercase.mb-8 многоканальный<br>номер
+						p.f-20px.f-md-25px.f-medium.mb-md-14.mb-8 +7 (495) 215-24-41
+						p.f-14px.mb-0.mt-auto info@milana-shoes.ru
+					.d-flex.flex-column.pe-lg-24.pe-md-10.bg-white.pt-md-16.pb-md-12
+						p.f-18px.f-md-20px.f-bold.text-uppercase.mb-9 Горячая линия по<br>качеству обслуживания
 						.line-height-1.mb-12
-							p.f-25px.f-medium.mb-0 8 800 555 38 60
+							p.f-20px.f-md-25px.f-medium.mb-0 8 800 555 38 60
 							small.f-11px звонок по России бесплатный
 						p.f-14px.mb-0 service@milana-shoes.ru
 				.contacts-image
 					img.w-auto.h-100(src="images/contacts-image.jpg" alt="" title="")
-			.f-14px.row.row-cols-xxl-4.row-cols-lg-3.row-cols-md-2.row-cols-1
+			.f-14px.row.row-cols-xxxl-4.row-cols-lg-3.row-cols-md-2.row-cols-1
 				- var colItems = [{workTime: true, title: 'Интернет-магазин', phones: ['+7 (495) 215-27-01','+7 (800) 555-38-60'], mail: 'ioperator@milana-shoes.ru'},{title: 'розничная сеть', phones: ['+7 (495) 215-24-41','+7 (800) 775-36-20'], mail: 'retail@milana-shoes.ru'},{title: 'Франчайзинг', phones: ['+7 (495) 215-24-41','+7 (800) 775-36-20'], mail: 'franch@milana-shoes.ru'},{title: 'Оптовые продажи', phones: ['+7 (495) 215-24-41','+7 (915) 385-64-16'], mail: 'opt@milana-shoes.ru'},{title: 'Аренда помещений', phones: ['+7 (495) 215-24-41','+7 (800) 775-36-20'], mail: 'arenda@milana-shoes.ru'},{title: 'Закупки товаров', phones: ['+7 (495) 215-24-41'], mail: 'zakupki@milana-shoes.ru'},{title: 'Реклама и PR', phones: ['+7 (495) 215-24-41'], mail: 'reklama@milana-shoes.ru'},{title: 'Отдел персонала', phones: ['+7 (495) 215-24-41','+7 (800) 333-12-85'], mail: 'job@milana-shoes.ru'}]
 				each item in colItems
 					+ContactsCol(item)
