@@ -1,6 +1,8 @@
 extends ../templates/layout
 include ../organisms/feedback
 include ../organisms/breadcrumb-and-title
+include ../atoms/input
+include ../atoms/metro-icon
 
 block main
 	main.mil-margin-left-side-menu.mil-margin-top-header
@@ -11,27 +13,39 @@ block main
 				classTitle: 'mb-10'
 			})
 
-			.row.mil-basket-container.f-14px
-				.col-xxl-8
+			.row.mil-basket-container.f-14px(data-sticky-container)
+				.col.flex-grow-1.flex-shrink-1
 					.row
 						.col-12
 							h2.h7.text-uppercase.f-bold.mb-12 Оформление заказа
-						label.col-lg-4.col-form-label.mb-6 Мои данные
-						.col-lg-5.mb-6
-							input.form-control.bg-light(type="text" placeholder="Фамилия" aria-describedby="text1" required)
-							.invalid-feedback#text1 Заполните поле
-						.col-lg-5.offset-lg-4.mb-6
-							input.form-control.bg-light(type="text" placeholder="Имя" aria-describedby="text2" required)
-							.invalid-feedback#text2 Заполните поле
-						.col-lg-5.offset-lg-4.mb-6
-							input.form-control.bg-light(type="text" placeholder="Отчество" aria-describedby="text3" required)
-							.invalid-feedback#text3 Заполните поле
-						label.col-lg-4.col-form-label.mb-6 Телефон
-						.col-lg-5.mb-6
-							input.form-control.bg-light.profile-phone(type="text" placeholder="+7 (___) ___-__-__" data-mask="+7 (999) 999-99-99")
-						label.col-lg-4.col-form-label.mb-6 e-mail
-						.col-lg-5.mb-6
-							input.form-control.bg-light.mb-2(type="text" placeholder="")
+						label.col-md-4.col-form-label.mb-6 Мои данные
+						.col-md-5.mb-6
+							+Input({
+								id: 'text1',
+								errorText: 'Заполните поле'
+							})(placeholder="Фамилия")
+						.col-md-5.offset-md-4.mb-6
+							+Input({
+								id: 'text2',
+								errorText: 'Заполните поле'
+							})(placeholder="Имя")
+						.col-md-5.offset-md-4.mb-6
+							+Input({
+								id: 'text3',
+								errorText: 'Заполните поле'
+							})(placeholder="Отчество")
+						label.col-md-4.col-form-label.mb-6 Телефон
+						.col-md-5.mb-6
+							+Input({
+								id: 'text4',
+								errorText: 'Заполните поле'
+							})(data-mask="+7 (999) 999-99-99" class="profile-phone" placeholder="+7 (___) ___-__-__")
+						label.col-md-4.col-form-label.mb-6 e-mail
+						.col-md-5.mb-6
+							+Input({
+								id: 'text5',
+								errorText: 'Заполните поле'
+							})(class="mb-2")
 							.small
 								+RadioCheckbox({
 									type: 'checkmark',
@@ -39,11 +53,11 @@ block main
 									id: 'newsletters',
 									checked: true
 								})
-						label.col-lg-4.col-form-label.mb-6 Город доставки
-						.col-lg-5.mb-6
+						label.col-md-4.col-form-label.mb-6 Город доставки
+						.col-md-5.mb-6
 							input.form-control.bg-light(type="text")
-						label.col-lg-4.col-form-label.mb-6 способ доставки
-						.col-lg-8.mb-6
+						label.col-md-4.col-form-label.mb-6 способ доставки
+						.col-md-8.mb-6
 							+RadioCheckbox({
 								type: 'radio',
 								title: 'Самовывоз',
@@ -66,11 +80,11 @@ block main
 								name: 'deliveryMethod'
 							})
 							.f-13px.text-dark.mb-6 Доставка осуществляется в течение дня в удобное для вас время.
-						label.col-lg-4.col-form-label.mb-6 пункт самовывоза
-						.col-lg-8.mb-6
+						label.col-md-4.col-form-label.mb-6 пункт самовывоза
+						.col-md-8.mb-6
 							button.btn.btn-black.btn-sm(type="button") Выбрать пункт
-						label.col-lg-4.col-form-label.mb-6 способ оплаты
-						.col-lg-8.mb-6
+						label.col-md-4.col-form-label.mb-6 способ оплаты
+						.col-md-8.mb-6
 							+RadioCheckbox({
 								class: 'mb-3',
 								type: 'radio',
@@ -93,14 +107,50 @@ block main
 								id: 'radio6',
 								name: 'paymentMethod'
 							})
-						label.col-lg-4.col-form-label.mb-6 комментарий
-						.col-lg-8.mb-6
+						label.col-md-4.col-form-label.mb-6 комментарий
+						.col-md-8.mb-6
 							textarea.form-control.bg-light(rows="8")
-				.col-xxl-4
-					.bg-light.pt-11.pb-15.px-18
-						label.col-lg-4.col-form-label.mb-6 Ваш заказ
-						.col-xxl-12.col-lg-8.mb-6
-							a.btn.btn-primary.btn-sm.w-100(href="#") Оформить заказ
+				.col-xxl-auto.flex-grow-0.flex-shrink-0
+					.mil-basket-your-order
+						.mil-basket-your-order.pt-xxl-11.pb-xxl-15.px-xxxl-18.px-xxl-9.basket-sticky-container
+							.row
+								label.col-xxl-12.col-md-4.col-form-label.mb-6.f-xxl-25px Ваш заказ
+								.col-xxl-12.col-md-8.mb-7
+									.row.mb-3
+										.col-6.pe-1 Товар на:
+										.col-6.ps-1 13 998 ₽
+										.col-6.pe-1 Скидка:
+										.col-6.ps-1 3 250 ₽
+										.col-6.pe-1 Доставка:
+										.col-6.ps-1 450 ₽
+									.row.mb-3
+										.col-2.pe-1.f-semibold Итого:
+										.col-4.px-1.text-end.f-12px
+											s 16 947
+										.col-6.ps-1.f-semibold 13 998 ₽
+								.col-xxl-12.col-md-8.offset-xxl-0.offset-md-4.mb-7
+									p.f-13px.f-black выходной
+									p
+										.d-flex.align-items-center
+											+MetroIcon('#943F90')(class="me-1 mb-1")
+											|Жулебино
+										| г. Люберцы, Октябрьский пр., 112<br>+7 (499) 2888-06-94
+								.col-xxl-12.col-md-8.offset-xxl-0.offset-md-4.mb-9
+									.row.mb-3
+										.col-6.pe-1 Способ оплаты:
+										.col-6.ps-1.f-semibold картой
+									.row.mb-3
+										.col-6.pe-1 Срок хранения:
+										.col-6.ps-1 7 дней
+								.col-xxl-12.col-md-8.mb-6.d-xxl-block.d-none
+									a.btn.btn-primary.btn-sm.w-100(href="#") Оформить заказ
+				.col-12
+					+RadioCheckbox({
+						class: 'align-items-stretch f-13px',
+						type: 'checkbox',
+						checked: true,
+						title: 'Нажимая кнопку «Отправить», я принимаю условия <a href="#">Публичной оферты</a> и даю свое согласие на обработку моих персональных данных на условиях и для целей, определенных в <a href="#">Согласии на обработку персональных данных</a>'
+					})
 
 
 		+Feedback()

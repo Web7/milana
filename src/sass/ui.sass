@@ -138,6 +138,22 @@ strong
 	padding-left: 2px
 	padding-right: 2px
 
+.was-validated .form-control:invalid:focus,
+.form-control.is-invalid:focus
+	box-shadow: none
+	border: 1px solid $primary
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid
+	border: 1px solid $primary
+	//margin-top: -15px
+
+.was-validated :invalid ~ .invalid-feedback,
+.was-validated :invalid ~ .invalid-tooltip,
+.is-invalid ~ .invalid-feedback,
+.is-invalid ~ .invalid-tooltip
+	margin-top: -20px
+
 @mixin opacity($opacity...)
 	@for $i from 0 to length($opacity)
 		.opacity-#{nth($opacity, $i+1)}

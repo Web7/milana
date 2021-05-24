@@ -5,6 +5,7 @@ include ../organisms/breadcrumb-and-title
 include ../molecules/product-preview-item
 include ../organisms/personal-area/tabs-personal-area
 include ../atoms/radio-checkbox
+include ../atoms/input
 
 block main
 	main.mil-margin-left-side-menu.mil-margin-top-header
@@ -24,14 +25,20 @@ block main
 									.row
 										label.col-lg-4.col-form-label.mb-6 Мои данные
 										.col-lg-8.mb-6
-											input.form-control.bg-light(type="text" placeholder="Фамилия" aria-describedby="text1" required)
-											.invalid-feedback#text1 Заполните поле
+											+Input({
+												id: 'text1',
+												errorText: 'Заполните поле'
+											})(class="is-invalid" placeholder="Фамилия")
 										.col-lg-8.offset-lg-4.mb-6
-											input.form-control.bg-light(type="text" placeholder="Имя" aria-describedby="text2" required)
-											.invalid-feedback#text2 Заполните поле
+											+Input({
+												id: 'text2',
+												errorText: 'Заполните поле'
+											})(placeholder="Имя")
 										.col-lg-8.offset-lg-4.mb-6
-											input.form-control.bg-light(type="text" placeholder="Отчество" aria-describedby="text3" required)
-											.invalid-feedback#text3 Заполните поле
+											+Input({
+												id: 'text3',
+												errorText: 'Заполните поле'
+											})(placeholder="Отчество")
 										label.col-lg-4.col-form-label.mb-5 Пол
 										.col-lg-8.mb-5
 											.row.mt-1
@@ -52,10 +59,16 @@ block main
 													})
 										label.col-lg-4.col-form-label.mb-6 Телефон
 										.col-lg-8.mb-6
-											input.form-control.bg-light.profile-phone(type="text" placeholder="+7 (___) ___-__-__" data-mask="+7 (999) 999-99-99")
+											+Input({
+												id: 'text4',
+												errorText: 'Заполните поле'
+											})(data-mask="+7 (999) 999-99-99" class="profile-phone" placeholder="+7 (___) ___-__-__")
 										label.col-lg-4.col-form-label.mb-6 e-mail
 										.col-lg-8.mb-6
-											input.form-control.bg-light.mb-2(type="text" placeholder="")
+											+Input({
+												id: 'text3',
+												errorText: 'Заполните поле'
+											})(class="mb-2 is-invalid")
 											.small
 												+RadioCheckbox({
 													type: 'checkmark',
@@ -65,7 +78,10 @@ block main
 												})
 										label.col-lg-4.col-form-label.mb-6 дата рождения
 										.col-lg-8.mb-6
-											input.form-control.bg-light.mb-2(type="text" placeholder="дд-мм-гггг" data-mask="99-99-9999")
+											+Input({
+												id: 'text5',
+												errorText: 'Заполните поле'
+											})(data-mask="99-99-9999" class="mb-2" placeholder="дд-мм-гггг")
 											.small.text-secondary.d-flex.align-items-center
 												i.i.i-gift.i-secondary.me-1.mb-1
 												small Укажи дату рождения и получай приятные бонусы к празднику.
@@ -73,17 +89,35 @@ block main
 									.row
 										label.col-lg-2.col-form-label.mb-6.offset-lg-2 Адрес
 										.col-lg-8.mb-6
-											input.form-control.bg-light(type="text" placeholder="Город")
+											+Input({
+												id: 'text6',
+												errorText: 'Заполните поле'
+											})(placeholder="Город")
 										.col-lg-8.offset-lg-4.mb-6
-											input.form-control.bg-light(type="text" placeholder="Улица")
+											+Input({
+												id: 'text7',
+												errorText: 'Заполните поле'
+											})(placeholder="Улица")
 										.col-lg-8.offset-lg-4.mb-6
-											input.form-control.bg-light(type="text" placeholder="Дом")
+											+Input({
+												id: 'text8',
+												errorText: 'Заполните поле'
+											})(placeholder="Дом")
 										.col-lg-8.offset-lg-4.mb-6
-											input.form-control.bg-light(type="text" placeholder="Корпус")
+											+Input({
+												id: 'text9',
+												errorText: 'Заполните поле'
+											})(placeholder="Корпус")
 										.col-lg-8.offset-lg-4.mb-6
-											input.form-control.bg-light(type="text" placeholder="Квартира")
+											+Input({
+												id: 'text10',
+												errorText: 'Заполните поле'
+											})(placeholder="Квартира")
 										.col-lg-8.offset-lg-4.mb-10
-											input.form-control.bg-light(type="text" placeholder="Индекс")
+											+Input({
+												id: 'text11',
+												errorText: 'Заполните поле'
+											})(placeholder="Индекс")
 										.col-lg-8.offset-lg-4.mb-4
 											button.btn.btn-outline-black.btn-sm.w-100(type="button") Сменить пароль
 										.col-lg-8.offset-lg-4.mb-4

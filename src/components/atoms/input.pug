@@ -1,0 +1,4 @@
+mixin Input(data)
+	.d-flex.flex-column
+		input.form-control.bg-light.order-1(type="text" aria-describedby= data.id required)&attributes(attributes)
+		.invalid-feedback.order-0(id= data.id)= data.errorText
