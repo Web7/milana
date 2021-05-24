@@ -13,35 +13,35 @@ block main
 				classTitle: 'mb-10'
 			})
 
-			.row.mil-basket-container.f-14px(data-sticky-container)
-				.col.flex-grow-1.flex-shrink-1
+			.row.mil-basket-container.f-14px.mb-38.mt-5(data-sticky-container)
+				.col.flex-grow-1.flex-shrink-1.mb-xxl-18.mb-10
 					.row
 						.col-12
 							h2.h7.text-uppercase.f-bold.mb-12 Оформление заказа
 						label.col-md-4.col-form-label.mb-6 Мои данные
-						.col-md-5.mb-6
+						.col-xxxl-5.col-md-6.mb-6
 							+Input({
 								id: 'text1',
 								errorText: 'Заполните поле'
 							})(placeholder="Фамилия")
-						.col-md-5.offset-md-4.mb-6
+						.col-xxxl-5.col-md-6.offset-md-4.mb-6
 							+Input({
 								id: 'text2',
 								errorText: 'Заполните поле'
 							})(placeholder="Имя")
-						.col-md-5.offset-md-4.mb-6
+						.col-xxxl-5.col-md-6.offset-md-4.mb-6
 							+Input({
 								id: 'text3',
 								errorText: 'Заполните поле'
 							})(placeholder="Отчество")
 						label.col-md-4.col-form-label.mb-6 Телефон
-						.col-md-5.mb-6
+						.col-xxxl-5.col-md-6.mb-6
 							+Input({
 								id: 'text4',
 								errorText: 'Заполните поле'
 							})(data-mask="+7 (999) 999-99-99" class="profile-phone" placeholder="+7 (___) ___-__-__")
 						label.col-md-4.col-form-label.mb-6 e-mail
-						.col-md-5.mb-6
+						.col-xxxl-5.col-md-6.mb-6
 							+Input({
 								id: 'text5',
 								errorText: 'Заполните поле'
@@ -54,7 +54,7 @@ block main
 									checked: true
 								})
 						label.col-md-4.col-form-label.mb-6 Город доставки
-						.col-md-5.mb-6
+						.col-xxxl-5.col-md-6.mb-6
 							input.form-control.bg-light(type="text")
 						label.col-md-4.col-form-label.mb-6 способ доставки
 						.col-md-8.mb-6
@@ -109,10 +109,10 @@ block main
 							})
 						label.col-md-4.col-form-label.mb-6 комментарий
 						.col-md-8.mb-6
-							textarea.form-control.bg-light(rows="8")
+							textarea.form-control.bg-light(rows="8" placeholder="Комментарий к заказу")
 				.col-xxl-auto.flex-grow-0.flex-shrink-0
-					.mil-basket-your-order
-						.mil-basket-your-order.pt-xxl-11.pb-xxl-15.px-xxxl-18.px-xxl-9.basket-sticky-container
+					.mil-basket-your-order.mt--5
+						.mil-basket-your-order.pt-xxl-11.pb-xxl-15.px-xxxl-18.px-xxl-9.basket-sticky-container.mt-xxl-5
 							.row
 								label.col-xxl-12.col-md-4.col-form-label.mb-6.f-xxl-25px Ваш заказ
 								.col-xxl-12.col-md-8.mb-7
@@ -144,13 +144,14 @@ block main
 										.col-6.ps-1 7 дней
 								.col-xxl-12.col-md-8.mb-6.d-xxl-block.d-none
 									a.btn.btn-primary.btn-sm.w-100(href="#") Оформить заказ
-				.col-12
+				.col-12.mil-basket-footer-col
 					+RadioCheckbox({
-						class: 'align-items-stretch f-13px',
+						class: 'align-items-stretch mil-agreement-check mb-14',
 						type: 'checkbox',
 						checked: true,
 						title: 'Нажимая кнопку «Отправить», я принимаю условия <a href="#">Публичной оферты</a> и даю свое согласие на обработку моих персональных данных на условиях и для целей, определенных в <a href="#">Согласии на обработку персональных данных</a>'
 					})
+					a.btn.btn-black.btn-sm.w-100.mb-0(href="#") Оформить заказ
 
 
 		+Feedback()
