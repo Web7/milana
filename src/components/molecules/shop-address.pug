@@ -1,0 +1,14 @@
+mixin ShopAddress(data)
+	p.f-13px.f-black.d-flex.align-items-center.line-height-1.text-uppercase
+		span.me-1!= data.shopName
+		a.mx-1.i.i-shop-info.i-sm(href="#")
+		a.ms-1.i.i-shop-route.i-sm(href="#")
+	.f-13px
+		.d-flex.align-items-center
+			+MetroIcon(data.metroIconColor)(class="me-1 mb-1")
+			!= data.metroName
+		!= data.shopAddress
+		br
+		!= data.shopPhones
+	if data.buttonText
+		a.btn.btn-outline-black.btn-sm.mt-6(href="#")!= data.buttonText

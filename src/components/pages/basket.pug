@@ -3,6 +3,8 @@ include ../organisms/feedback
 include ../organisms/breadcrumb-and-title
 include ../atoms/input
 include ../atoms/metro-icon
+include ../molecules/shop-address
+include ../organisms/basket/choose-shop
 
 block main
 	main.mil-margin-left-side-menu.mil-margin-top-header
@@ -81,8 +83,16 @@ block main
 							})
 							.f-13px.text-dark.mb-6 Доставка осуществляется в течение дня в удобное для вас время.
 						label.col-md-4.col-form-label.mb-6 пункт самовывоза
-						.col-md-8.mb-6
-							button.btn.btn-black.btn-sm(type="button") Выбрать пункт
+						.col-md-4.mb-6.pe-1
+							button.btn.btn-black.btn-sm(type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasChooseShop" aria-controls="offcanvasChooseShop") Выбрать пункт
+						.col-md-4.mb-6.ps-1
+							+ShopAddress({
+								shopName: 'выходной',
+								metroIconColor: '#943F90',
+								metroName: 'Жулебино',
+								shopAddress: 'г. Люберцы, Октябрьский пр., 112',
+								shopPhones: '+7 (499) 2888-06-94'
+							})
 						label.col-md-4.col-form-label.mb-6 способ оплаты
 						.col-md-8.mb-6
 							+RadioCheckbox({
@@ -129,12 +139,13 @@ block main
 											s 16 947
 										.col-6.ps-1.f-semibold 13 998 ₽
 								.col-xxl-12.col-md-8.offset-xxl-0.offset-md-4.mb-7
-									p.f-13px.f-black выходной
-									p
-										.d-flex.align-items-center
-											+MetroIcon('#943F90')(class="me-1 mb-1")
-											|Жулебино
-										| г. Люберцы, Октябрьский пр., 112<br>+7 (499) 2888-06-94
+									+ShopAddress({
+										shopName: 'выходной',
+										metroIconColor: '#943F90',
+										metroName: 'Жулебино',
+										shopAddress: 'г. Люберцы, Октябрьский пр., 112',
+										shopPhones: '+7 (499) 2888-06-94'
+									})
 								.col-xxl-12.col-md-8.offset-xxl-0.offset-md-4.mb-9
 									.row.mb-3
 										.col-6.pe-1 Способ оплаты:
@@ -153,5 +164,5 @@ block main
 					})
 					a.btn.btn-black.btn-sm.w-100.mb-0(href="#") Оформить заказ
 
-
+		+ChooseShop()
 		+Feedback()

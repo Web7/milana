@@ -19,3 +19,4 @@ window.Sticky = Sticky;
 window.mask = mask;
 
 import './js/common.js';
+import './js/maps.js';

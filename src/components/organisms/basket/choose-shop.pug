@@ -1,0 +1,25 @@
+include ../../molecules/shop-address
+
+mixin ChooseShop()
+	- var list = [{buttonText: 'Выбрать салон', shopName: 'Континент Дисконт', shopAddress: 'г. Санкт-Петербург, ул. Бухарестская, д.30/32', shopPhones: '+7 (812) 383-56-43', metroName: 'Бухарестская', metroIconColor: '#943F90'},{buttonText: 'Выбрать салон', shopName: 'Пулково Аутлет', shopAddress: 'г. Санкт-Петербург, Пулковское шоссе, дом 60, корпус 1', shopPhones: '+7 (812) 384-24-78', metroName: 'Московская', metroIconColor: '#007DCC'},{buttonText: 'Выбрать салон', shopName: 'Пулково Аутлет', shopAddress: 'г. Санкт-Петербург, Пулковское шоссе, дом 60, корпус 1', shopPhones: '+7 (812) 384-24-78', metroName: 'Московская', metroIconColor: '#007DCC'}]
+	.offcanvas.offcanvas-end.off-canvas-review-edit(tabindex="-1" id="offcanvasChooseShop" aria-labelledby="offcanvasChooseShopLabel")
+		.offcanvas-header
+			button.btn-close.text-reset(data-bs-dismiss="offcanvas" aria-label="Close" type="button")
+		.offcanvas-body.pt-0
+			.offcanvas-scroll-bar.overflow-hidden.pe-md-20
+				.container-fluid
+					h5.offcanvas-title.mb-10#offcanvasChooseShopLabel выбрать пункт
+					ul.nav.nav-pills.mb-md-10.mb-12#pillsTab(role="tablist")
+						li.nav-item(role="presentation")
+							button.nav-link.active#pillsListTab(data-bs-toggle="pill" data-bs-target="#pillsList" type="button" role="tab" aria-controls="pillsList" aria-selected="true") Список
+						li.nav-item(role="presentation")
+							button.nav-link#pillsMapTab(data-bs-toggle="pill" data-bs-target="#pillsMap" type="button" role="tab" aria-controls="pillsMap" aria-selected="true") Карта
+					.tab-content#pillsTabContent
+						.tab-pane.fade.show.active#pillsList(aria-labelledby="pillsListTab")
+							.row
+								each listItem in list
+									.col-md-6.col-12.mb-md-12.mb-10
+										+ShopAddress(listItem)
+						.tab-pane.fade#pillsMap(aria-labelledby="pillsMapTab")
+							.leaflet-choose-shop#leafletChooseShop
+

@@ -6,8 +6,13 @@ block main
 	main.mil-margin-left-side-menu.mil-margin-top-header
 		section.pe-md-7.pe-lg-8.pt-7.pt-md-13.pt-xxl-16.ps-xxxl-18.ps-xxl-14.ps-xl-12.ps-lg-9.ps-md-8.px-4.pb-16
 			+Breadcrumb(['Главная','Покупателям','Полезная информация','Зима в тепле: лучшая коллекция перчаток'])
-			.promotion-title-image.ps-xxxl-18.ps-xxl-14.ps-xl-12.ps-lg-9.ps-md-8.px-4.text-white.mb-26(style="background-image: url(images/center-carousel-slide-2.jpg)")
-				h1.h3.text-uppercase Только 3 дня скидки 50%<br>на все товары!
-			.text-justify
+			.promotion-title-image-container.ps-xxxl-18.ps-xxl-14.ps-xl-12.ps-lg-9.ps-md-8.px-4.mb-md-26.mb-7
+				h1.h3.text-uppercase.mb-10.promotion-title Только 3 дня скидки 50%<br>на все товары!
+				.promotion-title-image.mb-8.mb-md-0(style="background-image: url(images/center-carousel-slide-2.jpg)")
+					.promotion-badge-date.badge.bg-primary.px-3.f-15px с 12.02.2021 по 28.02.2021
+				.promotion-badge-tags
+					a.badge.bg-black.f-15px.px-md-3.px-4(href="#") #советы
+					a.badge.bg-black.f-15px.px-md-3.px-4(href="#") #обувь
+			.text-justify.f-14px
 				p Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки направлений прогрессивного развития. Задача организации, в особенности же новая модель организационной деятельности позволяет выполнять важные задания по разработке соответствующий условий активизации.
 		+Feedback()

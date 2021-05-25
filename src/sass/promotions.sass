@@ -1,15 +1,23 @@
 .promotion
+	&-badge
+		&-date
+			position: absolute
+			bottom: 284px
+			left: 50%
+			transform: translate(-50%, 0)
+		&-tags
+			.badge
+				text-decoration: none
+				color: $white
+				margin-right: 15px
+				line-height: 25px
 	&-title-image
-		height: 450px
+		height: 296px
 		margin-left: -20px
 		width: calc(100% + 40px)
 		background: no-repeat center center
 		background-size: cover
 		position: relative
-		> *
-			position: absolute
-			z-index: 2
-			bottom: 110px
 		&:before
 			content: ""
 			display: block
@@ -19,6 +27,12 @@
 			bottom: 0
 			left: 0
 			background-color: rgba(0, 0, 0, 0.5)
+		&-container
+			position: relative
+			margin-left: -20px
+			width: calc(100% + 40px)
+			color: $black
+
 	&-preview-item
 		margin-bottom: 5px
 		&-image
@@ -64,8 +78,17 @@
 @media (min-width: 768px)
 	.promotion
 		&-title-image
+			height: 452px
 			margin-left: -40px
 			width: calc(100% + 75px)
+			&-container
+				color: $white
+				margin-left: -40px
+				width: calc(100% + 75px)
+				.promotion-title
+					position: absolute
+					z-index: 2
+					bottom: 110px
 		&-preview-item
 			&-image
 				margin-right: 5px
@@ -74,12 +97,32 @@
 				max-width: 4200px
 				min-height: 550px
 				padding: 100px 55px 100px 55px
+		&-badge
+			&-date
+				position: absolute
+				bottom: -11px
+				left: 40px
+				transform: none
+			&-tags
+				position: absolute
+				bottom: -11px
+				right: 20px
+				.badge
+					line-height: 1
 
 @media (min-width: 992px)
 	.promotion
+		&-badge
+			&-date
+				left: 45px
+			&-tags
+				right: 0
 		&-title-image
 			margin-left: -45px
 			width: calc(100% + 85px)
+			&-container
+				margin-left: -45px
+				width: calc(100% + 65px)
 		&-preview-item
 			&-image
 				margin-right: 5px
@@ -93,18 +136,36 @@
 
 @media (min-width: 1200px)
 	.promotion
+		&-badge
+			&-date
+				left: 60px
 		&-title-image
 			margin-left: -60px
 			width: calc(100% + 100px)
+			&-container
+				margin-left: -60px
+				width: calc(100% + 80px)
 
 @media (min-width: 1400px)
 	.promotion
+		&-badge
+			&-date
+				left: 70px
 		&-title-image
 			margin-left: -70px
 			width: calc(100% + 110px)
+			&-container
+				margin-left: -70px
+				width: calc(100% + 90px)
 
 @media (min-width: 1600px)
 	.promotion
+		&-badge
+			&-date
+				left: 90px
 		&-title-image
 			margin-left: -90px
 			width: calc(100% + 130px)
+			&-container
+				margin-left: -90px
+				width: calc(100% + 110px)
