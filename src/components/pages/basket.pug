@@ -5,19 +5,36 @@ include ../atoms/input
 include ../atoms/metro-icon
 include ../molecules/shop-address
 include ../organisms/basket/choose-shop
+include ../organisms/basket/product-item
 
 block main
 	main.mil-margin-left-side-menu.mil-margin-top-header
-		section.pt-15.ps-17.pe-9
+		section.pe-md-7.pe-lg-8.pt-7.pt-md-13.pt-xxl-16.ps-xxxl-18.ps-xxl-14.ps-xl-12.ps-lg-9.ps-md-8.px-4
 			+BreadcrumbAndTitle({
 				breadcrumb: ['Главная', 'Корзина'],
 				title: 'Корзина',
 				classTitle: 'mb-10'
 			})
-
 			.row.mil-basket-container.f-14px.mb-38.mt-5(data-sticky-container)
 				.col.flex-grow-1.flex-shrink-1.mb-xxl-18.mb-10
 					.row
+						.col-12.mb-20
+							.row.align-items-center.mx-3.w-100
+								.row.py-4.px-0.align-items-center.bg-primary.text-white.d-none.d-md-flex
+									.col-auto.flex-grow-0.flex-shrink-0.ps-0
+										.mil-basket-product-item-img-width
+									.col-auto.flex-grow-1.flex-shrink-1.pe-0
+										.row.align-items-center
+											.col-auto Наименование товара
+											.col-auto.col-lg-2.mx-auto Количество
+											.col-2 Цена
+											.col-2 Сумма
+								+ProductItem({image: 'images/woman-slide-01.jpg', isBorder: true})
+								+ProductItem({image: 'images/woman-slide-01.jpg'})
+						.col-md-8.mb-20
+							.input-group.input-group-sm.flex-column.flex-md-row
+								input.form-control.bg-light.ps-4.w-100.w-md-auto.border-light.py-2.mb-4.mb-md-0(type="text" placeholder="Промокод / дисконтная карта" aria-label="Промокод / дисконтная карта")
+								button.btn.btn-black.btn-sm.py-2.px-8.lh-18px.min-width-auto(type="button") Применить
 						.col-12
 							h2.h7.text-uppercase.f-bold.mb-12 Оформление заказа
 						label.col-md-4.col-form-label.mb-6 Мои данные
@@ -61,6 +78,7 @@ block main
 						label.col-md-4.col-form-label.mb-6 способ доставки
 						.col-md-8.mb-6
 							+RadioCheckbox({
+								class: 'basket-pickup-check',
 								type: 'radio',
 								title: 'Самовывоз',
 								id: 'radio1',
@@ -69,6 +87,7 @@ block main
 							})
 							.f-13px.text-dark.mb-6 Вы можете самостоятельно забрать заказ из нашего магазина.
 							+RadioCheckbox({
+								class: 'basket-delivery-check',
 								type: 'radio',
 								title: 'Доставка курьером',
 								id: 'radio2',
@@ -76,29 +95,65 @@ block main
 							})
 							.f-13px.text-dark.mb-6 Доставка осуществляется в течение дня в удобное для вас время.
 							+RadioCheckbox({
+								class: 'basket-delivery-check',
 								type: 'radio',
 								title: 'Почта России',
 								id: 'radio3',
 								name: 'deliveryMethod'
 							})
 							.f-13px.text-dark.mb-6 Доставка осуществляется в течение дня в удобное для вас время.
-						label.col-md-4.col-form-label.mb-6 пункт самовывоза
-						.col-md-4.mb-6.pe-1
-							button.btn.btn-black.btn-sm(type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasChooseShop" aria-controls="offcanvasChooseShop") Выбрать пункт
-						.col-md-4.mb-6.ps-1
-							+ShopAddress({
-								shopName: 'выходной',
-								metroIconColor: '#943F90',
-								metroName: 'Жулебино',
-								shopAddress: 'г. Люберцы, Октябрьский пр., 112',
-								shopPhones: '+7 (499) 2888-06-94'
-							})
+						.col-12.ps-1.basket-pickup-col
+							.row
+								label.col-md-4.col-form-label.mb-6 пункт самовывоза
+								.col-md-4.mb-6.pe-1
+									button.btn.btn-black.btn-sm(type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasChooseShop" aria-controls="offcanvasChooseShop") Выбрать пункт
+								.col-md-4.mb-6.ps-1
+									+ShopAddress({
+										shopName: 'выходной',
+										metroIconColor: '#943F90',
+										metroName: 'Жулебино',
+										shopAddress: 'г. Люберцы, Октябрьский пр., 112',
+										shopPhones: '+7 (499) 2888-06-94'
+									})
+						.col-12.ps-1.basket-delivery-col.d-none
+							.row
+								label.col-md-4.col-form-label.mb-6 Адрес
+								.col-xxxl-5.col-md-6.mb-6
+									+Input({
+										id: 'text7',
+										errorText: 'Заполните поле'
+									})(placeholder="Улица *")
+								.col-xxxl-5.col-md-6.offset-md-4.mb-6
+									+Input({
+										id: 'text8',
+										errorText: 'Заполните поле'
+									})(placeholder="Дом *")
+								.col-xxxl-5.col-md-6.offset-md-4.mb-6
+									+Input({
+										id: 'text9',
+										errorText: 'Заполните поле'
+									})(placeholder="Квартира")
+								.col-xxxl-5.col-md-6.offset-md-4.mb-6
+									+Input({
+										id: 'text10',
+										errorText: 'Заполните поле'
+									})(placeholder="Подъезд")
+								.col-xxxl-5.col-md-6.offset-md-4.mb-6
+									+Input({
+										id: 'text11',
+										errorText: 'Заполните поле'
+									})(placeholder="Домофон")
+								.col-xxxl-5.col-md-6.offset-md-4.mb-6
+									+Input({
+										id: 'text6',
+										errorText: 'Заполните поле'
+									})(placeholder="Этаж")
 						label.col-md-4.col-form-label.mb-6 способ оплаты
 						.col-md-8.mb-6
 							+RadioCheckbox({
-								class: 'mb-3',
+								class: 'mb-3 ',
 								type: 'radio',
-								title: 'Самовывоз',
+								title: 'Оплата наличными при получении',
 								id: 'radio4',
 								name: 'paymentMethod',
 								checked: true
@@ -106,14 +161,14 @@ block main
 							+RadioCheckbox({
 								class: 'mb-3',
 								type: 'radio',
-								title: 'Доставка курьером',
+								title: 'Оплата при получении банковской картой',
 								id: 'radio5',
 								name: 'paymentMethod'
 							})
 							+RadioCheckbox({
 								class: 'mb-3',
 								type: 'radio',
-								title: 'Почта России',
+								title: 'Оплата онлайн',
 								id: 'radio6',
 								name: 'paymentMethod'
 							})
@@ -138,7 +193,7 @@ block main
 										.col-4.px-1.text-end.f-12px
 											s 16 947
 										.col-6.ps-1.f-semibold 13 998 ₽
-								.col-xxl-12.col-md-8.offset-xxl-0.offset-md-4.mb-7
+								.col-xxl-12.col-md-8.offset-xxl-0.offset-md-4.mb-7.basket-pickup-col
 									+ShopAddress({
 										shopName: 'выходной',
 										metroIconColor: '#943F90',

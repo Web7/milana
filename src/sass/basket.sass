@@ -6,11 +6,48 @@
 				font-size: 14px
 				font-weight: normal
 				font-family: 'montserratbold'
+		&-product
+			&-item
+				&-img
+					background: no-repeat center bottom
+					background-size: contain
+					position: relative
+					width: 146px
+					height: 180px
+					&-width
+						width: 146px
+					&:before
+						content: ""
+						display: block
+						top: 0
+						left: 0
+						bottom: 0
+						right: 0
+						position: absolute
+						background-color: $gray-400
+						z-index: 2
 
+@media (min-width: 768px)
+	.mil
+		&-basket
+			&-product
+				&-item
+					&-img
+						width: 130px
+						height: 160px
+						&-width
+							width: 130px
 
 @media (min-width: 1400px)
 	.mil
 		&-basket
+			&-product
+				&-item
+					&-img
+						width: 130px
+						height: 160px
+						&-width
+							width: 130px
 			&-your-order
 				width: 340px
 				background-color: $light

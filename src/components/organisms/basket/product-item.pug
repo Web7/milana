@@ -1,0 +1,16 @@
+mixin ProductItem(data)
+	.row.py-8.px-0.align-items-md-center.border-dark.align-items-stretch(class= data.isBorder ? 'border-bottom': '')
+		.col-auto.flex-grow-0.flex-shrink-0.ps-0
+			.mil-basket-product-item-img(style="background-image: url(" + data.image + ")")
+		.col.col-md-auto.flex-grow-md-1.flex-shrink-md-1.pe-0
+			.row.align-items-md-center.flex-column.flex-md-row.justify-content-between.h-100
+				.col-md-auto.f-13px
+					div Ботфорты / 211404-1-810F
+					.text-dark Размер 37
+				.col-md-2.mx-md-auto.my-auto
+					.input-group.input-group-sm
+						button.btn.btn-sm.py-2.px-0.min-width-auto.f-21px.f-regular(type="button") -
+						input.form-control.text-center(type="text" value="2")
+						button.btn.btn-sm.py-2.px-0.min-width-auto.f-21px.f-regular(type="button") +
+				.col-md-2.d-none.d-md-block 6 999 Р
+				.col-md-2.pe-0 6 999 Р
