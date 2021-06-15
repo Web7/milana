@@ -65,7 +65,7 @@ mixin CatalogFilters()
 						a.filter-nav-link.nav-link.dropdown-toggle#navbarMterial(href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false") Метериал
 						.dropdown-menu.ps-xl-11.py-xl-9.pe-xl-3
 							.dropdown-scrollbar(data-scroll-index="colorsScroll")
-								.column-block
+								.dropdown-col
 									each material in materials
 										+RadioCheckbox({
 											type: 'checkbox',

@@ -9,4 +9,4 @@ mixin ProductCarousel(data)
 		.mil-product-carousel-container
 			.mil-product-carousel-slick(data-type= data.type)
 				each item in data.items
-					+ProductPreviewItem(item)
+					+ProductPreviewItem(item)(href="card-product.html")

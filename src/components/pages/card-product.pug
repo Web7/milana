@@ -1,7 +1,83 @@
 extends ../templates/layout
 include ../organisms/feedback
+include ../molecules/breadcrumb
+include ../organisms/product-carousel
 
 block main
 	main.mil-margin-left-side-menu.mil-margin-top-header
+		section.pe-md-7.pe-lg-8.pt-7.pt-md-13.pt-xxl-16.ps-xxxl-18.ps-xxl-14.ps-xl-12.ps-lg-9.ps-md-8.px-4
+			+Breadcrumb(['Главная', 'Каталог', 'Женщинам', 'Женские ботфорты'])
 
+			.accordion.row
+				.accordion-item.col-4
+					h2.accordion-header#cardProductHeading1
+						button.accordion-button.text-uppercase.h7.after-none(type="button" data-bs-toggle="collapse" data-bs-target="#cardProduct1" aria-expanded="true" aria-controls="cardProduct1") характеристики
+					.accordion-collapse.collapse.show#cardProduct1
+						.accordion-body
+				.accordion-item.col-4
+					h2.accordion-header#cardProductHeading2
+						button.accordion-button.text-uppercase.h7.after-none(type="button" data-bs-toggle="collapse" data-bs-target="#cardProduct2" aria-expanded="true" aria-controls="cardProduct2") Материал
+					.accordion-collapse.collapse.show#cardProduct2
+						.accordion-body
+				.accordion-item.col-4
+					h2.accordion-header#cardProductHeading3
+						button.accordion-button.text-uppercase.h7.after-none(type="button" data-bs-toggle="collapse" data-bs-target="#cardProduct3" aria-expanded="true" aria-controls="cardProduct3") Измерения
+					.accordion-collapse.collapse.show#cardProduct3
+						.accordion-body
+				.accordion-item.col-12
+					h2.accordion-header#cardProductHeading
+						button.accordion-button.text-uppercase.h7.after-none(type="button" data-bs-toggle="collapse" data-bs-target="#cardProduct" aria-expanded="true" aria-controls="cardProduct") Описание
+					.accordion-collapse.collapse.show#cardProduct
+						.accordion-body
+							p Пудровые ботфорты на платформе, изготовлены из натуральной кожи, дополнены каблуком танкетка, с классической застежкой.
+		.mil-previously-you-watched
+			+ProductCarousel({
+				titleClass: 'f-black title-h',
+				title: 'ранее вы смотрели',
+				type: 'right',
+				items: [
+					{
+						image: 'images/woman-slide-01.jpg',
+						name: 'Ботинки / 202454-3-110W',
+						price: '10 990 ₽',
+						isSizes: true
+					},
+					{
+						image: 'images/woman-slide-02.jpg',
+						name: 'Сапоги / 202431-2-110W',
+						price: '12 990 ₽',
+						hit: true,
+						isSizes: true
+					},
+					{
+						image: 'images/woman-slide-03.jpg',
+						name: 'Ботинки / 202433-1-110W',
+						price: '9 990 ₽',
+						isSizes: true
+					},
+					{
+						image: 'images/woman-slide-04.jpg',
+						name: 'Ботинки … / 202454-3-110W',
+						price: '13 990 ₽',
+						sale: {
+							price: '5 990 ₽',
+							percent: '-20%'
+						},
+						new: true,
+						isSizes: true
+					},
+					{
+						image: 'images/woman-slide-01.jpg',
+						name: 'Ботинки / 202454-3-110W',
+						price: '10 990 ₽',
+						isSizes: true
+					},
+					{
+						image: 'images/woman-slide-02.jpg',
+						name: 'Сапоги / 202431-2-110W',
+						price: '12 990 ₽',
+						isSizes: true
+					}
+				]
+			})
 		+Feedback()
