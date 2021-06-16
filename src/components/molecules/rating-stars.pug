@@ -1,5 +1,5 @@
 mixin RatingStars(rating)
-	.rating-stars-block
+	.rating-stars-block&attributes(attributes)
 		input.rating-stars(type="hidden" name="rating" value= rating)
 		.rating-stars-container
 			i.i.i-star(data-rating="1")
@@ -7,3 +7,4 @@ mixin RatingStars(rating)
 			i.i.i-star(data-rating="3")
 			i.i.i-star(data-rating="4")
 			i.i.i-star(data-rating="5")
+		block
