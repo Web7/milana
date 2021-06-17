@@ -1,0 +1,17 @@
+extends ../templates/layout
+include ../organisms/feedback
+include ../organisms/breadcrumb-and-title
+
+block main
+	main.mil-margin-left-side-menu.mil-margin-top-header
+		section.pe-md-7.pe-lg-8.pt-7.pt-md-13.pt-xxl-16.ps-xxxl-18.ps-xxl-14.ps-xl-12.ps-lg-9.ps-md-8.px-4
+			+BreadcrumbAndTitle({
+				breadcrumb: ['Главная', 'Партнера', 'Франшиза'],
+				title: 'Франшиза салона обуви',
+				classTitle: 'mb-10'
+			})
+			.pt-16.pt-md-21.pt-lg-26.pt-xl-22.pt-xxl-28.pt-xxxl-27.pb-20.pb-md-21.pb-lg-26.pb-xl-22.pb-xxl-28.pb-xxxl-40.text-center
+				img.mb-2.mb-md-4.mb-lg-6.img-fluid(src="images/page-not-found.png" alt="" title="")
+				h2.h5.text-uppercase.f-bold страница не найдена
+
+		+Feedback()
