@@ -1,0 +1,229 @@
+extends ../templates/layout
+include ../organisms/feedback
+include ../molecules/pagination
+include ../organisms/breadcrumb-and-title
+include ../organisms/company/tabs-company
+include ../atoms/radio-checkbox
+include ../atoms/input
+include ../organisms/company/contact-us
+
+block main
+	main.mil-margin-left-side-menu.mil-margin-top-header
+		section.pe-md-7.pe-lg-8.pt-7.pt-md-13.pt-xxl-16.ps-xxxl-18.ps-xxl-14.ps-xl-12.ps-lg-9.ps-md-8.px-4
+			+BreadcrumbAndTitle({
+				breadcrumb: ['Главная', 'Компания', 'Работа'],
+				title: 'работа в milana',
+				classTitle: 'mb-10'
+			})
+			+TabsCompany({activeHref: 'fill-out-the-form.html'})
+			.personal-area-form
+				.row.align-items-center
+					.col-12
+						form.row.g-2.mb-11.mb-md-16.mb-xxl-32.needs-validation(novalidate)
+							.col-xxxl-6.col-xxl-8.col-lg-9.pe-xxxl-8
+								.row.align-items-center
+									label.col-lg-4.col-form-label.mb-md-6.mb-1 ФИО*
+									.col-lg-8.mb-6
+										+Input({
+											id: 'text1',
+											errorText: 'Заполните поле'
+										})(class="is-invalid" placeholder="")
+									label.col-lg-4.col-form-label.mb-md-6.mb-1 дата рождения*
+									.col-lg-8.mb-6
+										+Input({
+											id: 'text2',
+											errorText: 'Заполните поле'
+										})(data-mask="99-99-9999" class="mb-2" placeholder="дд-мм-гггг")
+									label.col-lg-4.col-form-label.mb-md-6.mb-1 Телефон*
+									.col-lg-8.mb-6
+										+Input({
+											id: 'text3',
+											errorText: 'Заполните поле'
+										})(data-mask="+7 (999) 999-99-99" class="profile-phone" placeholder="+7 (___) ___-__-__")
+									label.col-lg-4.col-form-label.mb-md-6.mb-1 Город*
+									.col-lg-8.mb-6
+										+Input({
+											id: 'text4',
+											errorText: 'Заполните поле'
+										})(placeholder="")
+									label.col-lg-4.col-form-label.mb-md-6.mb-1 E-mail*
+									.col-lg-8.mb-6
+										+Input({
+											id: 'text5',
+											errorText: 'Заполните поле'
+										})(placeholder="")
+									label.col-lg-4.col-form-label.mb-md-6.mb-1 В каком из  магазинов хотели бы работать?*
+									.col-lg-8.mb-6
+										+Input({
+											id: 'text6',
+											errorText: 'Заполните поле'
+										})(placeholder="")
+									label.col-lg-4.col-form-label.mb-md-auto.mb-1.pt-2 позиция*
+									.col-lg-8.mb-5
+										.row.mt-1
+											.col-12
+												+RadioCheckbox({
+													type: 'radio',
+													title: 'Управляющий',
+													id: 'radio1',
+													name: 'position',
+													checked: true
+												})
+											.col-12
+												+RadioCheckbox({
+													type: 'radio',
+													title: 'Старший продавец',
+													id: 'radio2',
+													name: 'position'
+												})
+											.col-12
+												+RadioCheckbox({
+													type: 'radio',
+													title: 'Продавец-кассир',
+													id: 'radio3',
+													name: 'position'
+												})
+											.col-12
+												+RadioCheckbox({
+													type: 'radio',
+													title: 'Продавец-кассир выходного дня',
+													id: 'radio4',
+													name: 'position'
+												})
+											.col-12
+												+RadioCheckbox({
+													type: 'radio',
+													title: 'Кладовщик',
+													id: 'radio5',
+													name: 'position'
+												})
+									label.col-lg-4.col-form-label.mb-md-auto.mb-1.pt-2 График работ*
+									.col-lg-8.mb-5
+										.row.mt-1
+											.col-12
+												+RadioCheckbox({
+													type: 'radio',
+													title: '2/2',
+													id: 'radio6',
+													name: 'workTime',
+													checked: true
+												})
+											.col-12
+												+RadioCheckbox({
+													type: 'radio',
+													title: '5/2',
+													id: 'radio7',
+													name: 'workTime'
+												})
+											.col-12
+												+RadioCheckbox({
+													type: 'radio',
+													title: 'Выходные',
+													id: 'radio8',
+													name: 'workTime'
+												})
+							.col-xxxl-6.col-xxl-8.col-lg-9.ps-xxxl-8
+								.row.align-items-center
+									label.col-lg-4.col-form-label.mb-md-6.mb-1 домашний телефон
+									.col-lg-8.mb-6
+										+Input({
+											id: 'text7'
+										})(data-mask="+7 (999) 999-99-99" class="profile-phone" placeholder="+7 (___) ___-__-__")
+									label.col-lg-4.col-form-label.mb-md-6.mb-1 Ближайшая станция метро
+									.col-lg-8.mb-6
+										+Input({
+											id: 'text8'
+										})(placeholder="")
+									label.col-lg-4.col-form-label.mb-md-6.mb-1 фактический адрес
+									.col-lg-8.mb-6
+										+Input({
+											id: 'text9'
+										})(placeholder="")
+									label.col-lg-4.col-form-label.mb-md-auto.mb-1.pt-2 Учитесь ли сейчас
+									.col-lg-8.mb-5
+										.row.mt-1
+											.col-12
+												+RadioCheckbox({
+													type: 'radio',
+													title: 'Да',
+													id: 'radio9',
+													name: 'student',
+													checked: true
+												})
+											.col-12
+												+RadioCheckbox({
+													type: 'radio',
+													title: 'Нет',
+													id: 'radio10',
+													name: 'student'
+												})
+									label.col-lg-4.col-form-label.mb-md-6.mb-1 Укажите вуз
+									.col-lg-8.mb-6
+										+Input({
+											id: 'text10'
+										})(placeholder="")
+									label.col-lg-4.col-form-label.mb-md-auto.mb-1.pt-2 отделение
+									.col-lg-8.mb-5
+										.row.mt-1
+											.col-12
+												+RadioCheckbox({
+													type: 'radio',
+													title: 'Дневное',
+													id: 'radio11',
+													name: 'studentType',
+													checked: true
+												})
+											.col-12
+												+RadioCheckbox({
+													type: 'radio',
+													title: 'Вечернее',
+													id: 'radio12',
+													name: 'studentType'
+												})
+											.col-12
+												+RadioCheckbox({
+													type: 'radio',
+													title: 'Заочное',
+													id: 'radio13',
+													name: 'studentType'
+												})
+									label.col-md-4.col-form-label.mb-md-auto.mb-1.pt-2 опыт работы
+									.col-md-8.mb-6
+										textarea.form-control.bg-light(rows="10" placeholder="")
+									label.col-lg-4.col-form-label.mb-md-auto.mb-1.pt-2 работаете ли сейчас
+									.col-lg-8.mb-5
+										.row.mt-1
+											.col-12
+												+RadioCheckbox({
+													type: 'radio',
+													title: 'Да',
+													id: 'radio14',
+													name: 'workIsNow',
+													checked: true
+												})
+											.col-12
+												+RadioCheckbox({
+													type: 'radio',
+													title: 'Нет',
+													id: 'radio15',
+													name: 'workIsNow'
+												})
+									label.col-lg-4.col-form-label.mb-md-6.mb-1 когда сможете приступить к работе
+									.col-lg-8.mb-6
+										+Input({
+											id: 'text11'
+										})(data-mask="99-99-9999" class="mb-2" placeholder="дд-мм-гггг")
+									label.col-md-4.col-form-label.mb-md-auto.mb-1.pt-2 дополнительная информация
+									.col-md-8.mb-6
+										textarea.form-control.bg-light(rows="10" placeholder="")
+									.col-12
+										button.btn.btn-black.btn-sm.w-100.mb-6(type="button") Отправить
+										+RadioCheckbox({
+											class: 'align-items-stretch mil-agreement-check',
+											type: 'checkbox',
+											id: 'checkbox1',
+											checked: true,
+											title: 'Я согласен с <a href="#">политикой конфиденциальности</a>'
+										})
+		+ContactUsCompany()
+		+Feedback()

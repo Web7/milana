@@ -1,0 +1,9 @@
+mixin TabsCompany(data)
+	- var links = [{name: 'Работа', href: "work.html"},{name: 'Вакансии в городах', href: "jobs-in-cities.html"},{name: 'Заполнить анкету', href: "fill-out-the-form.html"}]
+	.sticky-nav-tabs.tabs-personal-area
+		.sticky-container
+			.nav-tabs-personal-area-arrows
+			ul.nav.nav-tabs.nav-tabs-personal-area(data-scroll-index="navTabs")
+				each link in links
+					li.nav-item
+						a.nav-link(href= link.href class= data && data.activeHref === link.href ? 'active' : '')!= link.name

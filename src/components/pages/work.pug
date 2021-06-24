@@ -1,0 +1,19 @@
+extends ../templates/layout
+include ../organisms/feedback
+include ../molecules/pagination
+include ../organisms/breadcrumb-and-title
+include ../organisms/company/tabs-company
+include ../organisms/company/contact-us
+
+block main
+	main.mil-margin-left-side-menu.mil-margin-top-header
+		section.pe-md-7.pe-lg-8.pt-7.pt-md-13.pt-xxl-16.ps-xxxl-18.ps-xxl-14.ps-xl-12.ps-lg-9.ps-md-8.px-4
+			+BreadcrumbAndTitle({
+				breadcrumb: ['Главная', 'Компания', 'Работа'],
+				title: 'работа в milana',
+				classTitle: 'mb-10'
+			})
+			+TabsCompany({activeHref: 'work.html'})
+
+		+ContactUsCompany()
+		+Feedback()

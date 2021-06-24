@@ -5,10 +5,14 @@
 		font-family: 'montserratblack' !important
 	&-medium
 		font-family: 'montserratmedium' !important
+	&-mediumitalic
+		font-family: 'montserratmediumitalic' !important
 	&-semibold
 		font-family: 'montserratsemibold' !important
 	&-regular
 		font-family: 'montserratregular' !important
+	&-extrabold
+		font-family: 'montserratextrabold' !important
 
 .line-height-1
 	line-height: 1
@@ -34,22 +38,22 @@
 		.#{$className}
 			font-size: $size !important
 
-@include headersTag(39px, 20px, 20px, 20px, 18px, 15px, 20px)
+@include headersTag(39px, 20px, 20px, 20px, 18px, 15px, 20px, 20px)
 
 @media (min-width: 768px)
-	@include headersTag(60px, 35px, 40px, 26px, 25px, 18px, 25px)
+	@include headersTag(60px, 35px, 40px, 26px, 25px, 18px, 25px, 28px)
 
 @media (min-width: 992px)
-	@include headersTag(51px, 45px, 40px, 26px, 25px, 18px, 25px)
+	@include headersTag(51px, 45px, 40px, 26px, 25px, 18px, 25px, 28px)
 
 @media (min-width: 1200px)
-	@include headersTag(61px, 45px, 40px, 36px, 25px, 18px, 25px)
+	@include headersTag(61px, 45px, 40px, 36px, 25px, 18px, 25px, 28px)
 
 @media (min-width: 1400px)
-	@include headersTag(71px, 60px, 40px, 36px, 30px, 18px, 25px)
+	@include headersTag(71px, 60px, 40px, 36px, 30px, 18px, 25px, 28px)
 
 @media (min-width: 1600px)
-	@include headersTag(71px, 60px, 40px, 36px, 30px, 18px, 25px)
+	@include headersTag(71px, 60px, 40px, 36px, 30px, 18px, 25px, 33px)
 
 @function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints))
 	$n: index($breakpoint-names, $name)
@@ -72,7 +76,7 @@
 	@else
 		@content
 
-$fontSizes: (10px,11px,12px,13px,14px,15px,18px,20px,21px,22px,25px,26px,27px)
+$fontSizes: (10px,11px,12px,13px,14px,15px,18px,20px,21px,22px,25px,26px,27px,33px)
 
 .f
 	@each $breakpoint in map-keys($grid-breakpoints)
