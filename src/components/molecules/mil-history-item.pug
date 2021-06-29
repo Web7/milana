@@ -1,5 +1,6 @@
 mixin MilHistoryItem(data)
-    .card
-        .card-body.w-18
-            h1.h3.text-uppercase.card-title!= data.title
-            p.card-text!= data.text
+    .col-xxxl-4.col-md-6.col-12.history-col
+        .card.mil-card-history
+            .card-body
+                p.text-primary.h3.text-uppercase.card-title!= data.title
+                .card-text!= data.text
