@@ -2,6 +2,7 @@ extends ../templates/layout
 include ../organisms/feedback
 include ../organisms/breadcrumb-and-title
 include ../molecules/mil-history-item
+include ../molecules/pagination
 
 block main
 	main.mil-margin-left-side-menu.mil-margin-top-header
@@ -12,4 +13,6 @@ block main
 				.row.align-item-stretch
 					each historyItem in [...historyItems]
 						+MilHistoryItem(historyItem)
+					.mb-pagination.justify-content-center
+						+Pagination()
 		+Feedback()
