@@ -4,23 +4,12 @@ include ../organisms/breadcrumb-and-title
 include ../atoms/metro-icon
 include ../molecules/shop-address
 include ../atoms/input
-include ../organisms/basket/choose-shop
+include ../organisms/shops-item
 
 block main
 	main.mil-margin-left-side-menu.mil-margin-top-header
 		section.pt-15.ps-17.pe-9
 			+BreadcrumbAndTitle({breadcrumb: ['Главная', 'Магазины'], title: 'Магазины', classTitle: 'mb-10'})
-
-			.container-fluid
-				.row
-					.col-md-6.col-12.mb-md-12.mb-10
-						.each
-							+ChooseShop()
-							+ShopAddress({
-								shopName: 'выходной',
-								metroIconColor: '#943F90',
-								metroName: 'Жулебино',
-								shopAddress: 'г. Люберцы, Октябрьский пр., 112',
-								shopPhones: '+7 (499) 2888-06-94'
-							})
+		
+		+ShopItem()
 		+Feedback()
