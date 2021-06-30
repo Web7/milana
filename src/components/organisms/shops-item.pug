@@ -1,7 +1,0 @@
-mixin ShopItem()
-	- var list = [{buttonText: 'Посмотреть на карте', shopName: 'Выходной', shopAddress: 'г. Люберцы, Октябрьский пр., 112', shopPhones: '+7 (499) 2888-06-94', metroName: 'Жулебино', metroIconColor: '#943F90'},{buttonText: 'Выбрать салон', shopName: 'Пулково Аутлет', shopAddress: 'г. Санкт-Петербург, Пулковское шоссе, дом 60, корпус 1', shopPhones: '+7 (812) 384-24-78', metroName: 'Московская', metroIconColor: '#007DCC'},{buttonText: 'Выбрать салон', shopName: 'Пулково Аутлет', shopAddress: 'г. Санкт-Петербург, Пулковское шоссе, дом 60, корпус 1', shopPhones: '+7 (812) 384-24-78', metroName: 'Московская', metroIconColor: '#007DCC'}]
-	.container
-		.row
-			each listItem in list
-				.col-md-6.col-6.mb-md-6.mb-10
-					+ShopAddress(listItem)

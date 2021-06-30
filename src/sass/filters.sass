@@ -77,6 +77,16 @@
 					margin-bottom: 0
 
 .dropdown
+	&-input
+		width: 100%
+		& input
+			width: 100%
+			max-width: 280px
+			height: 40px
+			background: #F2F2F3
+			border: 0
+			padding: 10px 15px
+			outline: none
 	&-toggle
 		display: flex
 		&:after
@@ -94,7 +104,6 @@
 				transform: rotateX(180deg)
 	&-menu
 		z-index: 1029
-
 .irs--round
 	height: 27px
 	.irs
@@ -115,7 +124,6 @@
 			height: 4px
 			top: 4px
 			background-color: $gray-100
-
 
 @media (min-width: 768px)
 	.mil-filters
