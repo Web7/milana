@@ -13,6 +13,5 @@ block main
 				.row.align-item-stretch
 					each historyItem in [...historyItems]
 						+MilHistoryItem(historyItem)
-					.mb-pagination.justify-content-center
-						+Pagination()
+			+Pagination()
 		+Feedback()
