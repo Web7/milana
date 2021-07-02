@@ -1,0 +1,11 @@
+extends ../templates/layout
+include ../organisms/feedback
+include ../organisms/breadcrumb-and-title
+include ../organisms/company/tabs-media-area
+
+block main
+	main.mil-margin-left-side-menu.mil-margin-top-header
+		section.pe-md-7.pe-lg-8.pt-7.pt-md-13.pt-xxl-16.ps-xxxl-18.ps-xxl-14.ps-xl-12.ps-lg-9.ps-md-8.px-4
+			+BreadcrumbAndTitle({breadcrumb: ['Главная', 'Компания', 'Медиа'], title: 'Медиа', classTitle: 'mb-10'})
+			div(data-sticky-container)
+				+TabsPersonalArea({activeHref: 'press.html'})

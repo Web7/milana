@@ -1,0 +1,9 @@
+mixin TabsPersonalArea(data)
+	- var links = [{name: 'Пресса', href: "press.html"},{name: 'Фирменный стиль', href: "form-style.html"},{name: 'Рекламная кампания', href: "advertisement.html"},{name: 'Фотографии магазинов', href: "shop-photo.html"},{name: 'Модные издания', href: "fashion-publications.html"},{name: 'Информационные партнеры', href: "information-partners.html"}]
+	.sticky-nav-tabs.tabs-personal-area
+		.sticky-container
+			.nav-tabs-personal-area-arrows
+			ul.nav.nav-tabs.nav-tabs-personal-area(data-scroll-index="navTabs")
+				each link in links
+					li.nav-item
+						a.nav-link(href= link.href class= data && data.activeHref === link.href ? 'active' : '')!= link.name
