@@ -1,0 +1,7 @@
+include ../molecules/shop-inside-item
+
+mixin ShopCarousel(data)
+	section.mil-product-carousel-section(class="mil-product-carousel-position-" + data.type)
+		.mil-product-carousel-slick(data-type= data.type)
+			each item in data.items
+				+ShopPreviewItem(item)

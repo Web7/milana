@@ -1,0 +1,7 @@
+include ../atoms/metro-icon
+
+mixin MetroAddress(data)
+    .f-13px
+        .d-flex.align-items-center
+            +MetroIcon(data.metroIconColor)(class="me-1 mb-1")
+            != data.metroName

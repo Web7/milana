@@ -1,11 +1,73 @@
 extends ../templates/layout
 include ../organisms/feedback
 include ../organisms/breadcrumb-and-title
+include ../molecules/product-preview-item
+include ../organisms/personal-area/tabs-personal-area
+include ../organisms/personal-area/shop-review-item
+include ../organisms/shop-carousel-photo
+include ../molecules/shop-address
+include ../atoms/metro-icon-name
+include ../molecules/mil-shop-item
+include ../molecules/mil-way-item
 
 block main
+	- var reviews = [{name: 'Виктория', date: '10.12.2020', description: 'Прекрасный магазин, классный персонал! Помогли подобрать обувь, выслушав все пожелания.'},{name: 'Ольга', date: '12.12.2020', description: 'Девочки приятные в магазине. Мне понравилось. Сама не знала, что хотела... помогли-рассказали и подобрали целых две пары сапог. Выбрать не смогла! Спасибо Вам.Обязательно вернусь. Вы - чудо!'}, {name: 'Виктория', date: '10.12.2020', description: 'Прекрасный магазин, классный персонал! Помогли подобрать обувь, выслушав все пожелания.'}, {name: 'Виктория', date: '10.12.2020', description: 'Прекрасный магазин, классный персонал! Помогли подобрать обувь, выслушав все пожелания.'}, {name: 'Виктория', date: '10.12.2020', description: 'Прекрасный магазин, классный персонал! Помогли подобрать обувь, выслушав все пожелания.'}, {name: 'Виктория', date: '10.12.2020', description: 'Прекрасный магазин, классный персонал! Помогли подобрать обувь, выслушав все пожелания.'}]
+	- var news =[{image: 'images/news-item-01.jpg', title: 'Рекострукция<br>магазинабелая дача<br>аутлет'},{image: 'images/news-item-02.jpg', title: 'Новая коллекция<br>весна-лето 2021'},{image: 'images/news-item-01.jpg', title: 'Новинка:<br>подарочные карты'},{image: 'images/news-item-02.jpg', title: 'коронавирус, сидим<br>дома! бесплатная<br>доставка'}]
+	- var ShopItems = [{title: 'торговый центр', text: '<p>ТЦ "Выходной", 1 этаж</p>'}, {title: 'адрес', text: '<p>г. Люберцы,</p><p>Октябрьский пр., 112</p>'}, {title: 'телефон', text: '<p>+7 (499) 288 06 94</p>'}, {title: 'e-mail', text: '<p>vyhodnoj@milana-shoes.ru</p>'}, {title: 'график работы', text: '<p>10.00 - 22.00</p>'}]
+	- var ShopsWay = [{title: 'схема проезда', text: '<p>1-ый вагон из центра, из метро направо, потом на лево к остановке маршрутных такси до ТРЦ. 1) Метро Алтуфьево – АШАН Алтуфьево. Маршрут отправляется от северного вестибюля ст. м. метро Алтуфьево.</p><p>2) Платформа Лианозово – АШАН Алтуфьево. Маршрут отправляется от платформы Лианозово.</p>'}]
 	main.mil-margin-left-side-menu.mil-margin-top-header
 		section.pe-md-7.pe-lg-8.pt-7.pt-md-13.pt-xxl-16.ps-xxxl-18.ps-xxl-14.ps-xl-12.ps-lg-9.ps-md-8.px-4
-			+BreadcrumbAndTitle({breadcrumb: ['Главная', 'Магазины'], title: 'Магазины', classTitle: 'mb-6'})
-
+			+BreadcrumbAndTitle({breadcrumb: ['Главная', 'Магазины', 'Магазин Milana: ТЦ "РИГАМОЛЛ"'], title: 'магазин milana: ТЦ "ригамолл"', classTitle: 'mb-6'})
+			.mb-15
+				+MetroAddress({
+					metroIconColor: '#943F90',
+					metroName: 'Жулебино'
+				})
+			.row
+				.d-flex.justify-content-between.mb-21
+					.col-6
+						img(src='/src/images/shop-inside.png')
+					.col-6
+						+ShopCarousel({
+							type: 'left',
+							items: [
+								{
+									image: 'images/shop-slide-01.png',
+								},
+								{
+									image: 'images/shop-slide-01.png',
+								},
+								{
+									image: 'images/shop-slide-01.png',
+								},
+								{
+									image: 'images/shop-slide-01.png',
+								},
+							]
+						})
+			.row.mb-19
+				.col-4
+					.col-12.d-flex.flex-wrap
+						each ShopItem in [...ShopItems]
+							+MilShopItem(ShopItem)
+					
+					.col-12
+						each ShopWay in [...ShopsWay]
+							+MilWayItem(ShopWay)
+				.col-8
+							.align-self-center
+								img(src='/src/images/shop-map-inside.jpg')
+			.row
+				.d-flex.bg-white.pb-12.pr-0.pl-0.mb-34
+					h5.f-30px.f-bold.text-uppercase наши вакансии
+					p.f-14px В данном магазине есть открытые вакансии, Вы можете заполнить анкету соискателя
+					a.btn.btn-black.btn-sm.w-100.w-md-auto(href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasReviewEdit" aria-controls="offcanvasReviewEdit") Заполнить анкету
+				.mb-11
+					h5.f-25px.f-bold.text-uppercase отзывы
+					p.f-14px 10
+					a.f-14px.nav-link.pt-0(href="#") Оставить отзыв о магазине
+					.row
+						.d-flex.flex-row.mb-19.shops-scroll.overflow-auto
+							each review in [...reviews]
+								+ReviewItem(review)
 		+Feedback()
-
