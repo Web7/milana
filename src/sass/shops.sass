@@ -1,6 +1,7 @@
 .shops-scroll
     max-height: 620px
     margin-bottom: 165px
+    overflow-x: hidden !important
     &::-webkit-scrollbar
         width: 5px
         height: auto
@@ -10,15 +11,17 @@
 
     &::-webkit-scrollbar-thumb
         background-color: $black
+.shops-column-icon
+    flex-direction: column
 
 @media screen and ( max-width: 576px )
     .shops-column
         flex-direction: column
-    .mb-21
         margin-bottom: 60px !important
-    .nav-link
-        padding: 0
-    .p-mb
+    .shops-city-mb
         margin-bottom: 40px
     .dropdown-toggle
         display: inline-block
+    .dropdown-toggle::after
+        vertical-align: 0em
+        margin-left: 100px

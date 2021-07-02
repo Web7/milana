@@ -10,11 +10,11 @@ block main
 	main.mil-margin-left-side-menu.mil-margin-top-header
 		section.pe-md-7.pe-lg-8.pt-7.pt-md-13.pt-xxl-16.ps-xxxl-18.ps-xxl-14.ps-xl-12.ps-lg-9.ps-md-8.px-4
 			+BreadcrumbAndTitle({breadcrumb: ['Главная', 'Магазины'], title: 'Магазины', classTitle: 'mb-6'})
-			.nav-item.p-0.col-6.shops-column.d-flex.mb-21
-				.col-4.d-flex.p-mb
-					span.f-13px.p-0 Город:
+			.nav-item.p-0.col-6.shops-column.d-flex.mb-21.col-sm-12
+				.col-4.d-flex.shops-city-mb
+					span.me-2.f-13px.p-0 Город:
 					a.nav-link.f-13px.p-0.text-nowrap.text-decoration-underline.p-0(href="#" role="button") Москва
-				.col-4.nav-item.dropdown.d-flex.shops-column.col-sm-6
+				.col-4.nav-item.dropdown.d-flex.shops-column
 					a.nav-link.dropdown-toggle.f-13px.pt-0.pb-0#navbarOrderTablet(href="#" role="button" aria-haspopup="true" aria-expanded="false") Станция метро
 					.dropdown-menu.ps-7.py-4.pe-7.f-9px
 						a.d-block.text-nowrap.text-decoration-none.text-black.mb-2(href="#") Жулебино
@@ -28,8 +28,20 @@ block main
 						a.d-block.text-nowrap.text-decoration-none.text-black.mb-2(href="#") 2
 						a.d-block.text-nowrap.text-decoration-none.text-black.mb-2(href="#") 3
 						a.d-block.text-nowrap.text-decoration-none.text-black.mb-2(href="#") 4
+						a.d-block.text-nowrap.text-decoration-none.text-black.mb-2(href="#") 5
 			.row
 				.col-12.col-xxxl-6
 					+ShopList()
-				.col-6
+				.col-6.col-xxxl-6
+					.d-flex.flex-row.shops-column-icon
+						p.d-flex
+							a.d-block.text-nowrap.text-decoration-none.text-black(href="#")
+								img(src='/src/images/shops-icon-01.svg')
+								.d-block.text-nowrap.text-decoration-none.text-black.mb-2(href="#") Фирменный магазин
+						p.d-flex
+							img(src='/src/images/shops-icon-02.svg')
+							a.d-block.text-nowrap.text-decoration-none.text-black.mb-2(href="#") Аутлет
+						p.d-flex
+							img(src='/src/images/shops-icon-03.svg')
+							a.d-block.text-nowrap.text-decoration-none.text-black.mb-2(href="#") Дисконт
 		+Feedback()
