@@ -1,11 +1,50 @@
 .bg-image
-    background-image: url("/src/images/press-bg.png")
-    height: 550px
-    position: relative
-
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/src/images/press-bg.png")
+	height: 550px
+	position: relative
+	width: 100%
+	background-repeat: no-repeat
+	background-size: 100%
+.press-title
+	color: $gray-100
 .press-title-container
-    top: -50%
-    width: 100%
-    z-index: 1000
+	top: 50%
+	width: 100%
+	z-index: 1000
+	position: absolute
 .press-mail-color
-    color: $primary
+	color: $primary
+.press-bg-container
+	background-color: #F6F6F8
+	left: 12%
+	position: absolute
+@media ( max-width: 2560px)
+	.bg-image
+		margin-bottom: 300px
+	.press-text-container
+		margin-top: 80px
+		margin-bottom: 40px
+@media ( max-width: 1440px)
+	.bg-image
+		margin-bottom: 275px
+@media ( max-width: 1024px)
+	.bg-image
+		margin-bottom: 250px
+@media ( max-width: 768px)
+	.press-text-container
+		margin-top: 60px
+		margin-bottom: 30px
+@media ( max-width: 425px)
+	.bg-image
+		background-image: none
+		margin-bottom: 70px
+	.press-title
+		color: $black
+	.press-title-container
+		top: 0
+		left: 0
+	.press-bg-container
+		background-color: $white
+	.press-text-container
+		margin-top: 40px
+		margin-bottom: 40px
