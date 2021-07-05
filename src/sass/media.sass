@@ -8,7 +8,7 @@
 .press-title
 	color: $gray-100
 .press-title-container
-	top: 50%
+	top: 38%
 	width: 100%
 	z-index: 1000
 	position: absolute
@@ -16,13 +16,15 @@
 	color: $primary
 .press-bg-container
 	background-color: #F6F6F8
-	left: 12%
 	position: absolute
 .form-style-image
 	position: relative
 .form-style-buttons
-	height: 326px
-	width: 100%
+	height: 325px
+	width: 820px
+	position: absolute
+	top: 0
+	right: 0
 	z-index: 1000
 	background-color: #000
 .form-style-title-top
@@ -38,19 +40,27 @@
 @media ( max-width: 2560px)
 	.press-bg-image
 		margin-bottom: 300px
+		// background-size: 100% 150%
 	.press-text-container
 		margin-top: 80px
 		margin-bottom: 40px
+	.press-bg-container
+		left: 18%
 @media ( max-width: 1440px)
+	.press-bg-container
+		left: 12%
 	.press-bg-image
-		background-size: 150% 100%
 		margin-bottom: 275px
-// @media ( max-width: 1280px)
-// 	.form-style-title-top
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/src/images/press-bg-xl.png")
+@media ( max-width: 1280px)
+	.press-bg-image
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/src/images/press-bg-lg.png")
 @media ( max-width: 1024px)
 	.press-bg-image
 		margin-bottom: 250px
 @media ( max-width: 768px)
+	.press-bg-image
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/src/images/press-bg-md.png")
 	.press-text-container
 		margin-top: 60px
 		margin-bottom: 30px
