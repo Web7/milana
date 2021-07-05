@@ -1,0 +1,6 @@
+include ../../molecules/form-style-container-item
+
+mixin FormStyleContainer(data)
+	.col-7.d-flex.flex-column.align-items-right.form-style-buttons
+		each item in data
+			+FormStyleContainerItem(item)

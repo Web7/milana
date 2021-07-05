@@ -1,0 +1,12 @@
+mixin FormStyleContainerItem(data)
+	.d-flex.align-items-center.flex-column.mt-13.ml-13
+		p.h3.f-extrabold.f-33px.form-style-title-top.form-style-title-bottom.text-uppercase.mb-8= data.text1
+		.d-flex.flex-row.flex-sm-column
+			if data.buttonsCount === 2
+				.d-flex.flex-column
+					a.btn.btn-primary.f-medium.f-15px.mr-5.mb-3(href="#") Логотип в pdf
+					a.btn.btn-primary.form-style-btn.f-medium.f-15px(href="#") Логотип в кривых
+			if data.buttonsCount === 3
+				.d-flex.flex-column
+					a.btn.btn-primary.f-medium.f-15px.mr-5.mb-3(href="#") Гайдлайн в pdf
+					a.btn.btn-primary.form-style-btn.f-medium.f-15px(href="#") Гайдлайн в кривых

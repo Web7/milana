@@ -2,6 +2,7 @@ extends ../templates/layout
 include ../organisms/feedback
 include ../organisms/breadcrumb-and-title
 include ../organisms/company/tabs-media-area
+include ../organisms/company/form-style-container
 
 block main
 	main.mil-margin-left-side-menu.mil-margin-top-header
@@ -9,3 +10,25 @@ block main
 			+BreadcrumbAndTitle({breadcrumb: ['Главная', 'Компания', 'Медиа'], title: 'Медиа', classTitle: 'mb-10'})
 			div(data-sticky-container)
 				+TabsPersonalArea({activeHref: 'form-style.html'})
+				.mb-25
+					.row.mb-7
+						.d-flex
+							.col-7.d-flex.align-items-left.form-style-image
+								img(src='/src/images/form-style-image-01.png')
+							+FormStyleContainer([
+								{
+									text1: 'Фирменный стиль',
+									buttonsCount: 2
+								}
+							])
+					.row
+						.d-flex
+							.col-7.d-flex.align-items-left.form-style-image
+								img(src='/src/images/form-style-image-02.png')
+							+FormStyleContainer([
+								{
+									text1: 'Руководство по фирменному стилю',
+									buttonsCount: 3
+								}
+							])
+		+Feedback()

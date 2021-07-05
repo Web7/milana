@@ -2,6 +2,7 @@ extends ../templates/layout
 include ../organisms/feedback
 include ../organisms/breadcrumb-and-title
 include ../organisms/company/tabs-media-area
+include ../molecules/pagination
 
 block main
 	main.mil-margin-left-side-menu.mil-margin-top-header
@@ -9,3 +10,9 @@ block main
 			+BreadcrumbAndTitle({breadcrumb: ['Главная', 'Компания', 'Медиа'], title: 'Медиа', classTitle: 'mb-10'})
 			div(data-sticky-container)
 				+TabsPersonalArea({activeHref: 'advertisement.html'})
+				.col-12
+					.d-flex.flex-row.flex-wrap.align-items-center.advertisment-image
+						.card-img-top
+							img(src='/src/images/advertisment-image-01.png')
+						p.d-flex.align-items-center.text-center.advertisment-text Some quick example text to build 
+			+Pagination()
