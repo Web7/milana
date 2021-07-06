@@ -21,15 +21,16 @@
 	top: 74%
 .form-style-image
 	position: relative
-	width: 100%
-	height: auto
+	background-repeat: no-repeat
+	background-size: cover
+	&-top
+		background-image: url("/src/images/form-style-image-01.png")
+	&-bottom
+		background-image: url("/src/images/form-style-image-02.png")
 .form-style-buttons
-	height: 328px
-	width: 620px
+	height: 326px
+	width: 621px
 	position: absolute
-	top: 43px
-	right: 0
-	z-index: 1000
 	background-color: $white
 .form-style-title
 	max-width: 365px
@@ -37,6 +38,9 @@
 	background-color: $white
 	color: $primary
 	border: 1.5px solid #8c2837
+.advertisment-image
+	width: 360px
+	height: 230px
 @media ( max-width: 2560px)
 	.press-bg-image
 		margin-bottom: 300px
@@ -52,6 +56,19 @@
 @media ( max-width: 1440px)
 	.press-bg-container
 		left: 13%
+	.form-style-image
+		&-top
+			width: 708px
+			height: 412px
+		&-bottom
+			width: 708px
+			height: 412px
+	.form-style-buttons
+		width: 621px
+		height: 326px
+		bottom: 43px
+		right: 0
+		z-index: 1000
 	.press-bg-image
 		margin-bottom: 275px
 		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/src/images/press-bg-xl.png")

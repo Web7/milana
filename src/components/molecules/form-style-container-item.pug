@@ -1,13 +1,12 @@
 mixin FormStyleContainerItem(data)
 
 	.mt-13.mx-13
-		p.f-extrabold.f-33px.form-style-title.text-uppercase.line-height-1.mb-7= data.text1
-		.d-flex.flex-row
+		p.h4.form-style-title.text-uppercase.line-height-1.mb-7= data.text1
 			if data.buttonsCount === 2
 				.d-flex
-					a.btn.btn-primary.f-medium.f-15px(href="#") Логотип в pdf
-					a.btn.btn-primary.form-style-btn.f-medium.f-15px(href="#") Логотип в кривых
+					a.btn.btn-primary.f-medium.f-15px.me-5.pb-3(href="#") Логотип в pdf
+					a.btn.btn-primary.form-style-btn.f-medium.f-15px.f-sm-13px(href="#") Логотип в кривых
 			if data.buttonsCount === 3
 				.d-flex
-					a.btn.btn-primary.f-medium.f-15px(href="#") Гайдлайн в pdf
+					a.btn.btn-primary.f-medium.f-15px.me-5.pb-3(href="#") Гайдлайн в pdf
 					a.btn.btn-primary.form-style-btn.f-medium.f-15px(href="#") Гайдлайн в кривых
