@@ -12,9 +12,8 @@ block main
 				+TabsPersonalArea({activeHref: 'form-style.html'})
 				.mb-25
 					.row.mb-7
-						.col-12.form-style-image
-							.d-flex.align-items-left
-								img(src='/src/images/form-style-image-01.png')
+						.col-12.form-style-image.d-flex
+							img(src='/src/images/form-style-image-01.png')
 							+FormStyleContainer([
 								{
 									text1: 'Фирменный стиль',
@@ -23,7 +22,7 @@ block main
 							])
 					.row
 						.col-12.form-style-image
-							.d-flex.align-items-left
+							.d-flex.img-fluid
 								img(src='/src/images/form-style-image-02.png')
 							+FormStyleContainer([
 								{
