@@ -1,0 +1,68 @@
+.press
+	&-title
+		font-family: 'montserratbold'
+		font-weight: normal
+		font-size: 20px
+		line-height: 25px
+		text-transform: uppercase
+
+@media (min-width: 768px)
+	.press
+		&-section
+			position: relative
+			margin-bottom: 220px
+		&-bg-image
+			background: url(../images/press-bg.jpg) no-repeat center center
+			background-size: cover
+			height: 495px
+		&-title
+			color: $gray-100
+			font-size: 50px
+			position: absolute
+			top: -27px
+			text-align: center
+			width: 100%
+			left: 0
+			right: 0
+		&-content-container
+			padding: 70px 40px
+			position: absolute
+			background-color: $gray-100
+			top: 230px
+			left: 0
+			right: 0
+			margin: auto
+			line-height: 27px
+
+@media (min-width: 992px)
+	.press
+		&-section
+			margin-bottom: 255px
+		&-content-container
+			padding: 90px 45px
+			width: 785px
+
+@media (min-width: 1200px)
+	.press
+		&-section
+			margin-bottom: 270px
+
+@media (min-width: 1400px)
+	.press
+		&-section
+			margin-bottom: 275px
+		&-bg-image
+			height: 550px
+		&-title
+			font-size: 57px
+		&-content-container
+			padding: 75px 115px
+			width: 925px
+
+@media (min-width: 1600px)
+	.press
+		&-section
+			margin-bottom: 350px
+		&-content-container
+			padding: 105px 170px
+			width: 1040px
