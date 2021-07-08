@@ -1,16 +1,41 @@
-.advertisment-container
-    display: flex          
-    justify-content: space-between
+.advertisment-block
+    display: flex
     flex-wrap: wrap
-
-    .advertisment-card 
+    justify-content: space-between
+    .advertisment-card
         width: 451px
+        img
+            background-size: contain
+            width: 451px
+            height: 227px
+        p
+            color: $black
+            padding: 34px 0
+            font-size: 28px
 
-    p 
-        display: flex
-        align-items: center
+@media (max-width: 1440px)
+    .advertisment-block
+        .advertisment-card
+            width: 357px
+            img
+                width: 357px
+
+@media (max-width: 1280px)
+    .advertisment-block
+        .advertisment-card
+            width: 451px
+            img
+                width: 451px
+
+@media (max-width: 768px)
+    .advertisment-block
+        .advertisment-card
+            width: 332px
+            img
+                width: 332px
+            p
+                font-size: 25px
+
+@media (max-width: 425px)
+    .advertisment-block
         justify-content: center
-        padding: 34px 0
-        font-size: 28px
-        text-transform: uppercase
-        font-family: 'montserratregular'

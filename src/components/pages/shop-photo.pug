@@ -9,3 +9,28 @@ block main
 			+BreadcrumbAndTitle({breadcrumb: ['Главная', 'Компания', 'Медиа'], title: 'Медиа', classTitle: 'mb-10'})
 			div(data-sticky-container)
 				+TabsPersonalArea({activeHref: 'shop-photo.html'})
+				.row
+					.col-12 
+						div.d-flex.justify-content-center.flex-column
+							div.shop-photo-block.mb-12 
+								p.mb-4.shop-photo-h1 MILANA Санкт-Петербург Пулково Аутлет
+								p.shop-photo-data 05.06.2016
+								div.shop-photo-gallery.d-flex
+									img(src='/src/images/shopSlide01.png')
+									img(src='/src/images/shopSlide01.png')
+									img(src='/src/images/shopSlide01.png')
+									img(src='/src/images/shopSlide01.png')
+									img(src='/src/images/shopSlide01.png')
+									img(src='/src/images/shopSlide01.png')
+									img(src='/src/images/shopSlide01.png')
+									div.button-yet Еще фото
+							div.shop-photo-block.mb-12 
+								p.mb-4.shop-photo-h1 MILANA Галерея Краснодар
+								p.shop-photo-data 07.09.2014 
+								div.shop-photo-gallery.d-flex
+									img(src='/src/images/shopSlide01.png')
+									img(src='/src/images/shopSlide01.png')
+									img(src='/src/images/shopSlide01.png')
+									img(src='/src/images/shopSlide01.png')
+									div.button-yet Еще фото
+		+Feedback()
