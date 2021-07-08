@@ -11,13 +11,26 @@ block main
 			div(data-sticky-container)
 				+TabsPersonalArea({activeHref: 'advertisement.html'})
 				.row
-					.col-12
-						.d-flex.align-items-center.advertisment-image
-							img(src='/src/images/advertisment-image-01.png')
-						p.card-title.d-flex.align-items-center.text-center.h4.advertisment-text Some quick example text to build 
-						p.advertisment-image.d-flex
-							.d-block.text-decoration-none.text-black(href="#")
-								img(src='/src/images/advertisment-image-01.png')
-								a.d-flex.text-decoration-none.text-black.f-13px.line-height-1.icon-w-shop Фирменный магазин
+					.col-12 
+						div.advertisment-container
+							a.d-block.text-decoration-none.advertisment-card(href="#")
+								img(src='/src/images/advertismentImage01.jpg')
+								p ss - весна/лето
+							a.d-block.text-decoration-none.advertisment-card(href="#")
+								img(src='/src/images/advertismentImage01.jpg')
+								p ss - весна/лето
+							a.d-block.text-decoration-none.advertisment-card(href="#")
+								img(src='/src/images/advertismentImage01.jpg')
+								p ss - весна/лето
+							a.d-block.text-decoration-none.advertisment-card(href="#")
+								img(src='/src/images/advertismentImage01.jpg')
+								p ss - весна/лето
+							a.d-block.text-decoration-none.advertisment-card(href="#")
+								img(src='/src/images/advertismentImage01.jpg')
+								p ss - весна/лето
+							a.d-block.text-decoration-none.advertisment-card(href="#")
+								img(src='/src/images/advertismentImage01.jpg')
+								p ss - весна/лето
+						
 			.d-block
 				+Pagination()
